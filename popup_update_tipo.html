@@ -1,0 +1,142 @@
+<div class="protector_fondo_popup no-cerrar-click" data-id_popup="update_tipo">
+  <div id="popup_tipo" class="comp-popup">
+    <div class="txt">
+      Elige el rol con el que te deseas registrar
+    </div>
+    <div class="area_izquierda">
+     <div class="contenedor-tabla">
+       <div class="contenedor-celda">
+         <div class="imagen alumno" data-tipo="A">           
+         </div>
+         <div class="texto">Alumno</div>
+       </div>
+     </div>
+    </div>
+    <div class="area_derecha">
+     <div class="contenedor-tabla">
+       <div class="contenedor-celda">
+         <div class="imagen profesor " data-tipo="P">           
+         </div>         
+         <div class="texto">Profesor</div>
+       </div>
+     </div>
+
+    </div>
+    <div class="boton">
+      <div class="boton_invictos no_events" id="enviar_update_tipo">
+        Terminar registro
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('#popup_tipo .imagen').click(function(){
+      $('#popup_tipo .imagen').removeClass('activo');
+      $(this).addClass('activo');
+      $('#enviar_update_tipo').removeClass('no_events');
+    });
+
+    $('#enviar_update_tipo').click(function(){
+      fun_enviar_update_tipo($('#popup_tipo .imagen.activo').data('tipo'));
+    }); 
+
+  });
+
+
+  function fun_enviar_update_tipo(tipo){
+    $.ajax({
+      url:'POST/update_tipo.php',
+      data:{tipo:tipo},
+      datatype:'json',
+      type:'POST',
+      async:true,
+      success:function(data){
+      parent.document.location='http://www.invictos.la/editar_perfil';
+      }
+    });
+  } 
+</script>
+
+<style>
+  #popup_tipo{
+
+    height: 250px;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  .area_izquierda,
+  .area_derecha{
+    display: inline-block;
+    vertical-align: middle;
+    height: 170px;
+    width: calc(50% - 5px);
+  }
+
+  #popup_tipo .imagen
+  {
+
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+
+  }
+  #popup_tipo .imagen.activo
+  {
+    border: 1px solid transparent !important;
+
+  }
+  
+  #popup_tipo .imagen:after{  
+    position: absolute;
+    content: ' ';
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    top: -5px;
+    left: -5px;
+    border-radius: 7px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+
+    -webkit-transition: .3s all cubic-bezier(0,0,0.25,1);
+    -moz-transition: .3s all cubic-bezier(0,0,0.25,1);
+    -ms-transition: .3s all cubic-bezier(0,0,0.25,1);
+    -o-transition: .3s all cubic-bezier(0,0,0.25,1);
+    transition: .3s all cubic-bezier(0,0,0.25,1);
+  }
+
+  #popup_tipo .imagen:hover
+  {
+    border: 1px solid #f6a1a1;
+  }
+
+  #popup_tipo .imagen.activo:after{
+    border: 2px solid #fe6060;    
+  }
+  #popup_tipo .imagen.profesor{
+    background-image: url(IMG/USUARIOS/WEB/profesor_default.png);
+    
+  }
+  #popup_tipo .imagen.alumno{
+    background-image: url(IMG/USUARIOS/WEB/alumno_default.png);
+    
+  }
+
+  #enviar_update_tipo{
+
+    width: 170px;
+    margin: auto;
+  }
+
+</style>

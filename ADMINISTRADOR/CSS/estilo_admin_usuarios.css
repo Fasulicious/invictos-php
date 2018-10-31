@@ -1,0 +1,67 @@
+#div_nuevo_usuario{
+
+	max-width: 520px;
+	margin: auto;
+	padding-top:50px;
+}
+
+#div_nuevo_usuario .campo{			
+	text-align: center;
+	padding-top: 15px;
+}
+
+#ttl_nuevo_usuario,#ttl_modificar_usuario{
+	font-size: 170%;
+	margin-bottom: 30px;
+}
+
+#ttl_modificar_usuario{
+	display: none;
+}
+
+#nuevo_usuario-username,#nuevo_usuario-password{
+	width: 80%;
+}
+
+
+#div_nuevo_usuario #btn_modificar_usuario,#div_nuevo_usuario #btn_cancelar_modificar{
+	display:none;
+}
+
+#div_nuevo_usuario #btn_cancelar_modificar{
+	background: #f4f4f4 !important;
+	color:#666 !important;
+	margin-left: 40px;
+}
+#btn_cancelar_modificar:hover{
+	background: #ddd !important;
+}
+
+
+
+
+#content_usuarios {
+	padding-top: 25px;
+	max-width: 520px;
+	position: relative;
+	margin: auto;
+}
+
+#content_usuarios .usuario {
+	box-shadow: 0px 1px 6px #767676;
+	margin-bottom: 50px;
+}
+#content_usuarios .usuario .def{
+	text-align: center;
+	font-size: 25px;
+}
+#content_usuarios .usuario .username{
+	padding: 8px;
+}
+
+#content_usuarios .usuario .password{
+	padding: 8px;
+	background: rgb(68, 68, 68);
+	color: white;
+	margin-bottom: 5px;
+}

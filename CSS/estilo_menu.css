@@ -1,0 +1,335 @@
+ #menu_principal .comp-menu-fijo.menu-superior .logo.izq{            
+        height: 60px;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+        #menu_principal .comp-menu-fijo.menu-superior{                
+          background: white;
+          font-size: 14px;
+          color: #aaa;
+          box-shadow: 0px 0px 2px #969696;
+        }
+        #menu_principal .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion{
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+        #menu_principal .comp-menu-fijo.menu-superior .menu-principal .oculto{
+          display: none;
+        }
+        #menu_principal .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion span.boton_invictos{       
+          padding: 6px 29px;
+          color: white;
+          font-size: 14px;
+          border-radius: 18px;
+        }
+        
+        #menu_principal .comp-menu-fijo.menu-superior nav{
+
+          height: 35px;
+          margin-top: 20px;
+        }
+
+        #menu_principal #btn_notificaciones{
+          width: 30px;
+          height: 30px;
+          background-image: url(../IMG/BARRA_SUPERIOR/icon_notificacion.png);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        #menu_principal #btn_notificaciones.activo{
+          background-image: url(../IMG/BARRA_SUPERIOR/icon_notificacion-activo.png);
+        }
+        #menu_principal #btn_perfil_menu{
+          background-color: #e6e6e6;
+          width: 40px;
+          height: 40px;
+          border-radius: 15px;
+          background-position: center;
+          background-repeat: no-repeat;
+          border: 1px solid #c9c9c9;
+          background-size: cover;
+        }
+        #menu_principal #buscador_profesores{    
+          background: #f1f1f1;
+          border: 1px solid #ececec;
+          padding: 0px 5px;
+          border-radius: 20px;
+          width: 230px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        #menu_principal #buscador_profesores .icono_busqueda {
+          width: 30px;
+          height: 30px;
+          background-image: url(../IMG/BARRA_SUPERIOR/icono_busqueda.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          display: inline-block;
+          vertical-align: middle;
+
+        }
+        #menu_principal #buscador_profesores input{
+          border: 0px;
+          outline: none;
+          vertical-align: middle;
+          display: inline-block;
+          width: calc(100% - 36px);
+          background: transparent;
+          font-size: 12px;
+        }
+
+        #menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion .comp-menu-submenu{
+          width: 200px;
+          right: 0px;
+          text-align: left;
+          height: 230px;
+          box-shadow: 0px 0px 5px;
+          border-radius: 7px;
+          font-size: 13px;
+          top: calc(100% + 15px);
+        }
+        #menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion .comp-menu-submenu:after,
+        #menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion .comp-menu-submenu:before{
+            position: absolute;
+            content: ' ';
+            width: 20px;
+            height: 20px;
+            background: white;
+            top: -8px;
+            right: 28px;
+            transform: rotatez(45deg);
+            box-shadow: 0px 0px 5px;
+        }
+        #menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion .comp-menu-submenu:after{
+            transform: none;
+            box-shadow: none;
+            width: 47px;
+            right: 10px;
+            top: 0px;
+        }
+
+        #menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion .comp-menu-submenu .comp-submenu-opcion{
+         
+          display: block;
+          cursor: pointer;
+          border-bottom: 1px solid #e6e6e6;
+        }
+        #menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion .comp-menu-submenu .comp-submenu-celda-content{
+          padding: 10px 20px;
+
+        }
+        #menu_principal .comp-menu-submenu .comp-submenu-opcion:first-child{
+
+          position: relative;
+          z-index: 1;
+        }
+
+        #menu_principal .comp-menu-submenu .comp-submenu-opcion:hover{
+
+          background: #ff5757;
+          color: white;
+        }
+        #menu_principal .comp-menu-submenu .comp-submenu-opcion .nombre{
+          font-size: 16px;
+          font-weight: bold;
+          padding-top: 8px;
+          color: #666;
+        }
+        #menu_principal .comp-menu-submenu .comp-submenu-opcion:hover .nombre{
+          color: white;
+          
+        }
+        #menu_principal .comp-menu-submenu .comp-submenu-opcion .txt{
+          font-size: 10px;
+
+        }
+
+#menu_principal #btn_submenu_inicio,
+#menu_principal #btn_submenu_biblio,
+#menu_principal #btn_submenu_notificaciones{
+  display: none;
+}
+#menu_principal #cerrar_buscador_profesores{
+  cursor: pointer;
+  background-image: url(../IMG/x.png); 
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  background-position: center;
+  /*display: inline-block;*/
+  display: none;
+  
+    vertical-align: middle;
+}
+
+  .comp-menu-celda-content{
+        position: relative;
+      }
+        .popup_busqueda_profesores{
+          position: absolute;
+          top: 100%;
+          left: 0px;
+          z-index: 1005;
+          background: white;
+          width: 100%;
+          height: 300px;
+          cursor: default;
+          box-shadow: 0px 1px 1px #bfbfbf;
+    padding: 5px;
+    overflow-x: hidden;
+        }
+        
+
+.popup_busqueda_profesores::-webkit-scrollbar-track
+{
+  border: 4px solid white;
+  background-color: rgb(255,87,87);
+}
+
+.popup_busqueda_profesores::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: transparent;
+}
+
+.popup_busqueda_profesores::-webkit-scrollbar-thumb
+{
+  width: 20px;
+  background-color:  rgb(255,87,87); 
+}
+
+        .popup_busqueda_profesores .profesor {
+          margin-bottom: 5px;
+        }
+
+        .popup_busqueda_profesores .profesor:hover{          
+          background: #f1f1f1;
+        }
+
+        .popup_busqueda_profesores.oculto{
+          display: none;
+        }
+
+
+            .popup_busqueda_profesores .foto{
+              width: 40px;
+              height: 40px;
+              background: url(../IMG/USUARIOS/WEB/profesor_default.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-color: gainsboro;
+              background-size: 100%;
+              border: 1px solid #c7c7c7;
+              border-radius: 10px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+            .popup_busqueda_profesores .informacion{
+              display: inline-block;
+              vertical-align: middle;
+              width: calc(100% - 50px);
+              height: 40px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box;
+              padding-left: 5px;
+              text-align: left;
+                  color: gray;
+                  margin-bottom: 5px;
+              }
+
+              .popup_busqueda_profesores .nombre{
+
+                  display: inline-block;
+                  border-bottom: 1px solid gray;
+              }
+
+
+              .popup_busqueda_profesores .valoracion .btn_votar{
+
+                float: left;
+              }
+              .popup_busqueda_profesores .valoracion .icono{
+
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                background-image: url(../IMG/valoracion_activo.png);
+                vertical-align: middle;
+                background-size: cover;
+                background-position: center;
+              }
+              
+              .popup_busqueda_profesores .valoracion .numero{
+
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13px;
+                color: gray;
+              }
+
+#menu_principal .comp-menu-fijo.menu-superior #comp-btn-menu-responsive .comp-mr-circulo{
+
+    width: 27px;
+    height: 4px;
+    background: rgb(255, 87, 87);
+    position: absolute;
+    left: calc(50% - 14px);
+    -webkit-transition: all .3s cubic-bezier(0,0,0.25,1);
+    -moz-transition: all .3s cubic-bezier(0,0,0.25,1);
+    -ms-transition: all .3s cubic-bezier(0,0,0.25,1);
+    -o-transition: all .3s cubic-bezier(0,0,0.25,1);
+    transition: all .3s cubic-bezier(0,0,0.25,1);
+
+  }
+#menu_principal .comp-menu-fijo.menu-superior #comp-btn-menu-responsive .comp-mr-circulo:nth-child(1){
+  top: calc(50% - 12px);
+}
+#menu_principal .comp-menu-fijo.menu-superior #comp-btn-menu-responsive .comp-mr-circulo:nth-child(2){
+  top: calc(50% - 4px);
+}
+#menu_principal .comp-menu-fijo.menu-superior #comp-btn-menu-responsive .comp-mr-circulo:nth-child(3){
+  top: calc(50% + 4px);
+}
+
+#menu_principal .comp-menu-fijo.menu-superior #comp-btn-menu-responsive.cerrar .comp-mr-circulo{
+
+    top: calc(50% - 4px) !important;
+    background: white;
+}
+#menu_principal .comp-menu-fijo.menu-superior #comp-btn-menu-responsive.cerrar .comp-mr-circulo:nth-child(1),
+#menu_principal .comp-menu-fijo.menu-superior #comp-btn-menu-responsive.cerrar .comp-mr-circulo:nth-child(2){
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+#menu_principal .comp-menu-fijo.menu-superior #comp-btn-menu-responsive.cerrar .comp-mr-circulo:nth-child(3){
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+
+}
+
+#menu_principal .comp-menu-fijo.menu-superior .comp-menu-responsive
+{
+
+    background: #ff5757;
+    color: white;
+}
+
+
+
+
+
+#menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion.submenu_reducido .comp-menu-submenu{
+  height: 45px !important;
+}

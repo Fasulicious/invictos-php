@@ -1,0 +1,215 @@
+
+
+  
+      <section id="" class="columna_zonas" data-area="mis_zonas">             
+         <div class="contenido_zonas">
+         	<div class="texto">
+         		Define las ubicaciones donde puedes dictar tus clases.
+         	</div>
+         	<div class="contenedor_gestor">
+         		
+		        <div class="comp-gestion-elemento " data-titulo="" data-titulo_update="" data-elemento="aviso" data-objeto="zona" data-accion="insert" data-gestion="todo" data-espaciototal="4">
+					<bloque data-espacio="4">
+
+			            <campo data-nombre="Busca tu distrito, ciudad, pa&iacute;s" data-iddom="zona_autocompletado" data-espacio="4" data-campo="" data-tipo="text">
+			              <IdExtra DOMdestino="comp-ge-campo" id="campo_autocompletado"></IdExtra>   
+			            </campo>
+
+			            <campo data-nombre="Mapa" data-espacio="4" data-altura="200" data-latitud="13.5" data-longitud="-62.6" data-srcsenalador="" data-campo="coordenadas" data-tipo="mapa" data-campolatitud="coor_latitud" data-campolongitud="coor_longitud">
+			              <IdExtra DOMdestino="comp-ge-campo" id="mapa_registro"></IdExtra>
+			            </campo>
+
+			            <campo data-nombre="Referencia (solo la ver&aacute;s t&uacute;) (ejemplo: Casa, Trabajo, etc.)" data-espacio="4" data-campo="direccion" data-tipo="text"></campo>
+
+					</bloque>
+		        </div>
+
+
+
+          <div id="input_oculto" style= "display:none;">            
+              <input type="text" id="pac-input" placeholder="Buscar un lugar"/>
+          </div>
+
+         	</div>
+         	<div class="mis_zonas">
+         		<div class="texto">
+         			Puedes agregar hasta 3 zonas
+         		</div>
+         		<div class="lista_zonas">
+
+	          <div class="comp-consultor-elemento" data-elemento="aviso" data-condicion="consulta_1" data-conteo="3" data-recarga="false" data-btns_elemento="true">
+	                        
+	              <estructura>
+	            
+	     			<div class="elemento zona" data-id_elemento="{id}" data-latitud="{coor_latitud}" data-longitud="{coor_longitud}">
+	     				<div class="div_nombre">
+	         				<div class="icono"></div>
+	         				<div class="texto">{direccion}</div>
+	         			</div>
+	     				<div class="btn_editar"></div>
+	     				<div class="btn_eliminar"></div>
+	     			</div>
+
+	              </estructura>
+
+	          </div>
+
+<!--
+         			
+         			<div class="elemento inactivo">
+         				<div class="div_nombre">
+	         				<div class="icono"></div>
+	         				<div class="texto">Ubicaci&oacute;n vac&iacute;a</div>
+	         			</div>
+         				<div class="btn_editar"></div>
+         				<div class="btn_eliminar"></div>
+         			</div>-->
+         		</div>
+         	</div>
+         </div>
+
+      </section>
+
+
+	<script>
+
+		$(document).ready(function(){
+			$('body').on('click','.columna_zonas .mis_zonas .elemento .btn_editar, .columna_zonas .mis_zonas .elemento .btn_eliminar',function(){
+				$('.columna_zonas .comp-gestion-elemento').slideDown(300);
+				if(!GL_COMP_MAPA){
+					fun_comp_iniciar_mapa($(this).parents('.elemento').data('latitud'),$(this).parents('.elemento').data('longitud'));
+				}else{
+					fun_comp_cambiar_place($(this).parents('.elemento').data('latitud'),$(this).parents('.elemento').data('longitud'));
+				}
+			});
+
+			$('body').on('click','.columna_zonas .mis_zonas .zona.inactivo .btn_editar',function(){
+
+				$('.columna_zonas .comp-gestion-elemento').slideDown(300);
+				$('.columna_zonas .comp-gestion-elemento').attr('data-accion','insert');
+
+				var latitud=$('#ss_latitud').val();
+				var longitud=$('#ss_longitud').val();
+
+				if(!GL_COMP_MAPA){
+					fun_comp_iniciar_mapa(latitud, longitud);
+				}else{
+					fun_comp_cambiar_place(latitud, longitud);
+				}
+			});
+		});
+	</script>
+
+      <style>
+      #pac-input{
+      	display: none;
+      }
+      .columna_zonas{
+      	
+        padding-left: 70px;
+    height: initial !important;
+      }
+
+
+	.columna_zonas .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="limpiar"]{		
+    	display: none;
+	}
+	.columna_zonas .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="cancelar"]{
+    	display: inline-block;
+	}
+
+
+      .columna_zonas .comp-gestion-elemento {
+      	display: none;
+      }
+      .contenido_zonas{
+			
+		    padding-top: 10px;
+		    font-size: 15px;
+    		color: #a7a7a7;
+      }
+
+
+      .comp-gestion-elemento .comp-ge-btns{
+        text-align:right;
+      }
+      
+      .contenido_zonas .mis_zonas .texto{
+
+    		font-size: 18px;
+    		padding: 10px 0px;
+    color: gray;
+      }
+			.contenido_zonas .lista_zonas .zona .div_nombre,
+			.contenido_zonas .lista_zonas .zona .btn_editar,
+			.contenido_zonas .lista_zonas .zona .btn_eliminar{				
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.contenido_zonas .lista_zonas .elemento{
+    			cursor: inherit;
+
+			}
+
+			.contenido_zonas .lista_zonas .zona{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-top: 1px solid #dcdcdc;
+
+			}
+
+			.contenido_zonas .lista_zonas .zona .div_nombre{
+
+			    width: calc(100% - 55px);
+			}
+			.contenido_zonas .lista_zonas .zona.inactivo .div_nombre{
+
+			    width: calc(100% - 20px);
+			}
+			.contenido_zonas .lista_zonas .zona .div_nombre .icono{
+				width: 25px;
+				height: 25px;
+				background-size: 100%;
+				background-position: center;
+				display: inline-block;
+				vertical-align: middle;	
+			}
+
+			.contenido_zonas .lista_zonas .zona .div_nombre .icono{
+				background-image: url(IMG/PERFILES/lugar.png);
+				
+			}
+			.contenido_zonas .lista_zonas .zona.inactivo .div_nombre .icono{
+				background-image: url(IMG/PERFILES/lugar_gray.png);
+				
+			}
+			.contenido_zonas .lista_zonas .zona .div_nombre .texto{
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 13px;
+			}
+			.contenido_zonas .lista_zonas .zona .btn_editar,
+			.contenido_zonas .lista_zonas .zona .btn_eliminar{	
+				background-size: 100%;
+				background-position: center;	
+				cursor: pointer;
+				opacity:0.6;
+			}
+			.contenido_zonas .lista_zonas .zona .btn_editar{			
+				width: 20px;
+				height: 20px;	
+				background-image: url(IMG/PERFILES/edit_gray.png);
+			}
+			.contenido_zonas .lista_zonas .zona .btn_eliminar{	
+		    width: 15px;
+		    height: 15px;
+    		margin-left: 8px;
+		    background-image: url(IMG/PERFILES/close_gray.png);	
+			}
+
+			.contenido_zonas .lista_zonas .zona .btn_editar:hover,
+			.contenido_zonas .lista_zonas .zona .btn_eliminar:hover{
+				opacity: 1;
+			}
+      </style>

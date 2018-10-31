@@ -1,0 +1,194 @@
+#div_nueva_instalacion{
+
+	max-width: 520px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+#div_nueva_instalacion .campo{			
+	text-align: center;
+	padding-top: 15px;
+}
+
+#ttl_nueva_instalacion,#ttl_modificar_instalacion{
+	font-size: 170%;
+	margin-bottom: 30px;
+}
+
+#ttl_modificar_instalacion{
+	display: none;
+}
+
+#nueva_instalacion-titulo{
+	width: 80%;
+}
+#nueva_instalacion-subtitulo{
+	width: 80%;
+}
+
+#nueva_instalacion-texto{
+	width: 80%;
+	height: 120px;
+}
+#nueva_instalacion-nombre_instalacion{
+	width: 80%;
+}
+#nueva_instalacion-url_instalacion{
+	width: 80%;
+}
+
+
+.div_subir_foto{	
+	height: 150px;
+}
+.div_subir_foto_reducido{			
+	height: 120px;
+	margin-top: -50px;
+}
+
+article {
+
+	position: initial;
+	margin-bottom: 40px;
+	margin-left: 0px;
+	box-shadow: 0px 1px 5px #939393;
+}
+
+
+
+#div_nueva_instalacion #btn_modificar_instalacion,#div_nueva_instalacion #btn_cancelar_modificar{
+	display:none;
+}
+
+#div_nueva_instalacion #btn_cancelar_modificar{
+	background: #f4f4f4 !important;
+	color:#666 !important;
+}
+#div_nueva_instalacion #btn_cancelar_modificar:hover{
+	background: #ddd !important;
+}
+
+.btn_eliminar{
+	float: right;
+}
+
+#content_instalaciones {
+	padding-top: 25px;
+	max-width: 800px;
+	position: relative;
+	margin: auto;
+padding-bottom: 50px;
+}
+
+
+
+
+
+
+ 
+
+#content_instalaciones .instalacion{
+background: white;
+z-index: 10;
+min-height: 370px;
+width: 90%;
+max-width: 700px;
+box-shadow: 0px 0px 15px #666;
+margin: auto;
+position: relative;
+margin-top: 20px;
+padding-bottom: 45px;
+}
+
+#content_instalaciones .instalacion #btn_cerrar{
+width: 19px;
+height: 20px;
+padding: 5px;
+cursor: pointer;
+background: rgb(137,173,78);
+position: absolute;
+right: 6px;
+top: 6px;
+}
+
+
+#content_instalaciones .instalacion .seccion_izq{
+  padding: 20px;
+  padding-right: 30px;
+  max-height: 290px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+#content_instalaciones .instalacion .seccion_izq .img_fondo{
+
+  width: 100%;
+    opacity: .8;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#content_instalaciones .instalacion .seccion_izq .img_logo{
+	opacity: 1;
+  position: absolute;
+  width: 26%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+   -moz-transform: translate3d(-50%,-50%,0);
+   -ms-transform: translate3d(-50%,-50%,0);
+   -o-transform: translate3d(-50%,-50%,0);
+   transform: translate3d(-50%,-50%,0); 
+}
+
+#content_instalaciones .instalacion  .info_nombre{
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#content_instalaciones .instalacion .info_desc{
+  text-align: center;
+  padding: 0px 20px 50px 20px;
+}
+
+#content_instalaciones .instalacion .seccion_der{
+
+padding: 35px;
+}
+
+
+#content_instalaciones .instalacion #titulo{
+font-size: 34px;
+font-weight: bold;
+line-height: 30px;
+      color: rgb(4,73,121);
+}
+
+
+#content_instalaciones .instalacion #subtitulo{
+font-size: 21px;
+color: rgb(137,173,78);
+}
+
+
+#content_instalaciones .instalacion #texto{
+font-size: 14px;
+margin-top: 20px;
+font-weight: bold;
+}
+
+
+#content_instalaciones .instalacion .inf{
+	position: absolute;
+width: 96%;
+bottom: 0px;
+padding: 8px 2% 8px 2%;
+}
+
+
+

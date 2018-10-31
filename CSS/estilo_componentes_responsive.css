@@ -1,0 +1,773 @@
+
+@media (max-width:950px){
+  #menu_pie .comp-menu-fijo.menu-superior .logo.der{
+
+    height: 35px;
+    margin-top: 16px;
+  }
+  #menu_pie .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion .comp-menu-celda-content{    
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .cuerpo_dashboard .comp-menu-fijo.menu-izquierda{
+
+    display: none; 
+    position: fixed;
+    background: white;
+    top: 82px;
+    height: calc(100vh - 82px);
+    overflow-x: hidden;
+  }
+
+  .cuerpo_dashboard .comp-menu-fijo.menu-izquierda.mostrado{
+    display: block; 
+  }
+  .cuerpo_dashboard .contenido_dashboard{  
+    width: 100%;
+  }
+
+  .cuerpo_dashboard .btn_menu_dashboard{
+    display: block;
+  }
+
+      #btn_cerrar_dashboard{
+        display: inline-table;
+      }
+      .columna_zonas {
+    padding-left: 0px;
+    width: 96%;
+    margin: auto;
+}
+}
+
+@media (max-width:900px){
+  #inicio #resultados-busqueda{    
+    width: calc(100% - 305px);
+  }
+#inicio #resultados-busqueda .lista_resultados .resultado .contenido .foto{
+      width: 60px;
+    height: 60px;
+}
+#inicio #resultados-busqueda-ranking .lista_resultados_ranking .foto{
+  width: 50px;
+  height: 50px;
+}
+#inicio #resultados-busqueda-ranking .lista_resultados_ranking .informacion{  
+    width: calc(100% - 50px);
+}
+#inicio #resultados-busqueda-ranking{
+  width: 300px;
+}
+#inicio #resultados-busqueda .lista_resultados .resultado{
+
+    padding: 10px;
+}
+#inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion{
+
+    width: calc(100% - 60px);
+    padding-left: 8px;
+}
+#inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .nombre .texto{
+
+    font-size: 16px;
+}
+
+.contenido_perfil .portada .foto{
+  -webkit-transform: translate3d(0px,10px,0px);
+  -moz-transform: translate3d(0px,10px,0px);
+  -ms-transform: translate3d(0px,10px,0px);
+  -o-transform: translate3d(0px,10px,0px);
+  transform: translate3d(0px,10px,0px);
+}
+.contenido_perfil .portada .btn_editar{
+  left: 150px;
+}
+.contenido_perfil .contenido_info{  
+  padding: 10px 30px 10px 30px;
+}
+
+.contenido_perfil .portada{  
+    padding: 0px 30px 0px 30px;
+}
+
+}
+@media (max-width:850px){
+  #menu_principal .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion{
+        padding-left: 4px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width:800px){
+
+  #pagina-biblioteca .resultados-biblioteca ul .titulo{
+
+    width: calc(46% - 5px);
+  }
+  #pagina-biblioteca .resultados-biblioteca ul .descargas{
+     display: none;
+  }
+  #pagina-biblioteca .resultados-biblioteca ul .usuario{
+
+    width: calc(25% - 5px);   
+  }
+  #pagina-biblioteca .resultados-biblioteca ul .valoracion{
+
+    width: calc(17% - 5px);
+    text-align: center;
+  }
+  #pagina-biblioteca .resultados-biblioteca ul .enlace{
+
+    width: calc(12% - 5px);
+    text-align: center;
+  }
+
+  #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .nombre{
+
+    width: calc(100% - 50px);
+  }
+  #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion{
+    width: 50px;
+  }
+ #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion .texto{
+    display: none;
+  }
+  
+  .columna_mensajes .comp-menu-fijo.menu-superior{
+    display: block;
+    padding-left: 0;
+    text-align: center;
+  }
+  .columna_mensajes .columna-pagina[data-columna="chat"] .area-der{
+    display: none;
+  }
+  .columna_mensajes .area-izq{    
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .columna_mensajes .rol-columnas, .columna_mensajes .columna-pagina{
+
+    height: calc(100% - 30px);
+  }
+
+.columna_mensajes .area-izq .conversacion{
+
+    height: calc(100% - 135px);
+}
+.columna_mensajes .area-izq .acciones{  
+    padding: 4px;
+    margin-top: 5px;
+}
+.columna_mensajes .area-izq .acciones .armar_propuesta{  
+    margin-bottom: 5px;
+}
+  .columna_mensajes .area-izq .acciones .nuevo_mensaje textarea{
+
+    height: 50px;
+  }
+  .columna_mensajes .area-izq .acciones .boton_invictos{
+        font-size: 12px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    padding-right: 20px;  
+  }
+  .columna_mensajes .area-izq .acciones .btns{    
+    height: 26px;
+  }
+  .columna_mensajes .area-der .titulo{
+    display: none;
+  }
+  .columna_mensajes .columna-pagina[data-columna="notificaciones"] .area-der{
+    display: block;
+    margin: auto;
+  }
+  .columna_mensajes .comp-menu-fijo.menu-superior .comp-menu-nav-izq{
+    float: initial;
+  }
+  #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion .btn_votar{
+    text-align: right;    
+  }
+}
+
+
+
+@media (max-width:750px){
+  #menu_principal .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion{
+        padding-left: 4px;
+    padding-right: 12px;
+  } 
+ #menu_pie .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion .comp-menu-celda-content{
+    padding-left: 8px;
+    padding-right: 8px;
+ }
+
+ #inicio #resultados-busqueda-ranking{
+  display: none;
+ }
+ #inicio #resultados-busqueda{
+  width: 100%;
+ }
+ #inicio #resultados-busqueda .descripcion{
+      font-size: 16px;
+ }
+ .contenido_perfil .contenido_info .inf .izq,
+ .contenido_perfil .contenido_info .inf .der{
+    width: 100%;
+ }
+ .contenido_perfil .contenido_info .inf .de{
+  margin-top: 20px;
+ }
+ .contenido_perfil .portada .info_portada .valoracion{  
+    position: absolute;
+    top: 10px;
+    right: 0;
+ }
+ .contenido_perfil .portada .info_portada .info{  
+    width: 100%;
+ }
+}
+
+@media (max-width:650px){
+#popup_registro{
+
+    width: 96%;
+    max-width: 500px;
+}
+.protector_fondo_popup #popup_registro .area_izquierda{
+  display: none;
+}
+.protector_fondo_popup #popup_registro .area_derecha{
+  width: 100%;
+}
+
+
+
+  #pagina-biblioteca .resultados-biblioteca ul .titulo{
+
+    width: calc(55% - 5px);
+  }
+  #pagina-biblioteca .resultados-biblioteca ul .usuario{
+
+    display: none;
+  }
+  #pagina-biblioteca .resultados-biblioteca ul .valoracion{
+
+    width: calc(25% - 5px);
+    text-align: center;
+  }
+  #pagina-biblioteca .resultados-biblioteca ul .enlace{
+
+    width: calc(20% - 5px);
+    text-align: center;
+  }
+
+.contenido_perfil .portada{
+    height: 100px;  
+}
+.contenido_perfil .portada .btn_editar{  
+    left: 0;
+}
+.contenido_perfil .portada .info_portada{
+    width: 100%;
+    padding: 0;
+}
+.contenido_perfil .portada .info_portada .valoracion{
+
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+.contenido_perfil .portada .info_portada .valoracion .texto{
+  display: none;
+}
+.contenido_perfil .portada .info_portada .info .nombre{  
+    color: gray;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.elementos_portada{
+  padding-top: 37px;
+}
+.contenido_perfil .portada .foto{  
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+.contenido_perfil .portada .info_portada .info .btns_sociales .btn.facebook{  
+    background-image: url(../IMG/PERFILES/facebook_gris.png);
+}
+.contenido_perfil .portada .info_portada .info .btns_sociales .btn.linkedin{  
+    background-image: url(../IMG/PERFILES/linkedin_gris.png);
+}
+.contenido_perfil .portada .info_portada .info .btns_sociales .btn.twitter{  
+    background-image: url(../IMG/PERFILES/twitter_gris.png);
+}
+.contenido_perfil .portada .foto .btn_editar{
+  display: none;
+}
+.contenido_perfil .contenido_info{  
+    padding-top: 125px;
+}
+.popup_edit_portada{
+  height: 135%;
+}
+
+    #container_estadisticas{      
+    width: 100%;
+    }
+
+    .contenido_perfil .portada .info_portada .info{
+
+    text-align: center;
+    }
+    .contenido_perfil .portada .info_portada .info .btns_sociales{
+      margin-left: 0;
+    }
+}
+@media (max-width:580px){
+  #menu_principal .comp-menu-fijo.menu-superior{    
+    height: 50px;
+  }
+  /*#menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion .comp-menu-submenu{    
+    height: 345px;
+  }*/
+  #menu_principal .comp-menu-fijo.menu-superior nav{    
+    margin-top: 5px;
+  }
+  #menu_principal .comp-menu-fijo.menu-superior .logo.izq {
+    height: 45px;
+    margin-top: 2px;
+    margin-left: 8px;
+  }
+#menu_pie .comp-menu-fijo.menu-superior .comp-menu-nav-izq{
+    width: 250px;
+    display: block;
+    float: initial;
+    height: 100px;
+}
+  #menu_pie a{
+    height:50%;
+  }
+  #menu_pie .comp-menu-fijo.menu-superior{
+    height: 150px;
+    padding-top: 5px;
+    box-sizing: border-box;
+  }
+  #menu_pie .comp-menu-fijo.menu-superior .comp-menu-nav-izq{
+    width: 344px;
+    display: block;
+    float: initial;
+    height: 100px;
+    margin: auto;
+  }
+ #menu_pie .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion .comp-menu-celda-content{
+    padding-left: 25px;
+    padding-right: 25px;
+ }
+  #menu_pie .comp-menu-fijo.menu-superior .logo.der{
+    float: initial;
+    margin: auto;
+    display: block;
+    width: 35px;
+    padding: 0;
+  }
+  #menu_pie .comp-menu-fijo.menu-superior .logo.der{
+    background-image: url(../IMG/PIE_PAGINA/isotipo_oscuro.png);
+    background-size: cover;
+  }
+  #menu_pie .comp-menu-fijo.menu-superior .logo img{
+    display: none;
+  }
+
+
+  #pagina-nosotros,
+  #pagina-biblioteca,
+  #inicio #resultados-busqueda{
+    padding-top: 80px;
+
+  }
+  #barra_de_busqueda{
+    height: 100%;
+    -webkit-transform: translate3d(0px,-50%,0px);
+    -moz-transform: translate3d(0px,-50%,0px);
+    -ms-transform: translate3d(0px,-50%,0px);
+    -o-transform: translate3d(0px,-50%,0px);
+    transform: translate3d(0px,-50%,0px);
+    top: 50%;
+  }
+  #barra_buscador{   
+    max-width: 350px;
+    width: 94%;
+    margin-top: 90px;
+  }
+
+  #inicio.busqueda #barra_buscador .volver_busqueda{
+    display: block;
+  }
+  #barra_buscador .div_content_input{    
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  #barra_buscador .boton_busqueda{    
+    width: 100%;
+    text-align: center;
+    margin-left: 0px;
+  }
+  #barra_de_busqueda #botones_extra{
+
+    position: absolute;
+    bottom: 30px;
+    width: 300px;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,0px,0px);
+    -moz-transform: translate3d(-50%,0px,0px);
+    -ms-transform: translate3d(-50%,0px,0px);
+    -o-transform: translate3d(-50%,0px,0px);
+    transform: translate3d(-50%,0px,0px);
+  }
+
+  #inicio.busqueda #barra_de_busqueda{
+
+  }
+  #inicio.busqueda #barra_buscador{
+    margin-top: 0;
+    max-width: initial;
+  }
+  #inicio.busqueda #barra_buscador .inputs{
+    width: 100%;
+  }
+
+  #inicio.busqueda #barra_buscador .div_content_input{
+    width: calc(50% - 5px);
+  }
+
+
+  #dashboard_profesor{    
+    padding-top: 57px;
+  }
+  .cuerpo_dashboard .comp-menu-fijo.menu-izquierda{    
+    top: 52px;
+    height: calc(100vh - 52px);
+  }
+
+  .columna_editar_perfil .comp-gestion-elemento .comp-ge-bloque{
+    width: 100% !important;
+  }
+  .columna_editar_perfil .comp-gestion-elemento .comp-ge-btns{
+    text-align: center;
+  }
+
+  #perfil_profesor{    
+    padding-top: 50px;
+  }
+  .contenido_perfil .contenido_info .sup .izq{
+    width: 100%;
+  }
+  .contenido_perfil .contenido_info .sup .der{
+    display: none;
+  }
+  .contenido_perfil .contenido_info .sup .izq .enlace_mapa,
+  .contenido_perfil.profesor .contenido_info .sup .izq .tiempo_ranking,
+  .contenido_perfil.profesor .contenido_info .sup .izq .ranking{
+    display: block;
+  }
+}
+
+@media(max-width: 540px){
+  #menu_principal.logeado #btn_menu_inicio,
+  #menu_principal.logeado #btn_menu_biblio{
+    display: none;
+  }  
+  #menu_principal #btn_submenu_inicio,
+  #menu_principal #btn_submenu_biblio{
+    display: block;
+  }  
+  #menu_principal .comp-menu-fijo.menu-superior .comp-menu-opcion .comp-menu-submenu{    
+    height: 307px;
+  }
+
+
+  #pagina-biblioteca{    
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #pagina-biblioteca .resultados-biblioteca .descripcion{    
+    font-size: 16px;
+  }
+  #pagina-biblioteca .resultados-biblioteca ul li{   
+    font-size: 12px;
+  }
+
+  #resultados-busqueda .descripcion .txt_aux{
+    display: none;
+  }
+  .popup_edit_portada .comp-gestion-elemento{
+    width: 90%;
+  }
+}
+
+@media(max-width: 500px){
+  .columna_conocimientos .content {
+      width: calc(100% - 55px);
+      margin: initial;
+  }
+  .columna_conocimientos .lista_conocimientos .elemento .btn_editar{
+
+    right: -25px;
+  }
+  .columna_conocimientos .lista_conocimientos .elemento .btn_eliminar{
+   right: -50px; 
+  }
+  .columna_conocimientos .btn_mostrar_agregar{
+    padding: 7px;}
+    .columna_conocimientos .btn_mostrar_agregar .txt {
+    font-size: 14px;
+}
+.contenido_perfil .portada .foto{
+      width: 80px;
+    height: 80px;
+}
+.contenido_perfil .contenido_info {
+    padding-top: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.columna_mensajes .area-izq .acciones .armar_propuesta .bloque{
+  width:  100% !important;
+}
+
+.columna_mensajes .area-izq .acciones .armar_propuesta .input.caja{
+  text-align: left;
+}
+
+#popup_mapa .leyenda_mapa{  
+    width: 110px;
+}
+#popup_mapa .text_complementario{
+  display: none;
+}
+
+.columna_historial #resultados_historial .resultado .content{
+  width: 100%;
+}
+.columna_historial #resultados_historial .valoracion_clase{
+
+    display: block;
+    margin: auto;
+}
+.columna_historial #resultados_historial .valoracion_clase .boton_invictos{
+
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+}
+
+@media(max-width: 450px){
+  .columna_historial .comp-menu-fijo.menu-superior{
+    padding-left: 0px;
+  }
+  .columna_historial .lista_resultados .resultado{    
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .columna_historial .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion .comp-menu-celda {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .columna_historial .columna-pagina[data-columna="mis_alumnos"] .lista_resultados .resultado .content{    
+    width: calc(100% - 35px);
+  }
+  .columna_historial .lista_resultados .valoracion_clase .voto{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .columna-pagina[data-columna="mis_alumnos"] .valoracion_clase{    
+    text-align: left;
+    margin-top: 7px;
+  }
+  .columna_historial .lista_resultados .valoracion_clase .voto .icono{    
+    width: 25px;
+    height: 25px;
+  }
+  .columna-pagina[data-columna="mis_alumnos"] .btn_ver_msj{
+    display: block;
+    margin-left: 0px;
+    text-align: left;
+  }
+  .columna_estadisticas .sup .izq{
+    display: block;
+    margin: auto;
+    width: initial;
+    max-width: 250px;
+  }
+  .columna_estadisticas .sup .der{    
+    display: block;
+    margin: auto;
+    width: initial;
+    text-align: center;
+    margin-top: 8px;
+    max-width: 250px;
+  }
+}
+@media(max-width: 410px){
+/*
+  #menu_principal.logeado #btn_menu_notificaciones{
+    display: none;
+  }  
+  #menu_principal #btn_submenu_notificaciones{
+    display: block;
+  }  */
+
+  #menu_principal #buscador_profesores{
+    width: 142px;
+  }
+
+ #menu_principal .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion.buscador_activo{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding-left: 0;
+    padding-right: 0;
+ }
+ #menu_principal .buscador_activo #buscador_profesores{
+    margin: auto;
+    width: calc(100% - 43px);
+    display: inline-block;
+ }
+
+  #menu_principal .buscador_activo #cerrar_buscador_profesores{
+
+    display: inline-block;
+  }
+  .popup_busqueda_profesores{  
+    height: calc(100vh - 60px);
+  }
+
+
+  #menu_pie .comp-menu-fijo.menu-superior .comp-menu-nav-izq{
+    width: 265px;
+  }
+
+ #menu_pie .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion .comp-menu-celda-content{
+    padding-left: 12px;
+    padding-right: 12px;
+ }
+ 
+ #inicio #resultados-busqueda .lista_resultados .resultado .contenido .foto {
+    width: 40px;
+    height: 40px;
+}
+#inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion{
+
+    width: calc(100% - 40px);
+}
+
+.propuesta_economica .titulo_propuesta .estado_propuesta{  
+    width: calc(100% - 126px);
+}
+.propuesta_economica .titulo_propuesta .ttl{
+
+    font-size: 12px;
+}
+#popup_mapa .leyenda_mapa{
+
+    right: 3px;
+}
+#popup_mapa .leyenda_mapa .titulo{
+  text-align: right;
+}
+#popup_mapa .leyenda_mapa{
+  width: 95px;
+}
+#popup_mapa .pop_profesor{
+  left: 3px;
+}
+#popup_recomendacion .inf .box_profesor{
+  width: 100%;
+}
+}
+
+@media (max-width: 350px){
+
+#popup_mapa .leyenda_mapa{
+display: none;
+}
+}
+
+
+@media (max-height: 620px){
+  .protector_fondo_popup[data-id_popup="login"]{
+    overflow-x: hidden;
+  }
+  #popup_registro{
+    height: 620px;
+    position: relative;
+    top: initial;
+    margin-bottom: 30px;
+    -webkit-transform: translate3d(-50%,30px,0px);
+    -moz-transform: translate3d(-50%,30px,0px);
+    -ms-transform: translate3d(-50%,30px,0px);
+    -o-transform: translate3d(-50%,30px,0px);
+    transform: translate3d(-50%,30px,0px);
+  }
+}
+
+
+@media (max-height: 600px){
+  .columna_mensajes {
+      height: initial !important;
+
+  }
+  .columna_mensajes .area-izq .conversacion{
+
+  height: 300px !important;
+  }
+
+
+}
+
+
+@media (max-height: 500px){
+
+  #popup_mapa{    
+    height: 100%;
+  }
+  #popup_mapa .descripcion{    
+    font-size: 14px;
+    height: 50px;
+  }
+  #popup_mapa .contenedor_mapa{    
+    height: calc(100% - 50px);
+  }
+
+  #popup_mapa_usuario{    
+    height: 100%;
+  }
+  #popup_mapa_usuario .descripcion{    
+    font-size: 14px;
+    height: 50px;
+  }
+  #popup_mapa_usuario .contenedor_mapa{    
+    height: calc(100% - 50px);
+  }
+}
+
+@media (max-height: 400px){
+  .protector_fondo_popup[data-id_popup="mapa"]{
+    overflow-x: hidden;
+  }
+
+}

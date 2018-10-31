@@ -1,0 +1,210 @@
+#pagina-biblioteca {
+        padding-top: 130px;
+        height: initial !important;
+        overflow: hidden;
+        min-height: 100vh;
+        padding-bottom: 50px;
+    height: initial;
+      }
+      #pagina-biblioteca .comp-consultor-recarga{    
+        background: #949494;
+        color: white;
+        cursor: pointer;
+        border-radius:20px;
+        border: 1px solid #ff5757;
+        display: inline-block;
+        max-width: 300px;
+        padding: 5px 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+      margin-top: 20px;
+        font-size:18px;
+        font-family: OpenSansLight !important;
+      }
+
+      #pagina-biblioteca .comp-consultor-recarga:hover{
+        background:#6f6f6f;
+
+      }
+          
+          #pagina-biblioteca .resultados-biblioteca{
+                margin-top: 25px;
+          }
+          #pagina-biblioteca .resultados-biblioteca .descripcion{
+            color: #8e8e8e;
+            padding-bottom: 10px;
+            text-align: left;
+            padding-left: 10px;
+            max-width: 900px;
+            margin: auto;
+            padding-right: 20px;
+            box-sizing: border-box;
+            font-size: 18px;
+          }
+
+          #pagina-biblioteca .resultados-biblioteca ul{
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+
+          }
+          #pagina-biblioteca .resultados-biblioteca ul li{                 
+
+            display: inline-block;
+            vertical-align: middle;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+            color: #8e8e8e;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+          #pagina-biblioteca .resultados-biblioteca ul .titulo{
+
+            width: calc(40% - 5px);
+          }
+          #pagina-biblioteca .resultados-biblioteca .cabecera .titulo{
+            padding-left: 0px;
+          }
+          #pagina-biblioteca .resultados-biblioteca ul .descargas{
+
+            width: calc(18% - 5px);
+          }
+          #pagina-biblioteca .resultados-biblioteca ul .usuario{
+
+            width: calc(19% - 5px);   
+          }
+          #pagina-biblioteca .resultados-biblioteca ul .valoracion{
+
+            width: calc(12% - 5px);
+            text-align: center;
+          }
+          #pagina-biblioteca .resultados-biblioteca ul .enlace{
+
+            width: calc(10% - 5px);
+            text-align: center;
+          }
+
+
+          #pagina-biblioteca .resultados-biblioteca .resultado{
+          
+            position: relative;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            cursor:inherit;
+          }
+          #pagina-biblioteca .resultados-biblioteca .resultado:before{
+            height: 1px;
+            position: absolute;
+            content:' ';
+            width: 97%;
+            top: 0px;
+            left: 50%;
+            -webkit-transform: translate3d(-50%,0px,0px);
+            -moz-transform: translate3d(-50%,0px,0px);
+            -ms-transform: translate3d(-50%,0px,0px);
+            -o-transform: translate3d(-50%,0px,0px);
+            transform: translate3d(-50%,0px,0px);
+            background:#d4d4d4; 
+          }
+
+
+          #pagina-biblioteca .resultados-biblioteca .resultado  span{
+
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          #pagina-biblioteca .resultados-biblioteca .resultado .titulo span{
+
+            display: block;
+          }
+
+          #pagina-biblioteca .resultados-biblioteca .resultado .titulo .icono{
+            width: 25px;
+            height: 25px;
+            background-image: url(../IMG/VARIOS/doc.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            float: left;
+          }
+
+          #pagina-biblioteca .resultados-biblioteca .resultado .valoracion .icono{
+            width: 20px;
+            height: 20px;
+            background-image: url(../IMG/valoracion.png);
+    background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          #pagina-biblioteca .resultados-biblioteca .resultado .valoracion .icono.activo{
+            background-image: url(../IMG/valoracion_activo.png);
+          
+          }
+          #pagina-biblioteca .resultados-biblioteca .resultado .enlace .icono{
+            width: 25px;
+            height: 25px;
+            background-image: url(../IMG/VARIOS/descarga.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+          }
+
+
+
+              #pagina-biblioteca{
+                text-align: center;
+              }
+
+              #pagina-biblioteca header{
+                text-align: center;
+              }
+              #pagina-biblioteca header h1{                            
+                font-size: 30px;
+                color: #4e4e4e;
+                margin-bottom: 10px;
+              }
+              #pagina-biblioteca header h2{
+                color: #999;
+                font-size: 19px;
+                margin-bottom: 25px;
+              }
+              #buscador-biblioteca .inputs{
+                display: inline-block;
+                margin-bottom: 10px;
+                
+              }
+              #buscador-biblioteca input[type="text"]{
+                border: 1px solid #d2d2d2;
+                outline: none;
+                padding: 9px 15px;
+                border-radius: 30px;
+                font-size: 12px;
+              }
+
+              #buscador-biblioteca input.input-materia{
+                width:250px;
+              }
+              #buscador-biblioteca input.input-autor{
+                width:180px;                
+              }
+              #buscador-biblioteca .boton_busqueda{
+                display: inline-block;
+                padding: 7px 55px 8px 55px;
+                font-size: 14px;
+                margin-left: 3px;
+              }
+
+
+                #pagina-biblioteca .resultados-biblioteca .btn_votar_recurso{
+
+    display: inline-block;
+    cursor: pointer;
+              }

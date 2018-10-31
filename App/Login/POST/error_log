@@ -1,0 +1,4 @@
+[28-Nov-2016 12:09:37 America/Chicago] PHP Warning:  require_once(../../CONEXION/Conexion.php): failed to open stream: No such file or directory in /home1/manuelf27/public_html/App/Login/POST/logear.php on line 10
+[28-Nov-2016 12:09:37 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '../../CONEXION/Conexion.php' (include_path='.:/opt/php56/lib/php') in /home1/manuelf27/public_html/App/Login/POST/logear.php on line 10
+[28-Nov-2016 12:11:15 America/Chicago] PHP Warning:  require_once(../COMPONENTES/CONEXION/Conexion.php): failed to open stream: No such file or directory in /home1/manuelf27/public_html/App/Login/POST/logear.php on line 10
+[28-Nov-2016 12:11:15 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '../COMPONENTES/CONEXION/Conexion.php' (include_path='.:/opt/php56/lib/php') in /home1/manuelf27/public_html/App/Login/POST/logear.php on line 10

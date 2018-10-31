@@ -1,0 +1,42 @@
+#div_nuevo_contacto{
+
+	max-width: 520px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+#div_nuevo_contacto .campo{			
+	text-align: center;
+	padding-top: 15px;
+}
+
+#ttl_nuevo_contacto{
+	font-size: 170%;
+	margin-bottom: 30px;
+}
+
+#div_nuevo_contacto .campo input[type="text"]{			
+	width: 90%;
+}
+
+
+
+#msg_datos_contacto_guardados{
+	max-width: 530px;
+  text-align: center;
+  margin: auto;
+  margin-top: 60px;
+  font-size: 180%;
+  padding: 15px;
+  background: #D0F4FF;
+  color: #666;
+  overflow: hidden;
+  height: 35px;
+}
+
+#msg_datos_contacto_guardados.sin_mostrar{
+	margin-top: 0px;
+	height: 0px;
+	opacity: 0;
+}
+

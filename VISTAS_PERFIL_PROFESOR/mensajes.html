@@ -1,0 +1,810 @@
+<!--
+PROPUESTA ECONOMICA ESTADO
+0 Sin propuesta o cancelada
+
+1 PROPUESTA EN ESPERA
+2 REPLANTEAR PROPUESTA
+3 PROPUESTA APROBADA
+
+-->
+
+  
+      <section id="" class="columna_mensajes" data-area="mensajes"> 
+
+
+            <div class="comp-menu-fijo comp-animacion-ini trans_bezier_05" data-fraccion_altura="1.1" data-posicionlogo="der"  data-resizable="false" data-tipo="menu-superior" data-animaciondelay="0.5" data-srclogo=""  data-msrclogo="" data-dim_msrc="750" data-menufijo="no">
+
+	              <opcion area="chat" texto="Chat" rol="mensajes" columna="chat">  
+	              </opcion>
+	              <opcion area="notificaciones" texto='<div class="titulo titulo_cont_msj" data-num="0">Mensajes (0)</div>'  rol="mensajes"  columna="notificaciones">
+	              </opcion>
+
+            </div>
+
+
+            <div class="rol-columnas trans_bezier_1" data-rol="mensajes">
+
+              <div class="columna-pagina none oculto" data-columna="chat">
+
+
+		         <div class="area-izq inline vertical-t">
+		         	<div class="titulo"><span></span></div>
+					<div class="conversacion cancela-body-mousewheel" data-id_usuario="" data-nombres="" data-foto="" data-conteo="0">
+					</div>
+					<div class="propuesta_economica" data-estado="0">
+						<div class="titulo_propuesta">
+							<span class="ttl">Detalle de clases</span>
+							</div>
+						<div class="contenido txt-centro" style="display: inline-block; margin-bottom: 10px; margin-left: 10%;">
+							<div class="bloque inline vertical-m">
+								<span>Fecha</span>
+								<div class="valor" id="fecha"><input type="hidden" class="valor"><span>10/06/2016</span></div>
+							</div>
+							<div class="bloque inline vertical-m">
+								<span>Hora (referencial)</span>
+								<div class="valor" id="hora"><input type="hidden" class="valor"><span>4:00 pm</span></div>
+							</div>
+						</div>
+						<div id="btns_profesor" class="btns txt-centro" style="display: inline-block; padding-bottom: 0px; margin-bottom: 10px; margin-top: 0px;">							
+							<div class="boton_invictos inline" id="replantear_propuesta">Editar clase</div>		
+							<div class="boton_invictos gris inline" id="cancelar_propuesta">Cancelar clase</div>
+							<div class="titulo_propuesta" style="display: inline-block; padding-left: 4px;">
+							<span class="estado_propuesta" style="display: inline-block; width: 130px;"><span class="txt">Propuesta en espera</span> <span class="circulo"></span></span></div>
+						</div>
+						<div id="btns_alumno" class="btns txt-centro" style="display: inline-block; padding-bottom: 0px; margin-bottom: 10px; margin-top: 0px;">						
+							<div class="boton_invictos inline" id="confirmar_propuesta">Confirmar</div>
+							<div class="boton_invictos gris inline" id="rechazar_propuesta">Rechazar</div>
+							<div class="titulo_propuesta" style="display: inline-block;">
+							<span class="estado_propuesta" style="display: inline-block; width: 130px;"><span class="txt">Propuesta en espera</span> <span class="circulo"></span></span></div>
+						</div>
+						<div class="msj_auxiliar">
+							Respuesta enviada
+						</div>
+					</div>
+					<style>
+						.propuesta_economica{									
+						    border: 1px solid #ccc;
+						    border-radius: 10px;
+							overflow:hidden;
+						    display: none;
+						    margin-top: 10px;
+						}
+						.propuesta_economica.minimizado{
+							height: 45px;
+						}
+						.propuesta_economica .titulo_propuesta{
+						    padding: 10px 15px;
+						    cursor: pointer;    
+						}
+						.propuesta_economica .titulo_propuesta:hover{
+							background: #f1f1f1;
+						}
+						.propuesta_economica .titulo_propuesta .ttl{					
+		   					color: gray;
+						}
+						.propuesta_economica .titulo_propuesta .estado_propuesta{
+						    width: calc(100% - 170px);
+						    display: inline-block;
+						    text-align: right;
+						    font-size: 12px;
+						}				
+						.propuesta_economica[data-estado="1"] .titulo_propuesta .estado_propuesta{
+						    color: #ffb300;
+						}
+						.propuesta_economica[data-estado="2"] .titulo_propuesta .estado_propuesta{
+						    color: rgb(245, 57, 57);
+						}
+						.propuesta_economica[data-estado="3"] .titulo_propuesta .estado_propuesta{
+						    color: #4CAF50;
+						}
+						.propuesta_economica .titulo_propuesta .estado_propuesta .circulo{							
+						    width: 10px;
+						    height: 10px;
+						    display: inline-block;
+						    border-radius: 10px;
+						    vertical-align: middle;
+						}
+						.propuesta_economica[data-estado="1"] .titulo_propuesta .estado_propuesta .circulo{
+						    background: #ffb300;
+						}
+						.propuesta_economica[data-estado="2"] .titulo_propuesta .estado_propuesta .circulo{
+						    background: rgb(245, 57, 57);
+						}
+						.propuesta_economica[data-estado="3"] .titulo_propuesta .estado_propuesta .circulo{
+						    background: #4CAF50;
+						}
+						.propuesta_economica .contenido{
+						   	font-size: 13px;
+						    margin-top: 15px;
+						    color: gray;
+		    				padding: 0px 5px;
+						}
+						.propuesta_economica .contenido .bloque{
+						    margin-left: 5px;
+						    margin-right: 5px;
+						    text-align: center;
+						    border: 1px solid #ccc;
+						    border-radius: 5px;
+						}
+						.propuesta_economica .contenido .bloque span:first-child{
+						    padding: 5px;
+						    display: inline-block;
+						}
+						.propuesta_economica .contenido .bloque .valor{
+						    border-top: 1px solid #ccc;
+						    padding: 5px 10px;
+						}
+						.propuesta_economica .btns{
+		    				margin-top: 15px;
+		    				padding-bottom: 10px;
+						}
+						.propuesta_economica[data-estado="2"] #btns_alumno,
+						.propuesta_economica[data-estado="3"] #btns_alumno{
+							display: none;
+						}
+						.propuesta_economica[data-estado="3"] #replantear_propuesta{
+							display: none;
+						}
+						.propuesta_economica .msj_auxiliar
+						{
+							display: none;
+						    margin-top: 15px;
+						    padding: 8px;
+						    text-align: center;
+						    font-size: 13px;
+						}
+						.propuesta_economica[data-estado="2"] .msj_auxiliar,
+						.propuesta_economica[data-estado="3"] .msj_auxiliar{
+							display: block;
+						}
+						.propuesta_economica #cancelar_propuesta{
+							min-width: 120px;
+						}
+						.propuesta_economica #replantear_propuesta{
+							min-width: 120px;
+						}
+					</style>
+					<div class="acciones ">
+						<div class="content">
+							<div class="armar_propuesta">								
+								<div class="bloque inline vertical-m" style="margin-left: 30%;">
+									<span>Fecha</span>
+									<div class="input">
+										<input type="text" id="fecha_propuesta" value="">
+									</div>
+								</div>
+								<div class="bloque inline vertical-m">
+									<span>Hora (referencial)</span>
+									<div class="input caja txt-centro">
+										<input type="text" class="txt-der" id="hora_propuesta" value="5">:<input type="text" id="minutos_propuesta" value="00" class="txt-izq">
+										<!--<select id="meridiano_propuesta">
+											<option value="am">am</option>
+											<option value="pm" selected>pm</option>
+										</select>-->
+									</div>
+								</div>
+							</div>
+							<div class="mensaje_alerta">
+								
+							</div>
+							<div class="nuevo_mensaje">
+								<textarea placeholder="Escribir mensaje"></textarea>
+							</div>
+							<div class="btns">
+								<div class="generar_propuesta boton_invictos gris inline">Proponer clase</div>
+								<div class="btn_enviar boton_invictos f-right">Enviar</div>
+							</div>
+						</div>
+					</div>
+
+		         </div>
+
+
+
+
+		         <div class="area-der inline vertical-m recomendaciones">
+		         	<div class="titulo titulo_cont_msj" data-num="0">Mensajes (0)</div>
+		         	<div class="lista lista_mensajes cancela-body-mousewheel">         		
+		         	</div>
+
+					<?php 
+						if($_SESSION['tipo']=='A'){
+					?>
+		         	<div class="recomendaciones">
+		         		<div class="titulo_rec" data-num="0">Recomendaciones (0)</div>
+			         	<div class="lista lista_recomendaciones cancela-body-mousewheel">
+			         	</div>
+			         	<div class="flecha ant inactivo"></div>
+			         	<div class="flecha sig inactivo"></div>
+		         	</div>
+		         	<?php } ?>
+		         	
+		         </div>
+
+              </div>
+
+              <div class="columna-pagina none oculto" data-columna="notificaciones">
+
+
+		         <div class="area-der inline vertical-m recomendaciones">
+		         	<div class="titulo titulo_cont_msj" data-num="0">Mensajes (0)</div>
+		         	<div class="lista lista_mensajes cancela-body-mousewheel">         		
+		         	</div>
+
+					<?php 
+						if($_SESSION['tipo']=='A'){
+					?>
+		         	<div class="recomendaciones">
+		         		<div class="titulo_rec" data-num="0">Recomendaciones (0)</div>
+			         	<div class="lista lista_recomendaciones cancela-body-mousewheel">
+			         	</div>
+			         	<div class="flecha ant inactivo"></div>
+			         	<div class="flecha sig inactivo"></div>
+		         	</div>
+		         	<?php } ?>
+		         	
+		         </div>
+
+              </div>
+
+          </div>
+      </section>
+
+
+      <style>
+
+
+	      .columna_mensajes{
+    		height: calc(100vh - 100px) !important;      
+			padding-top: 5px;
+    		overflow: initial !important;
+	      }
+
+	      .columna_mensajes .rol-columnas,
+	      .columna_mensajes .columna-pagina{
+			height: 100%;
+	      }
+
+      .columna_mensajes .comp-menu-fijo.menu-superior{
+    background: transparent;
+    color: gray;
+    height: 40px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    padding-left: 15px;
+    display: none;
+      }
+
+      .columna_mensajes .comp-menu-fijo.menu-superior .menu-principal .comp-menu-celda-content:after{
+        position: absolute;
+        height: 2px;
+        width: 0px;
+        background: rgb(255,87,87);
+        bottom: 0px;
+        left:0px;
+        content: ' ';
+        -webkit-transition: all .4s cubic-bezier(0,0,0.25,1);
+        -moz-transition: all .4s cubic-bezier(0,0,0.25,1);
+        -ms-transition: all .4s cubic-bezier(0,0,0.25,1);
+        -o-transition: all .4s cubic-bezier(0,0,0.25,1);
+        transition: all .4s cubic-bezier(0,0,0.25,1);
+      }
+    
+      .columna_mensajes .comp-menu-fijo.menu-superior .menu-principal .comp-menu-celda-content:hover:after{
+        width: 100%;
+      }
+      .columna_mensajes .comp-menu-fijo.menu-superior .menu-principal .comp-menu-celda-content.activo:after{
+        width: 100%;
+      }
+      .columna_mensajes .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion .comp-menu-celda{   
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .columna_mensajes .comp-menu-fijo.menu-superior .menu-principal .comp-menu-celda-content:hover .comp-menu-celda{
+      }
+
+      .columna_mensajes .comp-menu-fijo.menu-superior .menu-principal .comp-menu-celda-content.activo .comp-menu-celda{
+        font-weight: bold;
+
+      }
+
+
+
+
+
+	      .columna_mensajes .area-izq{
+					width: calc(100% - 285px);
+					padding-right: 30px;
+					padding-left: 20px;
+    height: 100%;
+	      }
+	      .columna_mensajes .area-der{
+					width: 280px;
+					height: 100%;
+	      }	
+	      .columna_mensajes .area-der .titulo{
+			    font-size: 18px;
+			    margin-bottom: 13px;
+			    color: gray;
+	      }
+	      .columna_mensajes .area-der .lista{
+	    		overflow-x: hidden;
+	      }
+	      .columna_mensajes .area-der .lista_mensajes{
+	    		height: calc(100% - 45px); 
+
+	      }
+
+	      .columna_mensajes .area-der.recomendaciones .lista_mensajes{			
+	    		height: calc(100% - 165px); 
+	      }
+
+				.columna_mensajes .area-der .lista_mensajes::-webkit-scrollbar-track
+				{
+				  border: 4px solid white;
+				  background-color: transparent;
+				}
+
+				.columna_mensajes .area-der .lista_mensajes::-webkit-scrollbar
+				{
+				  width: 10px;
+				  background-color: transparent;
+				}
+
+				.columna_mensajes .area-der .lista_mensajes::-webkit-scrollbar-thumb
+				{
+				  width: 20px;
+				  border-radius: 20px;
+				  background-color:  #b5b5b5; 
+				}
+
+
+	        .columna_mensajes .area-der .lista .resultado{					            	
+				    padding-left: 5px;
+				    padding-right: 5px;
+				    cursor: pointer;
+	        }
+	        .columna_mensajes .area-der .lista .resultado:hover{
+    			background: #f4f4f4;
+	        }
+	        .columna_mensajes .area-der .lista .resultado.sin-leer{		
+				font-weight: bold;
+    			background: #f1f1f1;
+
+	        }
+	        .columna_mensajes .area-der .lista .resultado .content{
+	    	    width: 100%;
+						display: inline-block;
+						vertical-align: middle;
+	        }						
+					.columna_mensajes .area-der .lista .resultado .info_inf{
+						font-size: 12px;	
+					}
+	        .columna_mensajes .area-der .lista .foto{
+	          width: 55px;
+	          height: 55px;
+	          background: url(IMG/USUARIOS/WEB/profesor_default.png);
+	          background-position: center;
+	          background-repeat: no-repeat;
+	          background-color: gainsboro;
+	          background-size: 100%;
+	          border: 1px solid #c7c7c7;
+	          border-radius: 10px;
+	          display: inline-block;
+	          vertical-align: middle;
+	        }
+	        .columna_mensajes .area-der .lista .informacion{
+	          display: inline-block;
+	          vertical-align: middle;
+	          width: calc(100% - 80px);
+	          height: 60px;
+	          -webkit-box-sizing: border-box;
+	          -moz-box-sizing: border-box;
+	          -ms-box-sizing: border-box;
+	          -o-box-sizing: border-box;
+	          box-sizing: border-box;
+	          padding-left: 5px;
+	          text-align: left;
+	        }
+	          .columna_mensajes .area-der .lista .info_sup{
+					    color: gray;
+					    margin-bottom: 3px;
+					    margin-top: 1px;
+					    font-size: 15px;
+	          } 
+	           .columna_mensajes .area-der .conocimientos{
+
+                font-size: 12px;
+                color: gray;
+              }
+              .columna_mensajes .area-der .conocimientos .conocimiento{
+
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+              }
+              .columna_mensajes .area-der .conocimientos .conocimiento.match{
+                color: #7db6ff;
+              }
+              .columna_mensajes .area-der .valoracion{
+				margin-top: -3px;
+              }
+
+              .columna_mensajes .area-der .valoracion .btn_votar{                 
+                  cursor: pointer;
+              }
+
+              .columna_mensajes .area-der .valoracion .icono{
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                background: url(IMG/valoracion.png);
+                vertical-align: middle;
+                background-size: cover;
+                background-position: center;
+              }
+
+              .columna_mensajes .area-der .valoracion .btn_votar.activo .icono {
+                background-image: url(IMG/valoracion_activo.png);
+              }
+              .columna_mensajes .area-der .valoracion .numero{
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13px;
+                color: gray;
+              }
+
+
+	          .columna_mensajes .area-der .lista .nombre .texto{
+	            display: inline-block;
+	            border-bottom: 1px solid gray;
+	          }
+	          .columna_mensajes .area-der .lista .conocimientos{
+	            font-size: 12px;
+	            color: gray;
+	          }
+
+
+	          .columna_mensajes .area-der .cargar_mas{
+	            padding: 10px;
+	            text-align: center;
+	            cursor: pointer;
+	          }
+	          .columna_mensajes .area-der .cargar_mas:hover{
+	            background: #f1f1f1;
+	          }
+
+	          .columna_mensajes .area-der .no_hay_mas{
+	            padding: 10px;
+	            text-align: center;
+	            cursor: default;
+	          }
+			
+			.columna_mensajes .area-der .recomendaciones{
+				display: none;
+				height: 125px;
+			}
+			.columna_mensajes .area-der.recomendaciones .recomendaciones{
+				display: block;
+			}
+
+
+         
+        .columna_mensajes .area-izq .acciones .armar_propuesta #hora_propuesta,
+        .columna_mensajes .area-izq .acciones .armar_propuesta #minutos_propuesta{
+					
+		    border: none;
+		    width: 16px;
+		    outline: none;
+         }
+        .columna_mensajes .area-izq .acciones .armar_propuesta #meridiano_propuesta{
+        	width: 41px;
+		    border: none;
+		    outline: none;
+        }
+
+        .columna_mensajes .armar_propuesta #precio_total{        	
+		    height: 18px;
+		    display: block;
+        }
+        
+
+
+
+	        .columna_mensajes .lista_recomendaciones {
+    margin-top: 10px;
+    height: calc(100% - 10px);
+
+	        }
+	        .columna_mensajes .lista_recomendaciones .resultado{
+				display: none;
+	        }
+
+	
+	        .columna_mensajes .lista_recomendaciones .resultado .remitente{
+				
+    font-size: 13px;
+			}
+      .recomendaciones{
+      	position: relative;
+      }
+      .recomendaciones .flecha{
+		position: absolute;
+		cursor: pointer;
+		width: 20px;
+		height: 30px;
+		bottom: 20px;
+      	background-image: url('IMG/flecha.png');
+      	opacity: 0.6;
+      }
+      .recomendaciones .flecha:hover{
+		opacity: 0.8;
+      }
+      .recomendaciones .flecha.inactivo{
+		opacity: 0.4;
+		pointer-events: none;
+      }
+      .recomendaciones .flecha.ant{
+      	left: -20px;
+      	-webkit-transform: rotate(180deg);
+      	-ms-transform: rotate(180deg);
+      	-o-transform: rotate(180deg);
+      	-moz-transform: rotate(180deg);
+      	transform: rotate(180deg);
+      }
+      .recomendaciones .flecha.sig{
+      	right: -20px;
+      }
+
+         
+
+         
+        .columna_mensajes .area-izq .acciones .armar_propuesta .bloque>span{
+
+    color: gray;
+    font-size: 12px;
+         }
+        .columna_mensajes .area-izq .acciones .armar_propuesta .input,
+        .columna_mensajes .area-izq .acciones .armar_propuesta input,
+        .columna_mensajes .area-izq .acciones .armar_propuesta select{
+
+    color: gray;
+    font-size: 13px;
+    color: gray;
+         }
+
+        .columna_mensajes .area-izq .acciones .armar_propuesta .bloque{
+        	width: calc(20% - 5px);
+        }
+         
+        .columna_mensajes .area-izq .acciones .armar_propuesta .bloque:nth-child(1){
+        	width: calc(17% - 5px);
+        }
+         
+        .columna_mensajes .area-izq .acciones .armar_propuesta .bloque:nth-child(4){
+        	width: calc(21% - 5px);
+        }
+        .columna_mensajes .area-izq .acciones .armar_propuesta .bloque:nth-child(5){
+        	width: calc(22% - 5px);
+        }
+         
+        .columna_mensajes .area-izq .acciones .armar_propuesta #tiempo{
+
+    border-radius: 5px;
+    padding: 2px 1px;
+    width: 100%;
+
+         }
+
+        .columna_mensajes .area-izq .acciones .armar_propuesta #precio{	
+    width: calc(100% - 20px);
+    border: 0;
+    outline: none;
+    padding: 0;
+        }
+				
+        .columna_mensajes .area-izq .acciones .armar_propuesta .input.caja{
+
+				    border: 1px solid darkgrey;
+				    padding: 3px  4px;
+				    border-radius: 5px;
+				    font-size: 13px;
+				}
+        .columna_mensajes .area-izq .acciones .armar_propuesta .input.caja.alerta{
+			border-color:red;
+        }
+        .columna_mensajes .area-izq .acciones .mensaje_alerta{
+			padding: 5px;
+		    text-align: center;
+		    color: red;
+		    display: none;
+		    font-size: 12px;
+		    padding-top: 0;
+        }
+        .columna_mensajes .area-izq .acciones .armar_propuesta #fecha_propuesta{
+
+    width: 100%;
+    padding: 3px  4px;
+    border-radius: 5px;
+    border: 1px solid darkgrey;
+        }
+	      .columna_mensajes .area-izq .acciones{
+
+			    padding: 10px;
+			    border: 1px solid #ccc;
+			    border-radius: 8px;
+			    margin-top: 10px;
+	      }
+	      .columna_mensajes .area-izq .acciones .armar_propuesta{
+				display: none;
+    margin-bottom: 13px;
+	      }
+	      .columna_mensajes .area-izq .acciones.propuesta .armar_propuesta{
+				display: block;
+	      }
+	      .columna_mensajes .area-izq .acciones.propuesta .nuevo_mensaje{
+				display: none;
+	      }
+	      .columna_mensajes .area-izq .acciones .nuevo_mensaje{
+
+	      }
+	      .columna_mensajes .area-izq .acciones .nuevo_mensaje textarea{
+					outline: none;
+					border: 0;
+					resize: none;
+					width: 100%;
+					padding: 0;
+					font-size: 12px;
+					color: gray;
+					height: 60px;
+
+	      }
+
+	      .columna_mensajes .area-izq .acciones .btns{
+
+    height: 35px;
+	      }
+	      .columna_mensajes .area-izq .acciones .boton_invictos{
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+	      }
+	      .columna_mensajes .area-izq .acciones .
+	      _propuesta.oculto{
+			display: none;
+	      }
+	      .columna_mensajes .area-izq .acciones .btn_enviar{
+
+    padding-left: 45px;
+    padding-right: 45px;
+	      }
+	      .columna_mensajes .area-izq .titulo{
+			    font-size: 18px;
+			    color: gray;
+			    margin-bottom: 15px;
+	      }
+	      .columna_mensajes .area-izq .titulo span{
+					border-bottom: 1px solid gray;
+				}	
+	      .columna_mensajes .area-izq .conversacion{
+			    height: calc(100% - 180px);
+			    border: 1px solid #ccc;
+			    border-radius: 8px;
+			    overflow-x: hidden;
+			    padding-bottom: 20px;
+	      }
+	      .columna_mensajes .area-izq .conversacion.reducir{
+			    height: calc(100% - 340px);
+
+	      }
+	      .columna_mensajes .area-izq .conversacion.semireducir{
+			    height: calc(100% - 225px);
+
+	      }
+
+				.columna_mensajes .area-izq .conversacion::-webkit-scrollbar-track
+				{
+				  border: 4px solid white;
+				  background-color: transparent;
+				}
+
+				.columna_mensajes .area-izq .conversacion::-webkit-scrollbar
+				{
+				  width: 10px;
+				  background-color: transparent;
+				}
+
+				.columna_mensajes .area-izq .conversacion::-webkit-scrollbar-thumb
+				{
+				  width: 20px;
+				  border-radius: 20px;
+				  background-color:  #b5b5b5; 
+				}
+	          .columna_mensajes .conversacion .cargar_mas{
+	            padding: 10px;
+	            text-align: center;
+	            cursor: pointer;
+	          }
+	          .columna_mensajes .conversacion .cargar_mas:hover{
+	            background: #f1f1f1;
+	          }
+
+	          .columna_mensajes .conversacion .no_hay_mas{
+	            padding: 10px;
+	            text-align: center;
+	            cursor: default;
+	          }
+
+
+	      .columna_mensajes .area-izq .mensaje{
+
+   				padding: 15px 15px 0px 15px;
+	      }
+	      .columna_mensajes .area-izq .mensaje .cab{
+					height: 50px;
+	      }
+ 
+	      .columna_mensajes .area-izq .mensaje .cab .info_user {
+	      	width: 100%;
+	      }
+	      .columna_mensajes .area-izq .mensaje.yo .cab .info_user {
+	      	text-align: right;
+	      }
+	      .columna_mensajes .area-izq .mensaje .cab .nombre {
+
+			    margin-left: 5px;	
+			    font-size: 14px;
+    width: calc(100% - 160px);
+	      }
+
+	      .columna_mensajes .area-izq .mensaje.yo .cab .nombre {
+					margin-left: initial;
+					margin-right: 5px;
+	      }
+	      .columna_mensajes .area-izq .mensaje .cab .foto{
+					border-radius: 40px;
+					height: 40px;
+					width:40px;					
+          background: url(IMG/USUARIOS/WEB/profesor_default.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: gainsboro;
+          background-size: 100%;
+          border: 1px solid #c7c7c7;
+	      }
+	      .columna_mensajes .area-izq .mensaje .cab .f-d{
+					display: none;
+	      }
+	      .columna_mensajes .area-izq .mensaje.yo .cab .f-i{
+					display: none;
+	      }
+	      .columna_mensajes .area-izq .mensaje.yo .cab .f-d{
+					display: inline-block;
+	      }
+
+	      .columna_mensajes .area-izq .mensaje .cab .fecha_hora{
+
+			    font-size: 11px;
+			    float: right;
+			    padding-top: 16px;
+	      }
+	      .columna_mensajes .area-izq .mensaje.yo .cab .fecha_hora{
+	      	float: left;
+	      	}
+	      /*mensaje.yo*/
+	      .columna_mensajes .area-izq .mensaje .txt_msj {
+					font-size: 13px;
+    width: calc(100% - 90px);
+
+    color: gray;
+	      }
+	      .columna_mensajes .area-izq .mensaje.yo .txt_msj 
+	      {
+				margin-left: auto;
+				text-align: right;
+	      }
+         </style>
+
+
+
+  <script type="text/javascript" src="JS/funciones_mensajes.js"></script> 

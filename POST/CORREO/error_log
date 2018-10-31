@@ -1,0 +1,11 @@
+[13-Jun-2017 14:08:54 America/Chicago] PHP Parse error:  syntax error, unexpected 'i' (T_STRING), expecting ';' in /home1/manuelf27/public_html/POST/CORREO/correo_general.php on line 16
+[13-Jun-2017 14:10:31 America/Chicago] PHP Parse error:  syntax error, unexpected 'i' (T_STRING), expecting ';' in /home1/manuelf27/public_html/POST/CORREO/correo_general.php on line 16
+[13-Jun-2017 14:11:34 America/Chicago] PHP Parse error:  syntax error, unexpected 'i' (T_STRING), expecting ';' in /home1/manuelf27/public_html/POST/CORREO/correo_general.php on line 16
+[13-Jun-2017 14:14:19 America/Chicago] PHP Parse error:  syntax error, unexpected 'i' (T_STRING), expecting ';' in /home1/manuelf27/public_html/POST/CORREO/correo_general.php on line 16
+[13-Jun-2017 14:14:21 America/Chicago] PHP Parse error:  syntax error, unexpected 'i' (T_STRING), expecting ';' in /home1/manuelf27/public_html/POST/CORREO/correo_general.php on line 16
+[13-Jun-2017 14:14:22 America/Chicago] PHP Parse error:  syntax error, unexpected 'i' (T_STRING), expecting ';' in /home1/manuelf27/public_html/POST/CORREO/correo_general.php on line 16
+[13-Jun-2017 14:14:35 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home1/manuelf27/public_html/DAO/CORREO/DAOCorreo.php on line 14
+[13-Jun-2017 14:17:08 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home1/manuelf27/public_html/DAO/CORREO/DAOCorreo.php on line 14
+[13-Jun-2017 14:18:47 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home1/manuelf27/public_html/DAO/CORREO/DAOCorreo.php on line 14
+[13-Jun-2017 14:18:50 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home1/manuelf27/public_html/DAO/CORREO/DAOCorreo.php on line 14
+[13-Jun-2017 14:19:36 America/Chicago] PHP Fatal error:  Class 'DAOCorreo' not found in /home1/manuelf27/public_html/POST/CORREO/correo_general.php on line 7

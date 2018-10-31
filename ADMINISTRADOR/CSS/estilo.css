@@ -1,0 +1,544 @@
+body{
+	font-family: 'Abel';
+}
+
+#barra_sup #menu_principal .content_menu {
+
+width: 527px;
+}
+
+
+
+
+
+
+	.contenido_menu .campo span{			
+		display: none;
+		color: red;
+	}
+
+	.contenido_menu .campo_aviso input,.contenido_menu .campo_aviso textarea{
+		border: 1px solid red;		
+	} 
+	.contenido_menu .campo_aviso span{
+		display: block;	
+	} 
+
+
+.ttl_content{
+	max-width: 530px;
+	text-align: center;
+	margin: auto;
+	margin-top: 60px;
+	font-size: 180%;
+	padding: 15px;
+	background: #eee;
+	color: #666;
+}
+
+
+	.pie_pagina_senalado{		
+		height: 520px !important;
+	}
+
+#pie_pagina input[type="text"]{
+
+	padding: 7px;
+}
+
+#pie_pagina img{
+	float: left;
+	width: 39px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px #4F4F4F;
+}
+
+.pie_pagina_normal .text_enlace{
+		
+	width: 450px !important;
+}
+
+
+.btn_modificar{
+}
+
+
+.btn_eliminar{
+	float:right;
+}
+
+
+
+
+
+
+
+
+input[type="text"],input[type="password"]{
+		
+	border-radius: 20px;
+	border: 1px solid rgb(196, 196, 196);
+	border: 1px solid rgba(196, 196, 196, 0.49);
+	padding:10px 10px 10px 10px;
+	outline: none;
+	box-shadow: 1px 2px 4px #B9B9B9 inset;
+	font-size: 15px;
+	font-family:inherit;
+
+}
+
+input[type="button"]{
+	
+	background: rgb(255,87,87);
+	background: -webkit-gradient(linear, 0% 0%, 0% 53%, from(rgb(255,87,87)), to(rgb(255,87,87)), color-stop(1,rgb(255,87,87)));
+	background:-moz-linear-gradient(19% 87% 90deg,rgb(255,87,87), rgb(255,87,87), rgb(255,87,87) 100%);
+	box-shadow: 0px 1px 5px #888;
+	color: white;
+	font-weight: bold;
+	padding: 5px 7px 7px 7px;
+	border-radius:5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 120%;
+	font-family:inherit;
+}
+
+input[type="button"]:hover{
+			
+	background: rgb(255,87,87);
+	transform:translate(0px,1px);
+}
+
+
+textarea{
+	font-size: 120%;
+	outline: none;
+	resize: none;
+	border-radius: 20px;
+	border: 1px solid #EBEBEB;
+	padding: 10px;
+	box-shadow:1px 2px 6px #C0C0C0 inset;
+	font-family:inherit;
+}
+
+.contenido_menu{
+	display:none;
+}
+.contenido_select{
+	display:block !important;
+}
+
+
+.btn_subir_img{
+	width: 150px;
+	height: 150px;
+	border: dashed #aaa;
+	margin: auto;
+	cursor: pointer;
+}
+	.btn_subir_img:hover{
+		background: #eee;
+	}
+
+	.btn_subir_img .text{
+		padding-top: 35px;
+		font-size: 180%;
+		color: #aaa;
+
+	}
+
+	.btn_subir_img_minimizado{
+		transform: scale(0.5);
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-o-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+	}
+
+
+
+.loading40{
+	width:48px;
+	height:48px;
+	display: none;
+	background:url('../IMG/cargando2.gif');
+}
+
+
+
+
+
+
+.menu_sup{
+	background: rgb(255,87,87);
+}
+
+.menu_sup .logo {
+	  display: inline-table;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+	.menu_sup .logo img{
+
+		    height: 55px;
+    margin-top: 10px;
+	}
+
+.opciones{
+
+	  display: inline-table;
+}
+.opciones .opcion{
+  display: inline-table;
+  padding: 20px;
+  color: white;
+}
+.opciones .opcion:hover{
+	background: rgba(255,255,255, 0.4);
+	cursor: pointer;
+}
+.oculto{
+  display: none;
+}
+
+.menu_sup .div_cerrar_sesion{
+	   padding: 15px;
+  top: 0;
+  position: absolute;
+  color: white;
+  right: 0;
+}
+.menu_sup .div_cerrar_sesion:hover{
+	background: rgba(255,255,255, 0.4);
+	cursor: pointer;
+}
+
+
+body.responsive .opciones .opcion {
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+      .comp-gestion-elemento .comp-ge-campo input[type="text"],
+      .comp-gestion-elemento .comp-ge-campo input[type="password"] ,
+      .comp-gestion-elemento .comp-ge-campo textarea{ 
+           background-color: #f8f8f8 !important;
+      }
+
+      .comp-gestion-elemento .comp-ge-campo .lista-select {
+		background-color: #f8f8f8 !important;
+      }
+
+      .comp-gestion-elemento .comp-ge-campo select{ 
+           
+        background-color: transparent;
+      }
+      .comp-gestion-elemento .comp-ge-campo .div-input-checkbox {
+		background-color: #f8f8f8 !important;
+      }
+      .comp-gestion-elemento .comp-ge-campo .radio-campo {
+		background-color: #f8f8f8 !important;
+      }
+
+      
+
+      #contenido-instalaciones-principal .comp-gestion-elemento .comp-ge-campo_input{  
+        border: 0px;
+        background-color: transparent;
+      }
+
+      #contenido-instalaciones-principal .comp-gestion-elemento .comp-ge-campo_input:hover{  
+        background-color: transparent;
+      }
+      #contenido-instalaciones-principal .comp-gestion-elemento .comp-ge-campo_input.focus-input{
+        background-color: transparent;
+        box-shadow: 0px 0px 5px #002182;
+      }
+
+
+
+#content_instalaciones{
+
+    width: 970px;
+    margin: auto;
+    padding: 10px;
+}
+
+#content_instalaciones .comp-consultor-elemento .elemento{
+
+    padding: 10px;
+    box-shadow: 0px 1px 1px #aaa;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#content_instalaciones .comp-consultor-elemento .elemento:hover{
+	padding-left: 15px;
+    background: rgba(251, 117, 117, 0.3);
+}
+
+.div_filtro{
+
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+#div_nueva_instalacion{
+
+    max-width: 500px;
+    padding: 40px 20px 0px 20px;
+    margin: auto;
+}
+#num_usuarios_activos
+{
+	font-size: 60px;
+}
+
+#cuerpo .comp-gestion-elemento .comp-ge-campo_input{
+	border: 0px;
+}
+
+#cuerpo .comp-gestion-elemento .comp-ge-campo:hover{
+	background: transparent;
+}
+#cuerpo .comp-gestion-elemento .comp-ge-campo_input.focus-input{
+	box-shadow: 0px 0px 4px #aaa;
+}
+
+
+.comp-gestion-elemento[data-elemento="info_empresa"]{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 34px;
+}
+
+.comp-gestion-elemento[data-elemento="terminos"] .comp-ge-campo textarea{	
+    height: 300px;
+}
+
+.comp-gestion-elemento[data-elemento="terminos"]{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 34px;
+}
+
+.comp-gestion-elemento[data-elemento="titulo"] .comp-ge-campo textarea{	
+    height: 80px;
+}
+
+.comp-gestion-elemento[data-elemento="titulo"]{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 34px;
+}
+
+.comp-gestion-elemento[data-elemento="mensaje"] .comp-ge-campo textarea{	
+    height: 160px;
+}
+
+.comp-gestion-elemento[data-elemento="mensaje"]{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 34px;
+}
+
+
+.comp-gestion-elemento[data-elemento="contacto"]{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 34px;
+}
+
+
+
+
+
+
+
+.content_elementos{
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+.content_elementos .comp-consultor-elemento .elemento{
+
+    padding: 15px;
+    box-shadow: 0px 1px 1px #aaa;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.content_elementos .comp-consultor-elemento .elemento:hover{
+	padding-left: 25px;
+
+}
+
+
+
+#div_editar_usuario,
+#div_editar_problema{
+    max-width: 500px;
+    padding-top: 30px;
+    margin: auto;
+}
+
+#contenido-usuarios_activos-principal .elemento{
+	font-size: 13px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#contenido-usuarios_activos-principal .elemento[data-situacion="-1"]{
+	border-left: red 4px solid;
+}
+#contenido-usuarios_activos-principal .elemento[data-situacion="0"]{
+	border-left: #f9e300 4px solid;
+
+}
+#contenido-usuarios_activos-principal .elemento[data-situacion="1"]{
+	border-left: green 4px solid;
+}
+
+#contenido-usuarios_activos-principal .elemento .div_nombre{
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+#contenido-usuarios_activos-principal .elemento .div_fecha,
+#contenido-usuarios_activos-principal .elemento .div_comision,
+#contenido-usuarios_activos-principal .elemento .div_situacion{
+	padding-left: 10px;
+	
+}
+
+#contenido-usuarios_activos-principal .elemento[data-situacion="-1"] .div_situacion{
+	color: red;
+}
+#contenido-usuarios_activos-principal .elemento[data-situacion="0"] .div_situacion{
+	color: #ecd100;
+
+}
+#contenido-usuarios_activos-principal .elemento[data-situacion="1"] .div_situacion{
+	color: green;
+}
+#contenido-usuarios_activos-principal .div_foto{
+
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    background-color: #ccc;
+    background-position: center;
+    border-radius: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+#contenido-problemas_clases-principal .elemento{
+	font-size: 13px;
+}
+
+#contenido-problemas_clases-principal .elemento .ttl{
+	font-size: 18px;
+    color: brown;
+    padding-bottom: 10px;
+}
+
+#contenido-problemas_clases-principal .elemento .div_nombre{
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+#contenido-problemas_clases-principal .elemento .div_info{
+	padding-left: 10px;	
+}
+
+#contenido-problemas_clases-principal .div_foto_alumno, 
+#contenido-problemas_clases-principal .div_foto_profesor{
+	background-size: cover;
+	width: 80px;
+	height: 80px;
+	background-color: #ccc;
+	background-position: center;
+	border-radius: 40px;
+    float: left;
+    margin-right: 10px;
+}
+
+#contenido-problemas_clases-principal .elemento .datos_profesor{
+    border-top: 1px solid #ccc;
+    background: #f5f5f5;
+    padding: 15px;
+}
+#contenido-problemas_clases-principal .div_foto_profesor{	
+	width: 50px;
+	height: 50px;
+}
+#contenido-problemas_clases-principal .elemento .datos_profesor .div_nombre{
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+
+#contenido-problemas_clases-principal .elemento .datos_profesor .ttl{
+    font-size: 15px;
+}
+
+#contenido-problemas_clases-principal .elemento .div_problema{
+
+    padding: 10px;
+    border-left: 1px solid red;
+    margin-bottom: 10px;
+}
+
+
+#contenido-problemas_clases-principal .elemento .div_problema .ttl{
+	font-size: 15px;
+	color: red;
+    padding-bottom: 1px;
+}
+#contenido-problemas_clases-principal .elemento .div_problema span{
+	font-style: italic;
+	padding-left: 10px;
+	display: block;
+	}
+
+
+	.numero_usuarios{
+		padding: 20px 10px 3px 10px;
+		font-size: 18px;
+		text-align: center;
+	}

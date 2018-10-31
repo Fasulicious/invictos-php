@@ -1,0 +1,564 @@
+<div class="protector_fondo_popup no-cerrar-click" data-id_popup="confirmar_clases">
+  <div id="popup_confirmar_clases" class="comp-popup trans_bezier_05">
+    <div class="mensaje_exito">
+      
+      <div class="contenedor-tabla">
+        <div class="contenedor-celda">
+          <div class="checkon inline vertical-m"></div>
+          <div class="texto inline vertical-m">Reporte enviado con &eacute;xito</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="reporte">
+      <input type="hidden" value="" id="indice">
+      <div class="titulo txt-centro">
+      <?php
+        if($_SESSION['tipo']=='P'){
+          echo 'Confirmar clases';
+        }else{
+          echo 'Calificar clases';
+        }
+      ?>        
+      </div>      
+      <div class="foto trans_bezier_05"></div>
+      <div class="nombre">
+        Dante Vidal Tueros
+      </div>
+      <div class="fecha">
+        24 de Octubre - 2:30 pm
+      </div>
+
+      <div class="btns">
+        <div class="boton aprobar inline vertical-m" <?php if($_SESSION['P']){echo 'title="Confirmar clase"';}else{echo 'title="Buena clase"';}?>></div>
+        <div class="boton rechazar inline vertical-m" <?php if($_SESSION['P']){echo 'title="No hubo clase"';}else{echo 'title="Mala clase"';}?>></div>
+      </div>
+      <div class="criterios txt-centro">
+        <div class="txt">
+          Elija m&aacute;ximo 2 criterios
+        </div>
+
+        <div class="criterio inline vertical-m" data-id="1" data-ttl_positivo="Entusiasmo al ense&ntilde;ar" data-ttl_negativo="Sin entusiasmo al ense&ntilde;ar" data-orden="0"></div>
+        <div class="criterio inline vertical-m" data-id="2" data-ttl_positivo="Dominio del tema" data-ttl_negativo="Sin dominio del tema" data-orden="0"></div>
+        <div class="criterio inline vertical-m" data-id="3" data-ttl_positivo="Motiva a aprender" data-ttl_negativo="Sin motivaci&oacute;n" data-orden="0"></div>
+        <div class="criterio inline vertical-m" data-id="4" data-ttl_positivo="Amabilidad" data-ttl_negativo="Mal trato" data-orden="0"></div>
+        <div class="criterio inline vertical-m" data-id="5" data-ttl_positivo="Puntualidad" data-ttl_negativo="Impuntualidad" data-orden="0"></div>
+      </div>
+      <div class="seccion_ayuda">        
+        <div class="txt">
+          Elija el problema
+        </div>
+        <div class="problema" data-id="1">El profesor no lleg&oacute; a la clase</div>
+        <div class="problema" data-id="2">Problema de acoso</div>
+        <div class="problema" data-id="3">El profesor hizo otra cosa</div>
+        <div class="problema" data-id="4">Me olvid&eacute; una pertenecia</div>
+        <div class="problema" data-id="5">Otro problema</div>
+        <div class="mensaje">
+          <textarea id="" placeholder="Mensaje extra (opcional)"></textarea>
+        </div>
+      </div>
+      <div class="botones_inf txt-centro">
+        <div class="volver oculto inline boton_invictos">Volver</div>    
+        <div class="sgt inline boton_invictos">Siguiente</div>      
+      </div>
+      <?php 
+        if($_SESSION['tipo']=='A'){
+      ?>
+      <div class="txt-centro">
+          
+        <div class="help_resuelto">Tu problema fue resuelto. Por favor califica la clase que qued&oacute; pendiente.</div>  
+        <div class="botones_help">          
+          <div class="help">Necesito ayuda</div>   
+          <div class="help_volver">&lt;&lt; Volver a calificaci&oacute;n</div>
+        </div>
+      </div>      
+      <?php
+        }
+      ?>
+    </div>
+    
+  </div>
+</div>
+
+<script>
+
+  $(document).ready(function(){
+    $('body').on('click','#popup_confirmar_clases .btns .boton',function(){
+
+      $(this).siblings().removeClass('activo');
+      $(this).addClass('activo');
+
+      var indice=$('.protector_fondo_popup[data-id_popup="confirmar_clases"] #indice').val();
+
+
+      if($('#ss_tipo').val()=='A'){
+
+        if($(this).hasClass('aprobar')){
+          GL_CLASES_CONFIRMAR[indice].calificacion=1;
+        }else{
+          GL_CLASES_CONFIRMAR[indice].calificacion=-1;
+        }
+
+        $('#popup_confirmar_clases .costo_hora').slideUp(300);
+        $('#popup_confirmar_clases .tiempo').slideUp(300);        
+        $('#popup_confirmar_clases .costo_total').slideUp(300);
+
+        if(GL_CLASES_CONFIRMAR[indice].calificacion==1){
+
+          $('#popup_confirmar_clases .criterio').each(function(){
+            $(this).html($(this).data('ttl_positivo'));
+          });
+        }else{
+
+          $('#popup_confirmar_clases .criterio').each(function(){
+            $(this).html($(this).data('ttl_negativo'));
+          });
+        }
+
+        $('#popup_confirmar_clases .criterios').slideDown(300);
+
+      }else{
+
+
+        if($(this).hasClass('aprobar')){
+          GL_CLASES_CONFIRMAR[indice].confirmado=1;
+        }else{
+          GL_CLASES_CONFIRMAR[indice].confirmado=0;
+        }
+
+        $('#popup_confirmar_clases .sgt').removeClass('inactivo');
+      }
+
+
+    });
+
+    $('body').on('click','#popup_confirmar_clases .volver',function(){      
+      var indice=$('.protector_fondo_popup[data-id_popup="confirmar_clases"] #indice').val();
+      fun_llenar_popup_clase_confirmar(indice-1);
+    });
+
+    $('body').on('click','#popup_confirmar_clases .sgt',function(){
+      if(!$(this).hasClass('terminar')){
+
+        var indice=parseInt($('.protector_fondo_popup[data-id_popup="confirmar_clases"] #indice').val());
+        fun_llenar_popup_clase_confirmar(indice+1);
+
+      }
+    });
+
+    $('body').on('click','#popup_confirmar_clases .terminar',function(){
+
+      var reporte=new Array();
+      var reclamos=new Array();
+      if($('#ss_tipo').val()=='A'){
+
+      cont_reclamos=0;
+      cont_reportes=0;
+
+        for(var ind in GL_CLASES_CONFIRMAR){
+          if(GL_CLASES_CONFIRMAR[ind].problema){
+            reporte[cont_reportes]={cod_profesor:GL_CLASES_CONFIRMAR[ind].cod_profesor, cod_alumno:GL_CLASES_CONFIRMAR[ind].cod_alumno, fecha:GL_CLASES_CONFIRMAR[ind].fecha, hora: GL_CLASES_CONFIRMAR[ind].hora, mensaje:GL_CLASES_CONFIRMAR[ind].mensaje,problema:GL_CLASES_CONFIRMAR[ind].problema, criterios:null, calificacion:0};
+            cont_reportes++;
+          }else{
+            reporte[cont_reportes]={cod_profesor:GL_CLASES_CONFIRMAR[ind].cod_profesor,cod_alumno:GL_CLASES_CONFIRMAR[ind].cod_alumno, fecha:GL_CLASES_CONFIRMAR[ind].fecha, hora: GL_CLASES_CONFIRMAR[ind].hora, calificacion:GL_CLASES_CONFIRMAR[ind].calificacion, criterios:GL_CLASES_CONFIRMAR[ind].criterios, problema:0, mensaje:''};
+            cont_reportes++;
+          }
+        }
+
+      }else{
+
+        for(var ind in GL_CLASES_CONFIRMAR){
+          reporte[ind]={cod_profesor:GL_CLASES_CONFIRMAR[ind].profesor,cod_alumno:GL_CLASES_CONFIRMAR[ind].alumno, confirmacion:GL_CLASES_CONFIRMAR[ind].confirmado};
+        }
+
+      }
+
+        fun_enviar_confirmaciones(reporte);
+
+    });
+
+
+    $('#popup_confirmar_clases .criterio').click(function(){
+      if($(this).hasClass('activo')){
+        $(this).removeClass('activo');
+        $(this).attr('data-orden','0');
+        $('#popup_confirmar_clases .criterio.activo').attr('data-orden',1);
+      }else{
+        switch($('#popup_confirmar_clases .criterio.activo').length){
+          case 0:
+            $(this).attr('data-orden',1);
+            $(this).addClass('activo');
+          break;
+          case 1:
+            $(this).attr('data-orden',2);
+            $(this).addClass('activo');
+          break;
+          case 2:
+            $('#popup_confirmar_clases .criterio[data-orden="1"]').removeClass('activo');
+            $('#popup_confirmar_clases .criterio[data-orden="1"]').attr('data-orden',0);
+            $('#popup_confirmar_clases .criterio.activo').attr('data-orden',1);
+            $(this).addClass('activo');
+          break;
+        }
+      }
+
+      var indice=$('.protector_fondo_popup[data-id_popup="confirmar_clases"] #indice').val();
+
+      GL_CLASES_CONFIRMAR[indice].criterios=new Array();
+      $('#popup_confirmar_clases .criterio.activo').each(function(){
+        GL_CLASES_CONFIRMAR[indice].criterios.push($(this).data('id'));
+      });
+
+      if($('#popup_confirmar_clases .criterio.activo').length==0){
+        $('#popup_confirmar_clases .sgt').addClass('inactivo');
+      }else{
+        $('#popup_confirmar_clases .sgt').removeClass('inactivo');
+      }
+    });
+
+    $('#popup_confirmar_clases .help').click(function(){
+      $(this).slideUp(300);
+
+      var indice=$('.protector_fondo_popup[data-id_popup="confirmar_clases"] #indice').val();
+      $('#popup_confirmar_clases .criterios').slideUp(300);
+      $('#popup_confirmar_clases .btns').slideUp(300);
+      $('#popup_confirmar_clases .data_extra').slideUp(300);
+
+      $('#popup_confirmar_clases .foto').addClass('reducido');
+
+      $('#popup_confirmar_clases .seccion_ayuda').slideDown(300);
+      $('#popup_confirmar_clases .help_volver').slideDown(300);
+
+      if($('#popup_confirmar_clases .problema.activo').length==0){
+        $('#popup_confirmar_clases .sgt').addClass('inactivo');
+      }else{
+        $('#popup_confirmar_clases .sgt').removeClass('inactivo');        
+        GL_CLASES_CONFIRMAR[indice].problema=$('#popup_confirmar_clases .problema.activo').data('id');
+      }
+
+      GL_CLASES_CONFIRMAR[indice].criterios=new Array();
+
+    });
+
+    $('#popup_confirmar_clases .help_volver').click(function(){
+      $(this).slideUp(300);
+
+      var indice=$('.protector_fondo_popup[data-id_popup="confirmar_clases"] #indice').val();
+
+      if($('#popup_confirmar_clases .btns .boton.activo').length){        
+        $('#popup_confirmar_clases .criterios').slideDown(300);
+      }else{
+        $('#popup_confirmar_clases .criterios').slideUp(300);        
+      }
+
+      $('#popup_confirmar_clases .data_extra').slideDown(300);
+      $('#popup_confirmar_clases .btns').slideDown(300);
+      $('#popup_confirmar_clases .foto').removeClass('reducido');
+
+      $('#popup_confirmar_clases .seccion_ayuda').slideUp(300);
+      $('#popup_confirmar_clases .help').slideDown(300);
+
+      if($('#popup_confirmar_clases .criterio.activo').length==0){
+        $('#popup_confirmar_clases .sgt').addClass('inactivo');
+      }else{
+        $('#popup_confirmar_clases .sgt').removeClass('inactivo');
+
+        $('#popup_confirmar_clases .criterio.activo').each(function(){
+          GL_CLASES_CONFIRMAR[indice].criterios.push($(this).data('id'));
+        });
+      }
+      GL_CLASES_CONFIRMAR[indice].problema=0;
+
+    });
+
+
+    $('#popup_confirmar_clases .problema').click(function(){
+
+      var indice=$('.protector_fondo_popup[data-id_popup="confirmar_clases"] #indice').val();
+
+      if($(this).hasClass('activo')){
+        $(this).removeClass('activo');
+        $('#popup_confirmar_clases .sgt').addClass('inactivo');
+        GL_CLASES_CONFIRMAR[indice].problema=0;
+      }else{          
+        $(this).siblings().removeClass('activo');
+        $(this).addClass('activo');
+        $('#popup_confirmar_clases .sgt').removeClass('inactivo');
+        GL_CLASES_CONFIRMAR[indice].problema=$(this).data('id');
+
+      }
+
+    });  
+
+    $('#popup_confirmar_clases .seccion_ayuda textarea').keyup(function(){
+
+      var indice=$('.protector_fondo_popup[data-id_popup="confirmar_clases"] #indice').val();
+      GL_CLASES_CONFIRMAR[indice].mensaje=$(this).val();
+    });
+
+  });
+
+
+  function fun_enviar_confirmaciones(reporte){
+
+    if($('#ss_tipo').val()=='P'){
+      dir='POST/CLASES/profesor_confirmar_clases.php';
+    }else{
+      dir='POST/CLASES/alumno_calificar_clases.php';
+    }
+    $.ajax({
+      url:dir,
+      data:{reporte:reporte},
+      type:'POST',
+      datatype:'json',
+      async:true,
+      beforeSend: function(obj){
+      },
+      success: function(data){
+        console.log(data);
+
+        data=$.parseJSON(data);
+        if(data.error){
+          FMSG_ERROR_CONEXION();
+        }else{
+
+          var altura = parseInt($('#popup_confirmar_clases').css('height').replace('px',''));
+
+          $('#popup_confirmar_clases').css('height',altura+'px');
+          $('#popup_confirmar_clases .reporte').fadeOut(300);
+          
+
+          var delay=setInterval(function(){
+            clearInterval(delay);
+            $('#popup_confirmar_clases .mensaje_exito').fadeIn(300);
+            $('#popup_confirmar_clases').addClass('exito');
+
+            var delay2=setInterval(function(){
+              clearInterval(delay2);
+              $('.protector_fondo_popup[data-id_popup="confirmar_clases"]').fadeOut(300);
+            },1000);
+
+          },250);
+
+        }
+      }
+    });
+    
+  }
+
+
+
+</script>
+
+
+<style>
+
+  #popup_confirmar_clases{
+    padding: 20px;
+    width: 500px;
+    height: initial;
+  }
+  #popup_confirmar_clases.exito{
+    height: 110px !important;
+    border: 5px solid #91c741;
+  }
+  #popup_confirmar_clases .titulo{  
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  #popup_confirmar_clases .foto{
+    width: 150px;
+    height: 150px;
+    background: url(IMG/USUARIOS/WEB/alumno_default.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: gainsboro;
+    background-size: 100%;
+    border: 5px solid white;
+    border-radius: 90px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.7);
+    margin: auto;
+    margin-top: 10px;
+  }
+  #popup_confirmar_clases .foto.reducido{
+
+    width: 80px;
+    height: 80px;
+  }
+
+  #popup_confirmar_clases .nombre,
+  #popup_confirmar_clases .fecha,
+  #popup_confirmar_clases .costo_hora,
+  #popup_confirmar_clases .tiempo,
+  #popup_confirmar_clases .costo_total{
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  #popup_confirmar_clases .nombre{
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  #popup_confirmar_clases .btns{    
+    text-align: center;
+    padding: 10px;
+  }
+
+  #popup_confirmar_clases .btns .boton{
+    width: 40px;
+    height: 40px;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    border: 5px solid white;
+    background-position: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 1px #989898;
+    cursor: pointer;
+  }
+
+  #popup_confirmar_clases .btns .boton.activo{
+    border: 5px solid #ffc36a;
+  }
+  #popup_confirmar_clases .btns .boton:hover{
+    border: 5px solid #ffc36a;    
+  }
+
+
+  #popup_confirmar_clases .btns .boton.aprobar{
+    background-image: url(IMG/check.png);
+    background-color: #91c741;
+  }
+  #popup_confirmar_clases .btns .boton.rechazar{
+    background-image: url(IMG/equis.png);
+    background-color: #fd3232;
+    background-size: 18px;
+  }
+
+  #popup_confirmar_clases .criterios{
+    margin-top: 10px;
+    display: none;
+  }
+  #popup_confirmar_clases  .txt{    
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  #popup_confirmar_clases .criterio{
+    padding: 7px 14px;
+    border: 1px solid #999;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 22px;
+    margin-bottom: 5px;
+  }
+  #popup_confirmar_clases .criterio:hover{
+    background-color: #c8f9ff;
+  }
+  #popup_confirmar_clases .criterio.activo{
+    background-color: #c8f9ff;
+  }
+
+  #popup_confirmar_clases .help,
+  #popup_confirmar_clases .help_volver,
+  #popup_confirmar_clases .help_resuelto{    
+    font-size: 13px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    color:#146099;
+    display: inline-block;
+  }
+  
+
+  #popup_confirmar_clases .help_resuelto{
+    display: none;
+    color: green;
+    cursor: default;
+  }
+
+  #popup_confirmar_clases .help_volver{
+    display: none;
+  }
+  
+  #popup_confirmar_clases .help:hover,
+  #popup_confirmar_clases .help_volver:hover{
+    text-decoration: underline;    
+  }
+  #popup_confirmar_clases .boton_invictos{
+
+    min-width: 100px;
+    padding: 5px 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  #popup_confirmar_clases .volver{
+    background:white;
+    color: red;
+    font-weight: bold;
+  }
+  #popup_confirmar_clases .volver:hover{
+    background:#f9e4e4;
+  }
+  #popup_confirmar_clases .volver.oculto{
+    display: none;
+  }
+  #popup_confirmar_clases .sgt.inactivo{    
+    pointer-events: none;
+    background-color: #b3b3b3;
+  }
+
+  #popup_confirmar_clases .mensaje_exito{
+    display: none;
+    height: 100%;
+    text-align: center;
+  }
+  #popup_confirmar_clases .mensaje_exito .checkon{
+    width: 40px;
+    height: 40px;
+    background: url(IMG/check_on.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #popup_confirmar_clases .problema{
+    padding: 7px 14px;
+    border: 1px solid rgb(255,87,87);
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 22px;
+    margin-bottom: 5px;
+  }
+  
+  #popup_confirmar_clases .problema:hover{
+    background-color: rgb(255,87,87);
+    color: white;
+  }
+  #popup_confirmar_clases .problema.activo{
+    background-color: rgb(255,87,87);
+    color: white;
+  }
+
+  #popup_confirmar_clases .seccion_ayuda{
+    display: none;
+  }
+
+  #popup_confirmar_clases .seccion_ayuda textarea{
+    outline: none;
+    resize: none;
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+    height: 60px;
+  }
+</style>

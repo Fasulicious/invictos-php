@@ -1,0 +1,300 @@
+     <section id="dashboard_profesor" class="estilo-pagina area-pagina " data-area="dashboard">
+        
+        <div class="cuerpo_dashboard">
+            <div class="comp-menu-fijo comp-animacion-ini trans_bezier_05" data-fraccion_altura="1.1" data-posicionlogo="" data-tipo="menu-izquierda" data-animaciondelay="0.5" data-srclogo="" data-menufijo="no">
+              
+              <opcion area="" iddom="btn_cerrar_dashboard" texto="<div class='btn_cerrar_dashboard'></div>" rol="" columna="">      
+              </opcion>
+
+              <opcion area="editar_perfil" texto="Editar perfil" rol="dashboard" columna="editar_perfil">      
+              </opcion>
+
+              <opcion area="mis_zonas" texto="Mis zonas"  rol="dashboard"  columna="mis_zonas">               
+              </opcion>
+
+              <?php
+                if($_SESSION['tipo']=='P'){
+              ?>
+                <opcion area="conocimientos" texto="Mis conocimientos"  rol="dashboard"  columna="conocimientos">
+                </opcion>
+
+              <?php
+                }
+              ?>
+              <opcion area="historial" texto="Historial"  rol="dashboard"  columna="historial">               
+              </opcion>
+
+              <?php
+                if($_SESSION['tipo']=='P'){
+              ?>
+                <opcion area="estadisticas" texto="Mis estad&iacute;sticas"  rol="dashboard"  columna="estadisticas">
+                </opcion>
+
+              <?php
+                }
+              ?>
+              <opcion area="mensajes" texto="Mis mensajes"  rol="dashboard"  columna="mensajes">               
+              </opcion>
+
+              <?php
+                if($_SESSION['tipo']=='P'){
+              ?>
+                <opcion area="biblioteca" texto="Mi biblioteca"  rol="dashboard"  columna="biblioteca">
+                </opcion>
+
+              <?php
+                }
+              ?>
+              <opcion area="contacto" texto="Contacto"  rol="dashboard"  columna="contacto">               
+              </opcion>
+          
+            </div>
+          <div class="contenido_dashboard">
+              <div class="btn_menu_dashboard">
+                <div class="barras inline vertical-m">
+                  <div class="linea"></div>
+                  <div class="linea"></div>
+                  <div class="linea"></div>
+                </div><div class="texto inline vertical-m">Mi Dashboard</div>
+              </div>
+            <div class="rol-columnas trans_bezier_1" data-rol="dashboard">
+
+              <div id="edit_page" class="columna-pagina none oculto" data-columna="editar_perfil">
+                <?php
+                  include('VISTAS_PERFIL_PROFESOR/editar_perfil.html');
+                ?>
+              </div>
+              <div class="columna-pagina none oculto" data-columna="mis_zonas">
+                <?php
+                  include('VISTAS_PERFIL_PROFESOR/mis_zonas.html');
+                ?>
+              </div>
+
+              <div id="tag_page" class="columna-pagina none oculto" data-columna="conocimientos">
+                <?php
+                  if($_SESSION['tipo']=='P'){
+                    include('VISTAS_PERFIL_PROFESOR/conocimientos.html');
+                  }
+                ?>
+              </div>
+              <div class="columna-pagina none oculto" data-columna="historial">
+                <?php
+                  include('VISTAS_PERFIL_PROFESOR/historial.php');
+                ?>
+              </div>
+              <div class="columna-pagina none oculto" data-columna="estadisticas">
+                <?php
+                  if($_SESSION['tipo']=='P'){
+                    include('VISTAS_PERFIL_PROFESOR/estadisticas.php');
+                  }
+                ?>
+              </div>
+              <div class="columna-pagina none oculto" data-columna="mensajes">
+                <?php
+                  if($_SESSION['situacion_usuario']==0){
+                ?>
+                  <span class="mensaje_deuda">
+                    No se te permite tener comunicaci&oacute;n con tus alumnos y con nuevos alumnos hasta que hayas pagado tu deuda.
+                  <br>
+                  <a class="comp-menu-celda-content" data-area="estadisticas" data-columna="estadisticas" data-rol="dashboard" data-href="estadisticas">Haz click aqu&iacute;</a> para redireccionarte al &aacute;rea de estad&iacute;sticas, donde podr&aacute;s ver cual es el monto que debes pagar.</span>
+                <?php
+                  }else{
+
+                  include('VISTAS_PERFIL_PROFESOR/mensajes.html');
+                  }
+                ?>
+              </div>
+              <div class="columna-pagina none oculto" data-columna="biblioteca">
+                <?php
+                  if($_SESSION['tipo']=='P'){
+                    include('VISTAS_PERFIL_PROFESOR/biblioteca.html');
+                  }
+                ?>
+              </div>
+              <div class="columna-pagina none oculto" data-columna="contacto">
+                <?php
+                  include('VISTAS_PERFIL_PROFESOR/contacto.html');
+                ?>
+              </div>
+
+            </div>
+
+          </div>
+        </div>      
+
+<!--
+          <div class="comp-consultor-elemento" data-elemento="info_perfil" data-condicion="consulta_1" data-conteo="1" data-recarga="false">
+            
+            
+            <condicion data-iddom="condicion_id_perfil" data-campo="id" data-valor="<?php echo $_SESSION['id'];?>"></condicion>
+              
+              <estructura>
+                hiola
+              </estructura>
+
+          </div>
+-->
+
+
+      </section>
+  <script>
+    $(document).ready(function(){
+      $('.cuerpo_dashboard .btn_menu_dashboard').click(function(){
+
+
+        $('.cuerpo_dashboard .menu-izquierda').addClass('mostrado');
+      });
+
+      $('body').on('click','.cuerpo_dashboard .btn_cerrar_dashboard',function(){
+        $('.cuerpo_dashboard .comp-menu-fijo.menu-izquierda').removeClass('mostrado');
+      });
+
+    });
+  </script>
+
+      <style>
+      #dashboard_profesor{
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 90px;
+    max-width: initial;
+    min-height: 100vh;
+    height: inherit !important;
+      }
+      .cuerpo_dashboard{
+
+      }
+
+      .cuerpo_dashboard .btn_menu_dashboard{
+        padding: 0px 10px;
+        color: #aaa;
+        cursor: pointer;
+        display: none;
+      }
+      .cuerpo_dashboard .btn_menu_dashboard .barras{
+        width: 29px;
+        height: 40px;
+        position: relative;
+        margin-right: 10px;
+      }
+      .cuerpo_dashboard .btn_menu_dashboard .linea{
+        position: absolute;
+        background: #aaa;
+        height: 2px;
+        width: 100%;
+        left: 0;
+      }
+      .cuerpo_dashboard .btn_menu_dashboard .linea:nth-child(1){
+        top: calc(50% - 7px);
+      }
+      .cuerpo_dashboard .btn_menu_dashboard .linea:nth-child(2){
+        top: calc(50% - 1px);
+      }
+      .cuerpo_dashboard .btn_menu_dashboard .linea:nth-child(3){
+        top: calc(50% + 5px);
+      }
+
+      .cuerpo_dashboard .btn_menu_dashboard .texto{
+        
+      }
+
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda{
+
+        display: inline-block;
+        vertical-align: top;
+        background: transparent;
+        color: #a7a7a7;
+        width: 165px;
+        padding-bottom: 25px;
+        border-right: 1px solid #cccccc;
+      }
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .comp-menu-responsive{
+        display: none;
+      }
+      .cuerpo_dashboard .contenido_dashboard{
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 200px);
+        /*max-width: 800px;*/
+      }
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .menu-principal .comp-menu-opcion{
+
+    border-bottom: 1px solid #cccccc;
+    font-size: 15px;
+    position: relative;
+      }
+
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .menu-principal .comp-menu-opcion .comp-menu-celda-content{
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+      }
+
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .menu-principal .comp-menu-celda-content:after{
+        position: absolute;
+        height: 2px;
+        width: 0px;
+        background: rgb(255,87,87);
+        bottom: 0px;
+        left:0px;
+        content: ' ';
+        -webkit-transition: all .4s cubic-bezier(0,0,0.25,1);
+        -moz-transition: all .4s cubic-bezier(0,0,0.25,1);
+        -ms-transition: all .4s cubic-bezier(0,0,0.25,1);
+        -o-transition: all .4s cubic-bezier(0,0,0.25,1);
+        transition: all .4s cubic-bezier(0,0,0.25,1);
+      }
+    
+
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .menu-principal .comp-menu-celda-content:hover:after{
+        width: 100%;
+
+      }
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .menu-principal .comp-menu-celda-content.activo:after{
+        width: 100%;
+
+      }
+
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .menu-principal .comp-menu-opcion .comp-menu-celda{
+        padding-left: 10px;
+      }
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .menu-principal .comp-menu-celda-content:hover .comp-menu-celda{
+        border-left: 4px solid transparent; 
+      }
+
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda .menu-principal .comp-menu-celda-content.activo .comp-menu-celda{
+        font-weight: bold;
+        border-left: 4px solid transparent; 
+
+      }
+
+      .mensaje_deuda{
+        padding:20px; 
+        display: block;
+      }
+      .mensaje_deuda a{
+        cursor: pointer !important;
+        color:cornflowerblue !important;
+      }
+      .mensaje_deuda a:hover{
+        text-decoration: underline !important;
+      }
+
+      .cuerpo_dashboard .comp-menu-fijo.menu-izquierda #comp-btn-menu-responsive.oculto{
+      display:none;
+      }
+
+      .cuerpo_dashboard .btn_cerrar_dashboard{
+        background-image: url(IMG/x.png);
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        margin-right: 10px;
+
+      }
+      #btn_cerrar_dashboard{
+        display: none;
+      }
+      </style>
+

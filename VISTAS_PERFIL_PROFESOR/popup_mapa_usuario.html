@@ -1,0 +1,157 @@
+
+
+
+<div class="protector_fondo_popup" data-id_popup="mapa_usuario">
+  <div id="popup_mapa_usuario" class="comp-popup">
+    <div class="descripcion">
+      <div class="contenedor-tabla">
+        <div class="contenedor-celda">          
+          <div class="texto">
+            Lugares donde el profesor puede dictar clases
+          </div>
+          <div class="cerrar cerrar_popup"></div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="contenedor_mapa">
+      <div id="mapa_usuario">
+        
+      </div>
+    </div>
+  </div>
+
+    <div class="comp-consultor-elemento" data-elemento="zonas_profesor" data-condicion="consulta_1" data-conteo="3" data-recarga="false">
+            
+      <condicion data-iddom="condicion_id_perfil" data-campo="id_usuario" data-valor=""></condicion>
+        
+        <estructura>
+          
+        </estructura>
+
+    </div>
+</div>
+
+<style>
+
+  .protector_fondo_popup {
+    background: rgba(0, 0, 0, 0.71);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+
+
+  .protector_fondo_popup .comp-popup{
+
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate3d(-50%,-50%,0px);
+      -moz-transform: translate3d(-50%,-50%,0px);
+      -ms-transform: translate3d(-50%,-50%,0px);
+      -o-transform: translate3d(-50%,-50%,0px);
+      transform: translate3d(-50%,-50%,0px);
+      background: white;
+  }
+  #popup_mapa_usuario{
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    border-radius: 10px;
+  }
+    #popup_mapa_usuario .descripcion{
+
+      height: 80px;
+      font-size: 16px;
+      padding-left: 20px;
+    color: gray;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  #popup_mapa_usuario .contenedor_mapa{
+
+    position: relative;
+    height: calc(100% - 80px);
+  }
+  #popup_mapa_usuario #mapa_usuario{
+    height: 100%;
+  }
+  #popup_mapa_usuario .descripcion .texto{
+    width: calc(100% - 30px);
+  }
+
+</style>
+<!--
+<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places"
+    ></script>
+-->
+<script>
+
+
+
+
+/*
+var GL_ARRAY_MAKERS=new Array();
+var GL_MAP_AVISOS_MARKERS=[];*/
+
+
+
+function setMarkers_usuario(map, locations) {
+
+
+  var image;
+
+
+  var bounds = new google.maps.LatLngBounds();
+
+
+
+for (var i = 0, marker; marker = GL_MAP_AVISOS_MARKERS[i]; i++) {
+      marker.setMap(null);
+    }
+
+    // For each place, get the icon, place name, and location.
+    GL_MAP_AVISOS_MARKERS = [];
+
+
+  for (var index in locations) {
+
+    var beach = locations[index];
+ 
+      image= 'IMG/MAPA/apuntador3.png';
+
+     var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(beach.coor_latitud, beach.coor_longitud),
+        map: map,
+        icon: image,
+        animation: google.maps.Animation.DROP,
+        //shape: shape,
+//        title: beach.titulo,
+       indice: parseInt(beach.id)
+    });
+
+
+    fun_set_event(marker);
+
+     GL_MAP_AVISOS_MARKERS.push(marker);
+
+
+
+  }
+
+
+}
+
+
+</script>
+

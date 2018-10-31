@@ -1,0 +1,219 @@
+
+
+
+<div class="protector_fondo_popup" data-id_popup="recomendacion">
+  <div id="popup_recomendacion" class="comp-popup">
+    <div class="sup">
+      <div class="ttl">
+        Recomendar con:
+      </div>
+      <input type="text" id="correo_recomendacion" placeholder="correo@destinatario.com">
+      <div class="msj_alerta">Escriba un correo v&aacute;lido</div>
+    </div>
+    <div class="inf">
+      <div class="ttl">
+        Recomendar a:
+      </div>
+        <div class="box_profesor">
+        <input type="hidden" id="id_profesor" />
+          <div class="foto" style=""></div>
+          <div class="informacion">
+            <div class="info_sup">
+              <div class="nombre">
+                <div class="texto">
+                  Dante Vidal Tueros
+                </div>
+              </div>
+            </div>
+            <div class="info_inf">
+                <div class="conocimientos">
+                  <div class="conocimiento">Matematica</div>
+            </div>
+                <div class="valoracion">
+                  <div class="btn_votar">
+                    <div class="icono"></div>
+                    <div class="numero">120</div>
+                  </div>
+                </div>
+            </div> 
+          </div>
+        </div>
+    </div>
+
+    <div class="botones txt-centro">
+      <div class="boton_invictos gris inline vertical-m cerrar_popup">
+        Cancelar
+      </div>
+      <div id="enviar_recomendacion" class="boton_invictos inline vertical-m">
+        Recomendar
+      </div>
+    </div> 
+
+    <div class="msj_exito">
+      Recomendaci&oacute;n enviada con &eacute;xito.
+    </div>
+  </div>
+
+</div>
+
+<style>
+
+#popup_recomendacion{
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    max-width: 450px;
+    min-height: 25px;
+    height: initial;
+    width: 100%;
+}
+#popup_recomendacion .sup .ttl{
+    padding: 5px 0px;
+    color: #777;
+    
+}
+#popup_recomendacion .sup input{
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    font-size: 13px;
+    width: 100%;
+}
+#popup_recomendacion .sup input.alerta{
+    border: 1px solid #ff5757;
+}
+#popup_recomendacion .sup .msj_alerta{
+  color: #ff5757;
+  text-align: center;
+  padding: 2px;
+  display: none;
+    font-size: 12px;
+}
+
+
+#popup_recomendacion .inf .ttl{
+    padding: 20px 0px 5px 0px;
+    border-bottom: 1px solid #ddd;
+    color: #777;
+}
+#popup_recomendacion .inf .box_profesor{
+    margin: auto;
+    margin-top: 5px;
+    display: block;
+}
+
+#popup_recomendacion .botones{
+    margin-top: 25px;
+    text-align: center;
+}
+#popup_recomendacion .botones .boton_invictos{
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 4px 20px;
+}
+
+#popup_recomendacion .msj_exito{
+    color: green;
+    padding: 10px;
+    font-size: 16px; 
+    text-align: center;
+    display: none;
+}
+</style>
+
+<script>
+
+
+    $(document).ready(function(){
+
+      $('body').on('click','#enviar_recomendacion',function(){
+        fun_enviar_recomendacion($('#popup_recomendacion #id_profesor').val(), $.trim($('#popup_recomendacion #correo_recomendacion').val()));
+      });
+
+      $('#popup_recomendacion .sup input').keyup(function(){
+        if($.trim($(this).val())!=''){
+          $('#popup_recomendacion .sup input').removeClass('alerta');
+        }
+      });
+    });
+
+
+
+          function fun_enviar_recomendacion(cod_profe,correo){
+            if($.trim(correo)!=''){
+
+              $.ajax({
+                url:'POST/RECOMENDACIONES/set_recomendacion.php',
+                data:{cod_profe:cod_profe,correo:correo},
+                type:'POST',
+                datatype:'json',
+                async:true,
+                beforeSend: function(objeto){
+                },
+                success:function (data){
+
+                  console.log(data);
+
+                  data=$.parseJSON(data);
+                  if(data.error){
+                    switch(data.detalle){
+                      case 'mysql':
+
+                        FMSG_ERROR_CONEXION();
+                      break; 
+                    }
+                  }else{
+
+                    switch(data.detalle){
+                      case 'correo':
+
+                        $('#popup_recomendacion .sup input').addClass('alerta');
+                        $('#popup_recomendacion .sup .msj_alerta').slideDown(300);
+                        var delay=setInterval(function(){
+                          clearInterval(delay);
+                          $('#popup_recomendacion .sup .msj_alerta').slideUp(300);
+                        },2000);
+
+                      break;
+                      case 'ok':
+                        $('#popup_recomendacion .sup').slideUp(300);
+                        $('#popup_recomendacion .inf').slideUp(300);
+                        $('#popup_recomendacion .botones').slideUp(300);
+
+                        
+                        var delay=setInterval(function(){
+                          clearInterval(delay);
+                          $('#popup_recomendacion .msj_exito').slideDown(300);
+                          
+                          var delay2=setInterval(function(){
+                            clearInterval(delay2);
+                            $('#popup_recomendacion .cerrar_popup').click();
+                          },1000);
+
+                        },300);
+
+
+                      break;
+                    }
+
+
+                  }
+
+                }
+
+              });
+            }else{
+
+              $('#popup_recomendacion .sup input').addClass('alerta');
+              $('#popup_recomendacion .sup .msj_alerta').slideDown(300);
+              var delay=setInterval(function(){
+                clearInterval(delay);
+                $('#popup_recomendacion .sup .msj_alerta').slideUp(300);
+              },2000);
+
+            }
+          }
+
+</script>
+

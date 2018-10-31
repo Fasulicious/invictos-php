@@ -1,0 +1,357 @@
+
+.comp-login .seleccionar_forma{      
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+
+        .comp-login .comp-login-titulo{
+          text-align: center;
+    font-size: 22px;
+        }
+
+        .comp-login .comp-login-descripcion{
+          font-size: 11px;
+          padding: 15px;
+        }
+  
+        .comp-login .comp-login-btn_ingresar_facebook{
+          text-align: center;
+          font-size: 13px;
+          color: rgb(63,90,159);
+          border: 2px solid rgb(63,90,159);
+          padding: 8px;
+          border-radius: 29px;
+          width: 80%;
+          margin: auto;
+          cursor: pointer;
+        }
+        
+        .comp-login .comp-login-btn_ingresar_facebook:hover{
+          background: rgb(63,90,159);
+          color:white;
+        }
+
+        .comp-login .div_o{
+
+          text-align: center;
+          margin: 10px;
+        } 
+        .comp-login .comp-login-text{
+
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 18px;
+        }
+
+        .comp-login .comp-login-btn-switch{
+
+          font-size: 11px;
+          text-align: center;
+          cursor: pointer;
+    display: inline-block;
+
+        }
+        .comp-login .comp-login-btn-switch:hover{
+          text-decoration: underline;
+        }
+        .comp-login .comp-login-btn-enviar{
+
+          color: white;
+          background: #999;
+          text-align: center;
+          width: 80%;
+          margin: auto;
+          font-size: 13px;
+          padding: 10px;
+          margin-top: 15px;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+          .comp-login .comp-login-div-switch{
+
+    font-size: 12px;
+    text-align: center;
+    margin: 10px;
+          }
+          .comp-login .comp-login-campo_radio{
+
+    font-size: 13px;
+    display: inline-block;
+    width: calc(50% - 5px);
+    text-align: center;
+          cursor: pointer;
+          }
+          .comp-login .comp-login-campo_radio:hover .texto{
+            text-decoration: underline;
+          }
+
+        .comp-login .comp-login-radiobutton{
+
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          border: 1px solid #d4d4d4;
+          border-radius: 5px;
+          margin-right: 5px;
+        }
+      .comp-login .comp-login-radiobutton.select{
+        background: #aaa; 
+      }
+    .comp-login .comp-login-campo-checks{
+
+    text-align: center;
+    border: 0;
+    }
+
+.columna_estadisticas .btns_control .bloque_control{
+	display: inline-block;
+    margin-bottom: 10px;
+}
+
+        .comp-login .comp-login-campo{                
+          padding: 3px;
+
+        }
+        .comp-login .comp-login-campo_input{  
+          background-color: white;
+          border-radius: 6px;
+          margin-bottom: 5px;
+          border: 1px solid rgba(0, 216, 255, 0.52);
+
+          -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          overflow: hidden;
+        }
+        
+        .comp-login .comp-login-campo_input.norm{  
+          margin-bottom: -11px !important;
+          margin-top: -4px !important;
+        }
+
+        .comp-login .comp-login-campo_input.oculto{ 
+          padding-top: 0px !important;
+          padding-bottom: 0px !important;
+          height: 0px !important;
+          border: 0px !important;
+        }
+
+          .comp-login .comp-login-campo_input.focus-input{
+            box-shadow: 0px 0px 6px rgba(0, 216, 200, .7);
+          }
+
+
+        .comp-login .comp-login-campo.comp-login-alerta{
+          border: 1px rgba(255, 142, 142, 0.8) solid;
+        }
+          .comp-login .comp-login-campo_input.comp-login-alerta.focus-input{
+            box-shadow: 0px 0px 6px rgba(255, 80, 80, .8);
+          }
+
+
+          .comp-login .comp-login-campo input{                
+                     
+            padding: 5px;
+            border: 0px solid rgba(0, 216, 255, 0.52);
+            outline: none;
+            font-size: 17px;
+            width: 100%;
+            -webkit-box-sizing:border-box ;
+            -ms-box-sizing:border-box ;
+            -o-box-sizing:border-box ;
+            -moz-box-sizing:border-box ;
+            box-sizing:border-box ;
+          }
+          
+          .comp-login .comp-login-campo textarea{                
+              padding: 5px;
+              border: 0px solid rgba(0, 216, 255, 0.52);
+              outline: none;
+              width: 100%;
+              height: 150px;
+              font-size: 17px;
+              resize: none;
+              -webkit-box-sizing:border-box ;
+              -ms-box-sizing:border-box ;
+              -o-box-sizing:border-box ;
+              -moz-box-sizing:border-box ;
+              box-sizing:border-box ;
+          }
+
+          .comp-login .comp-login-campo .error-texto{                
+            display: block;
+            color: red;
+            overflow: hidden;
+            border-top: 1px solid rgb(255, 205, 205);
+            height: 20px;
+            font-size: 14px;
+            text-align: center;          
+
+            -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+
+          }
+          .comp-login .comp-login-campo .error-texto.oculto{                
+            height: 0px;
+            border-top: 0px solid rgb(255, 205, 205);
+          }
+          
+
+    .comp-login .div_form #comp-login-btn-accion{
+      width: 100%;
+      cursor: pointer;
+      background: rgba(17, 19, 94, 0.51);
+      border: 1px solid rgba(121, 124, 255, 0.54);
+      color: white;
+      font-size: 18px;
+      overflow: hidden;
+      width: 235px;
+    }
+
+
+
+.comp-login .comp-login-contenedor_secciones .comp-login-seccion{
+  display: none;
+}
+
+  .comp-login[data-estado="login"] .comp-login-seccion[data-seccion="login"]{
+    display: block;
+  }
+  .comp-login[data-estado="registro"] .comp-login-seccion[data-seccion="registro"]{
+    display: block;
+  }
+  .comp-login[data-estado="recuperacion"] .comp-login-seccion[data-seccion="recuperacion"]{
+    display: block;
+  }
+
+
+.comp-login-placeholder{
+
+    color: #afafaf;
+    font-size: 12px;
+    padding-left: 9px;
+}
+
+
+
+//Autocomplete 
+
+	.comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="limpiar"]{		
+    	display: none;
+	}
+	.comp-popup .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="cancelar"],
+	.comp-popup .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="limpiar"]	{
+    	display: none;
+	}
+	
+	.comp-popup .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="insert"]{
+    	display: none;
+	}
+
+	
+      	
+
+			.comp-popup .formulario{
+				display: none;
+      			
+      		}
+
+			.comp-popup .formulario .oculto{
+				display: none;
+			}
+      		.comp-popup .formulario .comp-gestion-elemento{
+				padding: 10px;
+    			box-shadow: 0px 0px 2px #969696;
+      		}
+      		.comp-popup  .lista-select{
+
+			    padding-top: 3px !important;
+      		}
+      		.comp-popup .comp-ge-campo[data-campo="nivel"]{
+			    width: calc(33% - 10px) !important;
+			    margin-left: 5px;
+      		}
+      		.comp-popup .comp-content-titulo{
+      			display: none;
+      		}
+
+
+
+  #lista_conocimientos_autocom #crear_nuevo_curso_tema{
+  
+    margin: 5px;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px #999;
+    background: #FFFFCF;
+
+  }
+  #lista_conocimientos_autocom #crear_nuevo_curso_tema:hover{
+    background: #FFF5AD;
+
+  }
+  #lista_conocimientos_autocom #crear_nuevo_curso_tema.hover{
+    background: #FFF4A8;
+  }
+
+  #lista_conocimientos_autocom #crear_nuevo_curso_tema.oculto{
+    display: none;
+  }
+
+  #lista_conocimientos_autocom .msj_alerta{
+
+    color: #FF2E2E;
+    text-align: center;
+    padding: 5px 10px;
+    border-top: 1px solid red;
+    display: none;
+  }
+  #lista_conocimientos_autocom .msj_correcto{
+
+    color: #00D400;
+    text-align: center;
+    padding: 5px 10px;
+    border-top: 1px solid #00D400;
+    display: none;
+  }
+
+	#lista_conocimientos_autocom .lista_cursos_temas{
+	    font-size: 12px;
+	}
+
+    .comp-popup .formulario .comp-ge-campo_input.comp-contacto-alerta.exito{
+
+    border: 1px rgb(0, 212, 0) solid;
+
+    }
+    .comp-popup .formulario .comp-ge-campo.comp-contacto-alerta.exito:hover {
+	    background: rgba(142, 255, 178, 0.1);
+	}
+    .comp-popup .formulario .comp-ge-campo_input.comp-contacto-alerta.exito .aviso-aux{
+      color:#00D400;
+
+      border-top: 1px solid #00D400;
+    }
+
+    .comp-popup .formulario .comp-ge-campo.comp-contacto-alerta.exito.focus-input{
+	box-shadow: none !important;
+    }
+
+			.comp-popup .form_oculto{
+			display: none;
+      		}
+      		
+      		
+	.comp-popup .comp-gestion-elemento .comp-ge-btn-accion .content-btn{		
+	    font-size: 11px;
+	    padding-left: 12px;
+	    padding-right: 12px;
+	}

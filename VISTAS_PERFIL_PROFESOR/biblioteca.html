@@ -1,0 +1,365 @@
+
+  
+      <section id="" class="perfil_biblioteca" data-area="biblioteca">             
+            
+            <div class="div_subir_libro" style="">
+            <header>
+              <h2>
+                Sube un libro de tu inter&eacute;s
+              </h2>              
+            </header>
+            	
+            <div id="buscador-biblioteca">
+              <div class="inputs">
+
+                <div class="comp-gestion-elemento" data-titulo="" data-titulo_update="" data-elemento="mis_recursos" data-objeto="mis_recursos" data-accion="insert" data-funcion_insert="fun_insertar_recurso();" data-funcion_update="fun_update_recurso();" data-gestion="todo" data-espaciototal="4" >
+                  <bloque data-espacio="4">
+                    <campo data-nombre="T&iacute;tulo Libro: Matem&aacute;ticas, etc."  data-iddom="recurso_titulo" data-espacio="4" data-campo="titulo" data-tipo="text"></campo>
+                    <campo data-nombre="" data-espacio="4" data-iddom="recurso_titulo_busqueda" data-campo="titulo_busqueda" data-tipo="hidden"></campo>
+                    <campo data-nombre="Autor: Nombre y Apellido"  data-iddom="recurso_autor" data-espacio="4" data-campo="autor" data-tipo="text"></campo>
+                    <campo data-nombre="" data-espacio="4" data-iddom="recurso_autor_busqueda" data-campo="autor_busqueda" data-tipo="hidden"></campo>
+                    <!--<campo data-nombre="Descripcion (opcional)" data-espacio="4" data-campo="descripcion" data-tipo="textarea"></campo>-->
+                    <campo data-nombre="Link de descarga directa (requerido http://...)" data-espacio="4" data-campo="link_externo" data-tipo="text"></campo>
+                    
+                  </bloque>                                
+
+                </div>
+                
+                <div class="boton_cancelar boton_invictos gris" style="display: none; height: 31px; width: 310px;">
+		             Cancelar
+		        </div>
+              
+              </div>
+              <div class="boton_busqueda boton_invictos">
+                Referenciar Libro
+              </div>
+            </div>
+            
+            </div>
+            <div class="resultados-biblioteca">
+              <div class="descripcion">
+                Mis libros - 0 Libro(s)
+              </div>              
+              <ul class="cabecera">
+                <li class="titulo">T&iacute;tulo del libro - Autor</li>
+                <li class="descargas">Cant. descargas</li>
+                <li class="valoracion">Valoraci&oacute;n</li>
+              </ul>
+              <div class="lista-resultados">
+
+                   <div class="msj_biblioteca_vacia">
+                   	<div>Sube un libro a la biblioteca y gana puntos de valoraci&oacute;n para tu perfil</div>
+
+		              <div class="boton_subir boton_invictos">
+		                Referenciar Libro
+		              </div>
+                   </div>
+
+                <div class="comp-consultor-elemento oculto" data-elemento="mis_recursos" data-condicion="consulta_1"  data-conteo="10" data-recarga="true" data-txt_recarga="Cargar m&aacute;s libros" data-vacio="No se encontraron m&aacute;s libros" >
+                  
+                  <estructura>
+                    <ul class="resultado elemento" data-nombre="{titulo}"  data-id_elemento="{id}">                    
+                      <li class="titulo"><span>{titulo} - {autor}</span></li>
+                      <li class="descargas">{descargas|0} descargas</li>
+                      <li class="valoracion"> <span>{valoraciones|0}</span></li>
+                    </ul>
+                  </estructura>
+
+                </div>
+
+              </div>
+            </div>
+
+      </section>
+
+
+      <style>
+      .perfil_biblioteca {
+	    padding-top: 0px;
+	    padding-left: 5px;
+    height: inherit !important;
+      }
+      .perfil_biblioteca .comp-gestion-elemento{
+        display: none;
+      }
+       .perfil_biblioteca .comp-gestion-elemento .comp-ge-campo_input textarea{
+
+    height: 50px;
+       }
+
+      .perfil_biblioteca .div_subir_libro{
+		border:2px solid transparent;
+	    padding-top: 25px;
+    	padding-bottom: 50px;
+    max-width: 500px;
+    margin: auto;
+    padding-bottom: 30px;
+
+		-webkit-transition: all 3s cubic-bezier(0,0,0.25,1);
+		-moz-transition: all 3s cubic-bezier(0,0,0.25,1);
+		-ms-transition: all 3s cubic-bezier(0,0,0.25,1);
+		-o-transition: all 3s cubic-bezier(0,0,0.25,1);
+		transition: all 3s cubic-bezier(0,0,0.25,1);
+      }
+
+      .perfil_biblioteca .div_subir_libro.resaltado{
+		border:2px solid rgb(255,87,87);
+		-webkit-transition: all .5s cubic-bezier(0,0,0.25,1);
+		-moz-transition: all .5s cubic-bezier(0,0,0.25,1);
+		-ms-transition: all .5s cubic-bezier(0,0,0.25,1);
+		-o-transition: all .5s cubic-bezier(0,0,0.25,1);
+		transition: all .5s cubic-bezier(0,0,0.25,1);
+      }
+
+      .perfil_biblioteca .comp-consultor-recarga{    
+        background: #949494;
+        color: white;
+        cursor: pointer;
+        border-radius:20px;
+        border: 1px solid #ff5757;
+        display: inline-block;
+        max-width: 300px;
+        padding: 5px 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+      margin-top: 20px;
+        font-size:18px;
+        font-family: OpenSansLight !important;
+      }
+
+      .perfil_biblioteca .comp-consultor-recarga:hover{
+        background:#6f6f6f;
+
+      }
+          
+          .perfil_biblioteca .resultados-biblioteca{
+                margin-top: 10px;
+    padding-bottom: 50px;
+          }
+          .perfil_biblioteca .resultados-biblioteca .descripcion{
+            color: #8e8e8e;
+            padding-bottom: 10px;
+            text-align: left;
+            padding-left: 10px;
+            max-width: 900px;
+            margin: auto;
+            padding-right: 20px;
+            box-sizing: border-box;
+            font-size: 15px;
+          }
+
+          .perfil_biblioteca .resultados-biblioteca ul{
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+
+          }
+          .perfil_biblioteca .resultados-biblioteca ul li{                 
+
+            display: inline-block;
+            padding: 10px;
+            text-align: left;
+            font-size: 12px;
+            color: #8e8e8e;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+          .perfil_biblioteca .resultados-biblioteca ul .titulo{
+
+            width: calc(60% - 5px);
+          }
+          .perfil_biblioteca .resultados-biblioteca .cabecera .titulo{
+            padding-left: 0px;
+          }
+          .perfil_biblioteca .resultados-biblioteca ul .descargas{
+
+            width: calc(20% - 5px);
+    text-align: center;
+          }
+
+          .perfil_biblioteca .resultados-biblioteca ul .valoracion{
+
+            width: calc(20% - 5px);
+            text-align: center;
+          }
+
+
+
+          .perfil_biblioteca .resultados-biblioteca .resultado{
+          
+            position: relative;
+            padding-top: 3px;
+            padding-bottom: 3px;
+          }
+          .perfil_biblioteca .resultados-biblioteca .resultado:before{
+            height: 1px;
+            position: absolute;
+            content:' ';
+            width: 97%;
+            top: 0px;
+            left: 50%;
+            -webkit-transform: translate3d(-50%,0px,0px);
+            -moz-transform: translate3d(-50%,0px,0px);
+            -ms-transform: translate3d(-50%,0px,0px);
+            -o-transform: translate3d(-50%,0px,0px);
+            transform: translate3d(-50%,0px,0px);
+            background:#d4d4d4; 
+          }
+
+
+          .perfil_biblioteca .resultados-biblioteca .resultado  span{
+
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          .perfil_biblioteca .resultados-biblioteca .resultado .titulo .icono{
+            width: 25px;
+            height: 25px;
+            background-image: url(IMG/VARIOS/doc.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+          .perfil_biblioteca .resultados-biblioteca .resultado .valoracion .icono{
+            width: 20px;
+            height: 20px;
+            background-image: url(IMG/valoracion.png);
+    background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .perfil_biblioteca .resultados-biblioteca .resultado .valoracion .icono.activo{
+            background-image: url(IMG/valoracion_activo.png);
+          
+          }
+          .perfil_biblioteca .resultados-biblioteca .resultado .enlace .icono{
+			width: 25px;
+            height: 25px;
+            background-image: url(IMG/VARIOS/descarga.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+          }
+
+
+
+              .perfil_biblioteca{
+                text-align: center;
+              }
+
+              .perfil_biblioteca header{
+                text-align: center;
+              }
+              .perfil_biblioteca header h1{                            
+                font-size: 30px;
+                color: #4e4e4e;
+                margin-bottom: 10px;
+              }
+              .perfil_biblioteca header h2{
+                color: #999;
+                font-size: 19px;
+              }
+              .perfil_biblioteca #buscador-biblioteca .inputs{
+                
+              }
+              .perfil_biblioteca #buscador-biblioteca input[type="text"]{
+                    border: 0;
+                outline: none;
+                padding: 3px 6px;
+                border-radius: 30px;
+                font-size: 12px;
+              }
+
+              .perfil_biblioteca #buscador-biblioteca .boton_busqueda{
+                padding: 4px 95px 5px 95px;
+			    font-size: 15px;
+			    margin: auto;
+			    font-family: OpenSansRegular !important;
+				margin-top: 10px;
+              }
+
+	      .perfil_biblioteca #buscador-biblioteca .boton_cancelar{
+                padding: 4px 95px 5px 95px;
+			    font-size: 15px;
+			    margin: auto;
+			    font-family: OpenSansRegular !important;
+				margin-top: 10px;
+              }
+
+              .perfil_biblioteca .msj_biblioteca_vacia{
+				max-width: 400px;
+				font-size:22px;
+
+			    margin: auto;
+			    margin-top: 60px;
+
+              }
+
+              .perfil_biblioteca .msj_biblioteca_vacia .boton_subir{
+                padding: 4px 95px 5px 95px;
+			    font-size: 15px;
+			    margin: auto;			    
+			    background: #9e9e9e;			    
+			    font-family: OpenSansRegular !important;
+    			margin-top: 25px;
+              }
+              .perfil_biblioteca .msj_biblioteca_vacia .boton_subir:hover{
+              	background: gray;
+              }
+              .perfil_biblioteca .comp-consultor-elemento.oculto{
+				display: none;
+              }
+              </style>
+
+	<script>
+		$(document).ready(function(){
+			var GL_DELAY_RESALTAR_BIBLIOTECA;
+			$('.perfil_biblioteca ').on('click','.msj_biblioteca_vacia .boton_subir',function(){
+				clearInterval(GL_DELAY_RESALTAR_BIBLIOTECA);
+				$('.perfil_biblioteca .div_subir_libro').addClass('resaltado');
+				$('.perfil_biblioteca .input-materia').focus();
+        $('.perfil_biblioteca .boton_busqueda').click();
+        $('body,html').animate({scrollTop:0});
+				GL_DELAY_RESALTAR_BIBLIOTECA=setInterval(function(){
+					clearInterval(GL_DELAY_RESALTAR_BIBLIOTECA);
+					$('.perfil_biblioteca .div_subir_libro').removeClass('resaltado');
+
+				},1000);
+			});
+
+      $('.perfil_biblioteca ').on('click','.boton_busqueda',function(){
+        $('.perfil_biblioteca .comp-gestion-elemento').slideDown(300);
+        $('.perfil_biblioteca .boton_cancelar').slideDown(300); 	
+	$(this).slideUp(300);        
+      });
+      
+      $('.perfil_biblioteca ').on('click','.boton_cancelar',function(){      
+        $('.perfil_biblioteca .comp-gestion-elemento').slideUp(300);
+        $('.perfil_biblioteca .boton_busqueda').slideDown(300);        
+        $(this).slideUp(300);
+      });
+
+      $('.perfil_biblioteca').on('click','.lista-resultados .elemento',function(){
+        $('.perfil_biblioteca .msj_biblioteca_vacia .boton_subir').click();
+      });
+
+		});
+
+
+    function fun_insertar_recurso(){
+      $('.perfil_biblioteca #recurso_titulo_busqueda').val($('.perfil_biblioteca #recurso_titulo').val());
+      $('.perfil_biblioteca #recurso_autor_busqueda').val($('.perfil_biblioteca #recurso_autor').val());
+    }
+    function fun_update_recurso(){
+      $('.perfil_biblioteca #recurso_titulo_busqueda').val($('.perfil_biblioteca #recurso_titulo').val());
+      $('.perfil_biblioteca #recurso_autor_busqueda').val($('.perfil_biblioteca #recurso_autor').val());
+    }
+	</script>

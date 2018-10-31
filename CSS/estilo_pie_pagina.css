@@ -1,0 +1,49 @@
+   #menu_pie .comp-menu-fijo.menu-superior{
+        background-color: rgb(255,87,87);
+        color: white;
+        height: 70px;
+        font-size: 14px;
+      }
+      #menu_pie .comp-menu-fijo.menu-superior .logo.der{
+    padding-right: 20px;
+    height: 50px;
+    margin-top: 8px;
+      }
+      #menu_pie .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion .comp-menu-celda-content{
+
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      #menu_pie .comp-menu-fijo.menu-superior .menu-principal .comp-menu-opcion .comp-menu-celda{
+
+    border-left: 0;
+      }
+      #menu_pie .comp-menu-fijo.menu-superior .comp-menu-nav-izq{
+
+    margin-left: 25px;
+      }
+      #menu_pie .menu-principal .comp-menu-celda-content:hover .comp-menu-celda,
+      #menu_pie .comp-menu-fijo.menu-superior .menu-principal .comp-menu-celda-content.activo .comp-menu-celda{
+        background: none;
+        color: white;
+      }
+      #menu_pie a{
+        text-decoration: none;
+      }
+        #pie_pagina{
+          background-color: red;
+        }
+        #pie_pagina #firma{
+          font-size: 13px;
+          color: white;
+          padding: 12px;
+          background-color: rgb(223,70,70); 
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box;
+          text-align: center;
+          font-family: OpenSansLight !important;
+        }

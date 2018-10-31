@@ -1,0 +1,93 @@
+      <section id="inicio" class="area-pagina  comp-animacion-ini" data-area="inicio">
+<!-- busqueda  scroll_uniforme -->
+        <div id="slider-portal" class="comp-slider-full trans_bezier_1" data-tipocarga="manual" data-botones="false" data-autoanimado="true" data-tiemposlide="15">
+           
+          <slide data-src="IMG/INICIO/slide1.jpg" data-msrc="IMG/INICIO/slide1.jpg" data-tipotexto="texto_dividido" data-texto="" data-subtexto=""></slide>
+
+        </div>
+          
+          <div class="contenedores_resultados">
+              
+            <div id="resultados-busqueda">
+              <div class="descripcion">
+                
+              </div>
+              <div class="lista_resultados">
+
+
+              </div>
+            </div>
+            <div id="resultados-busqueda-ranking">
+              <div class="titulo_busqueda-ranking">
+                Ranking de profesores cercanos
+              </div>
+              <div class="lista_resultados_ranking">
+                
+              </div>
+            </div>
+
+          </div>
+
+<!--trans_bezier_1 trans_delay_05-->
+          <div id="barra_de_busqueda" class="seccion-buscar  inferior  anim-oculto-opacity anim-desplaza-abajo " data-posicion="inferior">
+
+            <div id="barra_buscador">
+              <div class="volver_busqueda izq"></div>
+              <div class="volver_busqueda der"></div>
+              <div class="inputs">
+
+                <div class="div_content_input">
+                  <input id="nombre_curso_buscar" type="text" placeholder="Buscar profesor de..." autocomplete="off"> 
+                  <span class='msj_aux oculto'>Campo obligatorio</span> 
+                </div>
+                  <input type="hidden" id="id_curso" value="0" placeholder="">
+                
+                <div class="div_content_input">
+                  <input id="lugar_autocompletado" type="text" placeholder="En distrito, ciudad, pa&iacute;s">
+                  <span class='msj_aux oculto'>Campo obligatorio</span> 
+                </div>
+                  <input type="hidden" id="posicion-circulo" value="no" autocomplete="off">
+                  <input type="hidden" id="lugar_latitud" value="vacio" autocomplete="off">
+                  <input type="hidden" id="lugar_longitud" value="vacio" autocomplete="off">
+
+              </div>
+              <div class="boton_busqueda boton_invictos bold">
+                Buscar
+              </div>
+            </div>
+            <div id="botones_extra">
+              <div class="texto">
+                Publica una clase o agrega un libro a la biblioteca
+              </div>
+              <div class="botones">     
+
+                <?php if(!isset($_SESSION['id'])){ ?>
+                  
+                  <div class="boton comp-btn-abrir-popup" data-popup='login'>Publicar</div>
+
+                <?php }else{ ?>
+
+                  <div class="boton comp-menu-celda-content" data-columna='dashboard' data-area='biblioteca' data-rol='principal'>Publicar</div>
+
+                <?php } ?>
+                <div class="boton comp-menu-celda-content" data-area="biblio" data-rol="principal" data-columna="biblioteca">Biblioteca</div>
+              </div>
+            </div>
+                
+            </div>
+
+            <link rel="stylesheet" type="text/css" href="CSS/estilo_buscador_principal.css" media="screen">
+            <script type="text/javascript" src="JS/funciones_busqueda.js"></script>
+    <!--
+        <div class="contenedor_msj_alerta_busqueda">
+
+          <div class="contenido_msj_alerta_busqueda trans_bezier_03 oculto">
+            <div class="mensaje_alerta_busqueda trans_bezier_03 ">
+              Debe seleccionar un curso existente
+            </div>
+          </div>
+
+        </div>
+    -->
+
+      </section>

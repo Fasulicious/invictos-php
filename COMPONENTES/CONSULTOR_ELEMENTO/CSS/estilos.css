@@ -1,0 +1,30 @@
+.comp-consultor-recarga{
+	font-size: 20px;
+	padding: 15px;
+	background: #f1f1f1;
+	color: #777;
+	text-align: center;
+	cursor: pointer;
+	
+    max-width: 300px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.comp-consultor-recarga.inactivo{
+	opacity: .5;
+	pointer-events:none;
+
+}
+.comp-consultor-recarga:hover{
+	background: #e1e1e1;
+}
+
+
+.comp-consultor-elemento .elemento{
+	cursor: pointer;	
+}
+
+.comp-consultor-elemento .elemento:hover{
+	background: #f9f9f9;
+}

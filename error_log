@@ -1,0 +1,5 @@
+[11-Nov-2016 15:38:32 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home1/manuelf27/public_html/perfil_profesor.php on line 609
+[23-Mar-2017 03:14:55 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[23-Mar-2017 04:22:15 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[05-Jun-2017 12:27:39 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home1/manuelf27/public_html/pagina_principal.php on line 107
+[26-Jul-2017 18:17:16 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home1/manuelf27/public_html/pagina_principal.php on line 954

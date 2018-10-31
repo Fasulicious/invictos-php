@@ -1,0 +1,26 @@
+CREATE TABLE `grl_tbl_users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_fb` varchar(20) DEFAULT NULL,
+  `nombres` varchar(50) DEFAULT NULL,
+  `apellidos` varchar(50) DEFAULT NULL,
+  `correo` varchar(50) DEFAULT NULL,
+  `password` blob,
+  `cod_activacion` varchar(15) DEFAULT NULL,
+  `usuario_activo` tinyint(1) DEFAULT NULL,
+  `id_img` varchar(10) DEFAULT NULL,
+  `ext_img` varchar(10) DEFAULT NULL,
+  `presentacion` varchar(200) DEFAULT NULL,
+  `profesion` varchar(50) DEFAULT NULL,
+  `fecha_nacimiento` date DEFAULT NULL,
+  `firma` varchar(200) DEFAULT NULL,
+  `moneda` varchar(10) DEFAULT 'soles',
+  `costo` varchar(10) DEFAULT '0',
+  `video` varchar(100) DEFAULT NULL,
+  `ciudad` varchar(100) DEFAULT NULL,
+  `tipo` varchar(1) DEFAULT NULL,
+  `calificacion` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 |
+
+
+insert into grl_tbl_users (id,nombres,apellidos,correo,password,cod_activacion,usuario_activo,presentacion,profesion,fecha_nacimiento,firma,moneda,costo,video,ciudad,tipo,calificacion) values (30,'Dante','Vidal','dante_vidal_tueros@hotmail.com',aes_encrypt('123456','123'),'123456',1,'Hola mundo','Ingeniero','1989-12-13','Mi firma','soles',25,'','Lima','P',10)

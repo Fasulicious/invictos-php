@@ -1,0 +1,389 @@
+
+
+
+<div class="protector_fondo_popup" data-id_popup="mapa">
+  <div id="popup_mapa" class="comp-popup">
+    <div class="descripcion">
+      <div class="contenedor-tabla">
+        <div class="contenedor-celda">          
+          <div class="texto">
+            Mueve el radar o expande el tama&ntilde;o para ubicar m&aacute;s profesores.  
+          </div>
+          <div class="cerrar cerrar_popup"></div>
+        </div>
+      </div>
+    </div>
+    <div class="contenedor_mapa">
+      <div id="mapa_profesores">
+        
+      </div>
+      <div class="leyenda_mapa">
+        <div class="titulo">Leyenda</div>
+        <div class="contenido_leyenda">
+          <div class="leyenda">
+            <div class="texto">Lejos <span class="text_complementario">de la zona</span></div>
+            <div class="icono icono1"></div>
+          </div>
+          <div class="leyenda">
+            <div class="texto">Cerca <span class="text_complementario">de la zona</span></div>
+            <div class="icono icono2"></div>
+          </div>
+          <div class="leyenda">
+            <div class="texto">Muy cerca <span class="text_complementario">de la zona</span></div>
+            <div class="icono icono3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pop_profesor comp-menu-celda-content" data-area="perfil" data-columna="perfil" data-rol="principal" data-href="">
+        <div class="foto"></div>
+        <div class="informacion">
+          <div class="div_sup">
+            <div class="nombre">Dante Vidal Tueros</div>
+          </div>
+          <div class="div_inf">
+            <div class="conocimientos">
+              <div class="conocimiento">F&iacute;sica</div>
+            </div>
+            <div class="valoracion">
+              <div class="icono"></div>
+              <div class="texto">150</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+#popup_mapa .pop_profesor{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    border: 1px solid #d0d0d0;
+    width: 220px;
+    background: white;
+    padding: 5px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  -ms-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+
+  cursor: pointer;
+}
+#popup_mapa .pop_profesor.resaltar{ 
+  -webkit-transition: all .5s ease-in-out !important;
+  -moz-transition: all .5s ease-in-out !important;
+  -ms-transition: all .5s ease-in-out !important;
+  -o-transition: all .5s ease-in-out !important;
+  transition: all .5s ease-in-out !important;
+
+    border: 1px solid #8888ff;
+    box-shadow: 0px 0px 10px #8888ff, 0px 0px 10px #8888ff;
+}
+#popup_mapa .pop_profesor .foto{
+  width: 40px;
+  height: 40px;
+  background-image: url(IMG/USUARIOS/WEB/profesor_default.png);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-color: gainsboro;
+  background-size: 100%;
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#popup_mapa .pop_profesor .informacion{
+  display: inline-block;
+  vertical-align: middle;
+  color: gray;
+  padding-left:5px;
+    width: calc(100% - 55px);
+}
+#popup_mapa .pop_profesor .div_sup{
+    height: 19px;
+}
+#popup_mapa .pop_profesor .div_sup .nombre{
+  border-bottom:1px solid gray;
+  font-size: 12px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#popup_mapa .pop_profesor .div_inf{
+}
+#popup_mapa .pop_profesor .div_inf .conocimientos{
+    height: 15px;
+}
+#popup_mapa .pop_profesor .div_inf .conocimiento{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+#popup_mapa .pop_profesor .div_inf .conocimiento.match{
+  color: #7db6ff;
+}
+
+#popup_mapa .pop_profesor .div_inf .valoracion{
+}
+#popup_mapa .pop_profesor .div_inf .valoracion .icono{
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(IMG/valoracion.png);
+}
+#popup_mapa .pop_profesor .div_inf .valoracion .texto{
+
+  display: inline-block;
+  vertical-align: middle;
+  font-size:10px;
+}
+
+
+  .protector_fondo_popup {
+    background: rgba(0, 0, 0, 0.71);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+
+
+  .protector_fondo_popup .comp-popup{
+
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate3d(-50%,-50%,0px);
+      -moz-transform: translate3d(-50%,-50%,0px);
+      -ms-transform: translate3d(-50%,-50%,0px);
+      -o-transform: translate3d(-50%,-50%,0px);
+      transform: translate3d(-50%,-50%,0px);
+      background: white;
+  }
+  #popup_mapa{
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    border-radius: 10px;
+  }
+    #popup_mapa .descripcion{
+
+      height: 80px;
+      font-size: 16px;
+      padding-left: 20px;
+    color: gray;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+    position: relative;
+    }
+  #popup_mapa .contenedor_mapa{
+
+    position: relative;
+    height: calc(100% - 80px);
+  }
+  #popup_mapa .contenedor_mapa #mapa_profesores{
+    height: 100%;
+  }
+  #popup_mapa .leyenda_mapa{
+    background: white;
+    border: 1px solid #bfbfbf;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 180px;
+    height: 80px;
+    padding: 5px 10px;
+  }
+  #popup_mapa .leyenda_mapa .titulo{
+    color: #424242;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  #popup_mapa .leyenda_mapa .contenido_leyenda{
+
+  }
+  #popup_mapa .leyenda_mapa .contenido_leyenda .leyenda{
+    color: gray;
+    font-size: 11px;
+    text-align: right;    
+  }
+  #popup_mapa .leyenda_mapa .contenido_leyenda .leyenda .texto{
+    display: inline-block;
+    vertical-align: middle;
+
+  }
+  #popup_mapa .leyenda_mapa .contenido_leyenda .leyenda .icono{
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+  }
+  #popup_mapa .leyenda_mapa .contenido_leyenda .leyenda .icono1{
+    background-image: url(IMG/MAPA/apuntador1.png);
+  }
+  #popup_mapa .leyenda_mapa .contenido_leyenda .leyenda .icono2{
+    background-image: url(IMG/MAPA/apuntador2.png);
+  }
+  #popup_mapa .leyenda_mapa .contenido_leyenda .leyenda .icono3{
+    background-image: url(IMG/MAPA/apuntador3.png);
+  }
+
+  #popup_mapa .descripcion .texto{
+    width: calc(100% - 30px);
+  }
+  #popup_mapa .cerrar{
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    background-size: cover;
+    background-image: url(IMG/x.png);
+    cursor: pointer;
+  }
+</style>
+<!--
+<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places"
+    ></script>
+-->
+<script>
+
+
+
+$(document).ready(function(){
+  $('#popup_mapa .pop_profesor').click(function(){
+    $('.protector_fondo_popup').click();
+  });
+});
+
+
+
+var GL_ARRAY_MAKERS=new Array();
+var GL_MAP_AVISOS_MARKERS=[];
+
+
+
+function setMarkers(map, locations) {
+
+
+  var image;
+
+
+  var bounds = new google.maps.LatLngBounds();
+
+
+
+for (var i = 0, marker; marker = GL_MAP_AVISOS_MARKERS[i]; i++) {
+      marker.setMap(null);
+    }
+
+    // For each place, get the icon, place name, and location.
+    GL_MAP_AVISOS_MARKERS = [];
+
+
+  for (var index in locations) {
+
+    var beach = locations[index];
+ 
+      image= 'IMG/MAPA/apuntador'+beach.leyenda+'.png';
+
+     var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(beach.coor_latitud, beach.coor_longitud),
+        map: map,
+        icon: image,
+        animation: google.maps.Animation.DROP,
+        //shape: shape,
+//        title: beach.titulo,
+       indice: parseInt(beach.id)
+    });
+
+
+    fun_set_event(marker);
+
+     GL_MAP_AVISOS_MARKERS.push(marker);
+
+
+
+  }
+
+
+}
+
+function fun_set_event(marker) {
+    google.maps.event.addListener(marker, 'click', function() {
+
+      fun_set_pop_profesor_mapa(marker.indice);
+
+    });
+}
+
+
+var GL_DELAY_RESALTAR_POP_PROFESOR;
+function fun_set_pop_profesor_mapa(id){
+
+    clearInterval(GL_DELAY_RESALTAR_POP_PROFESOR);
+
+    $('#popup_mapa .pop_profesor').data('href',GL_AVISOS[id].id_usuario);
+
+      $('#popup_mapa .pop_profesor').addClass('resaltar');
+      GL_DELAY_RESALTAR_POP_PROFESOR=setInterval(function(){
+        clearInterval(GL_DELAY_RESALTAR_POP_PROFESOR);
+      $('#popup_mapa .pop_profesor').removeClass('resaltar');
+      },1000);
+
+    if(GL_AVISOS[id].foto){
+
+      $('#popup_mapa .pop_profesor .foto').css('background-image','url(IMG/USUARIOS/WEB/'+GL_AVISOS[id].foto+')');
+    }else{
+      $('#popup_mapa .pop_profesor .foto').removeAttr("style");
+    }
+
+    $('#popup_mapa .pop_profesor .nombre').html(GL_AVISOS[id].nombres+' '+GL_AVISOS[id].apellidos);
+
+    var html_conoimientos='';
+    for(var index in GL_AVISOS[id].conocimientos){
+      match='';
+      if(GL_AVISOS[id].conocimientos[index].id_conocimiento==$('#barra_buscador #id_curso').val()){
+        match='match';
+      }
+      html_conoimientos+='<div class="conocimiento '+match+'">'+GL_AVISOS[id].conocimientos[index].nombre+'</div>';
+
+    }
+
+    $('#popup_mapa .pop_profesor .conocimientos').html(html_conoimientos);
+    $('#popup_mapa .pop_profesor .valoracion .texto').html(GL_AVISOS[id].calificacion);
+    
+
+}
+
+
+</script>
+

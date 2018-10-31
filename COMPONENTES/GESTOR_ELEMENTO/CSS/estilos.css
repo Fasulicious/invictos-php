@@ -1,0 +1,489 @@
+    .comp-gestion-elemento .comp-ge-titulos{
+
+      text-align: center;
+      font-size: 150%;
+      margin-bottom: 20px;
+    }
+   
+
+
+    .comp-gestion-elemento .comp-ge-separador{       
+      border-top: 1px solid #99CED0;
+      margin:15px 0px 15px 0px;
+    }
+
+    .comp-gestion-elemento .comp-ge-bloque{
+
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .comp-gestion-elemento .comp-ge-campo{                
+      padding: 3px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    
+    .comp-gestion-elemento .comp-ge-campo:hover{                
+      background: #E8FEFF;
+    }
+    .comp-gestion-elemento .comp-ge-campo.comp-contacto-alerta:hover{                
+      background: rgba(255, 142, 142, 0.1);
+    }
+
+    .comp-gestion-elemento .comp-ge-campo.comp-contacto-alerta{
+      border: 1px rgba(255, 142, 142, 0.8) solid;
+    }
+
+
+    .comp-gestion-elemento .comp-ge-campo_input{  
+      background-color: white;
+      border-radius: 6px;
+      margin-bottom: 5px;
+        border: 1px solid rgba(0, 216, 255, 0.52);
+
+        -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+
+        -webkit-box-sizing:border-box ;
+        -ms-box-sizing:border-box ;
+        -o-box-sizing:border-box ;
+        -moz-box-sizing:border-box ;
+        box-sizing:border-box ;
+    }
+
+      .comp-gestion-elemento .comp-ge-campo_input.focus-input{
+        box-shadow: 0px 0px 6px rgba(0, 216, 200, .7);
+      }
+
+
+      .comp-gestion-elemento .comp-ge-campo_input.comp-contacto-alerta.focus-input{
+        box-shadow: 0px 0px 6px rgba(255, 80, 80, .8);
+      }
+
+
+      .comp-gestion-elemento .comp-ge-campo input[type="text"],.comp-gestion-elemento .comp-ge-campo input[type="password"]{                
+                 
+        padding: 5px;
+        border: 0px solid rgba(0, 216, 255, 0.52);
+        outline: none;
+        font-size: 17px;
+        width: 100%;   
+        background: none;
+        -webkit-box-sizing:border-box ;
+        -ms-box-sizing:border-box ;
+        -o-box-sizing:border-box ;
+        -moz-box-sizing:border-box ;
+        box-sizing:border-box ;
+      }
+      
+      .comp-gestion-elemento .comp-ge-campo textarea{                
+          padding: 5px;
+          border: 0px solid rgba(0, 216, 255, 0.52);
+          outline: none;
+          width: 100%;
+          height: 90px;
+          font-size: 17px;
+          resize: none;   
+          background: none;
+          -webkit-box-sizing:border-box ;
+          -ms-box-sizing:border-box ;
+          -o-box-sizing:border-box ;
+          -moz-box-sizing:border-box ;
+          box-sizing:border-box ;
+      }
+      .comp-gestion-elemento .comp-ge-campo .aviso-aux{                
+        display: block;
+        color: red;
+        overflow: hidden;
+        border-top: 1px solid rgb(255, 205, 205);
+        min-height: 0px;
+        font-size: 12px;
+        text-align: center;          
+
+        -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+
+      }
+      .comp-gestion-elemento .comp-ge-campo .aviso-aux.oculto{                
+        height: 0px;
+        border-top: 0px solid rgb(255, 205, 205);
+      }
+
+
+.comp-gestion-elemento .comp-ge-campo .text-campo{
+  padding: 5px;
+}
+.comp-gestion-elemento .comp-ge-campo .radio-campo{
+ padding: 5px; 
+  cursor: pointer;  
+}
+
+  .comp-gestion-elemento .comp-ge-campo .inline{
+    display: inline-table;
+  }
+
+.comp-gestion-elemento .comp-ge-campo .lista-select{
+    padding: 5px;
+  width: 100%;
+          -webkit-box-sizing:border-box ;
+          -ms-box-sizing:border-box ;
+          -o-box-sizing:border-box ;
+          -moz-box-sizing:border-box ;
+          box-sizing:border-box ;
+}
+  .comp-gestion-elemento .comp-ge-campo .lista-select select{
+   border: 0px;
+    outline: 0px;
+    width: 100%;
+    font-size: 17px;
+    cursor: pointer;        
+      background: none;
+  }
+
+
+  .comp-gestion-elemento .comp-ge-campo .div-input-checkbox,
+  .comp-gestion-elemento .comp-ge-campo .radio-campo  {
+    cursor: pointer;
+  }
+
+  .comp-gestion-elemento .comp-ge-campo .comp-ge-campo-texto_extra{
+   font-style: italic;
+   color:#666;
+  }
+
+
+    .comp-gestion-elemento .comp-ge-campo[data-imagen_btn="si"] .comp-ge-btn_subir {
+      display: none;
+    }
+
+    .comp-gestion-elemento .comp-ge-campo[data-imagen_btn="si"] .comp-ge-imagen {
+      
+      cursor: pointer; 
+    }
+
+    .comp-gestion-elemento .comp-ge-campo[data-imagen_btn="si"] .comp-ge-imagen:before,
+    .comp-gestion-elemento .comp-ge-campo[data-imagen_btn="si"] .comp-ge-imagen:after{
+
+        position: absolute;
+        top: 0px;
+        left:0px;
+        width: 100%;
+        opacity: 0;
+    }
+    .comp-gestion-elemento .comp-ge-campo[data-imagen_btn="si"] .comp-ge-imagen:after{
+
+        content: ' ';
+        background: rgba(0,0,0,0.5);
+        z-index: 10;
+        height: 100%;
+    }
+    .comp-gestion-elemento .comp-ge-campo[data-imagen_btn="si"] .comp-ge-imagen:before{
+
+        color: white;
+        content: 'Cambiar foto';
+        text-align: center;
+        z-index: 20;
+        font-weight: bold;
+        height: 20px;
+        top: 50%;
+        -webkit-transform: translate3d(0px,-50%,0px);
+        -moz-transform: translate3d(0px,-50%,0px);
+        -ms-transform: translate3d(0px,-50%,0px);
+        -o-transform: translate3d(0px,-50%,0px);
+        transform: translate3d(0px,-50%,0px);
+    }
+    .comp-gestion-elemento .comp-ge-campo[data-imagen_btn="si"] .comp-ge-imagen:hover:after,
+    .comp-gestion-elemento .comp-ge-campo[data-imagen_btn="si"] .comp-ge-imagen:hover:before{
+      opacity: 1;
+    }
+
+
+
+
+
+
+
+    .comp-gestion-elemento .comp-ge-subir{
+      padding: 5px;
+      background-color:#f1f1f1;
+    display: inline-block;
+      cursor: pointer; 
+      box-shadow: 0px 1px 2px #666;
+    }
+
+  
+  
+    .comp-gestion-elemento .comp-ge-subir:hover{
+
+      background-color:#e1e1e1;
+    }
+
+
+
+
+      
+
+
+
+.comp-gestion-elemento .comp-ge-btns{
+  text-align: center;
+}
+
+  .comp-gestion-elemento .comp-ge-btn-accion{
+    margin: auto;
+    min-width: 70px;
+    border: 1px solid rgba(82, 82, 82, 0.35);
+
+    display: none;
+  }
+
+
+  .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="insert"],
+  .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="limpiar"]{
+    display:inline-block;  
+  }
+  .comp-gestion-elemento[data-accion="update"] .comp-ge-btn-accion[data-accion="update"],
+  .comp-gestion-elemento[data-accion="update"] .comp-ge-btn-accion[data-accion="cancelar"],
+  .comp-gestion-elemento[data-accion="update"] .comp-ge-btn-accion[data-accion="preguntar_delete"]{
+    display:inline-block;  
+  }
+  .comp-gestion-elemento[data-accion="delete"] .comp-ge-btn-accion[data-accion="delete"],
+  .comp-gestion-elemento[data-accion="delete"] .comp-ge-btn-accion[data-accion="cancelar_delete"]{
+    display:inline-block;  
+  }
+
+
+  .comp-gestion-elemento[data-accion="insert"] .titulo{
+    display:block;  
+  }
+  .comp-gestion-elemento[data-accion="update"] .titulo,
+  .comp-gestion-elemento[data-accion="delete"] .titulo{
+    display:none;  
+  }
+
+  .comp-gestion-elemento[data-accion="insert"] .titulo_update{
+    display:none;  
+  }
+  .comp-gestion-elemento[data-accion="update"] .titulo_update,
+  .comp-gestion-elemento[data-accion="delete"] .titulo_update{
+    display:block;  
+  }
+
+
+    .comp-gestion-elemento .comp-ge-btn-accion .content-btn{
+      background: rgba(200, 200, 200, 0.3);       
+      text-align: center;
+      padding: 6px 10px 6px 10px;
+      border: 1px solid rgba(250, 250, 250, 0.83);
+      cursor: pointer;
+      color: #666;
+    }
+      .comp-gestion-elemento .comp-ge-btn-accion .content-btn:hover{
+        background: rgba(200, 200, 200, 0.7);            
+      }
+
+  .comp-gestion-elemento .comp-ge-btn-accion.comp-btn-enviando{
+    pointer-events:none;
+    cursor: default;
+    opacity: .8;
+  }
+
+
+
+
+
+
+
+#comp-ge-imagen img{
+
+    background-color: rgba(102, 102, 102, 0.61);
+    padding: 4px;
+}
+
+.comp-ge-vista_previa,
+.comp-ge-imagen{
+  
+    width: 95px;
+    margin-top: 5px;
+    height: 95px;
+    background-size: cover;
+    background-position: center;
+    
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+
+    border: 2px #71FF00 solid;
+
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     -o-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+.comp-ge-vista_previa[data-origen="bd"],
+.comp-ge-imagen[data-origen="bd"]{
+
+    border: 2px blue solid;
+
+  }
+
+  .comp-ge-vista_previa-eliminar,
+  .comp-ge-imagen-eliminar{
+    cursor: pointer;
+
+  }
+
+.comp-ge-vista_previa-eliminar:before,
+.comp-ge-imagen-eliminar:before{
+  position: absolute;
+  content: ' ';
+  top: 0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 10;
+  opacity: 0;
+
+}
+
+.comp-ge-vista_previa-eliminar:hover:before,
+.comp-ge-imagen-eliminar:hover:before{
+  opacity: 1;
+}
+
+
+.comp-ge-vista_previa-eliminar:after,
+.comp-ge-imagen-eliminar:after{
+      position: absolute;
+    content: 'Eliminar';
+    top: 37px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0px 0px 9px black;
+    height: 30px;
+    color: white;
+    z-index: 20;
+    opacity: 0;
+
+}
+.comp-ge-vista_previa-eliminar:hover:after,
+.comp-ge-imagen-eliminar:hover:after{
+  opacity: 1;
+}
+
+
+
+
+
+.comp-ge-vista_previa[data-tipo="pdf"]{
+
+    background-image: url(../IMG/pdf.png);
+    background-color:rgb(210,71,38);
+    background-repeat:no-repeat;
+    background-position:center;
+
+    height: 110px;
+    background-size: initial;
+
+
+  }
+
+
+
+
+  .comp-gestion-elemento[data-accion="update"] .no-update{
+    pointer-events:none;
+    opacity: 0.5;
+    background: #eee;
+  }
+
+
+
+
+    .comp-gestion-elemento .comp-ge-campo-multicampo{
+      
+        border: 1px solid rgba(0, 216, 255, 0.52);
+    margin-bottom: 5px;
+    }
+
+    
+  .comp-gestion-elemento .comp-ge-campos-multicampo{
+    display: none;  
+  }
+
+  .comp-gestion-elemento .comp-ge-quitar_multicampo{
+    cursor: pointer;
+    padding: 3px;
+    width: 10px;
+    height: 10px;
+    margin-left: auto;
+    background-image: url(../IMG/x.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .comp-gestion-elemento .comp-ge-quitar_multicampo:hover{
+    background-image: url(../IMG/x-blanco.png);
+    background-color: #aaa;
+    
+  }
+  .comp-gestion-elemento .comp-ge-conjunto-multicampo{
+
+    background: white;
+    padding: 5px;
+    margin-bottom: 10px;
+    
+        -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+  }
+
+.comp-gestion-elemento .comp-ge-agregar_multicampo{
+  text-align: center;
+  background: gainsboro;
+  padding: 8px;
+  margin: auto;
+  cursor: pointer;
+
+}
+
+.comp-gestion-elemento .comp-ge-agregar_multicampo:hover
+{
+    background: #AFAEAE;
+    color: white;
+  }
+
+
+  .comp-gestion-elemento .comp-ge-conjunto-multicampo .comp-ge-campo_input.focus-input{
+    box-shadow: none;
+  }
+
+
+  .comp-gestion-elemento .comp-ge-conjunto-multicampo .comp-ge-campo_input.comp-contacto-alerta.focus-input{
+    box-shadow: none;
+  }
+
+
+  .comp-gestion-elemento .comp-ge-conjunto-multicampo.focus-input{
+    box-shadow: 0px 0px 6px rgba(0, 216, 200, .7);
+  }
+
+

@@ -1,0 +1,562 @@
+  
+      <section id="" class="columna_conocimientos" data-area="conocimientos">             
+         <div class="titulo">
+         	Lista de conocimientos
+         </div>
+         <div class="content">
+
+		      <div class="formulario ">
+
+
+		      </div>
+		      <div class="btn_mostrar_agregar">
+		      	<span class="icono"></span><span class="txt">Agregar conocimiento</span>
+		      </div>
+
+
+
+         	<div class="lista_conocimientos">
+
+		        <div class="comp-consultor-elemento" data-elemento="conocimiento" data-condicion="consulta_1" data-conteo="10" data-recarga="true"  data-btns_elemento="true">
+		          
+		          <!--
+		          <condicion data-iddom="condicion_clasificacion" data-campo="id_profesor" data-valor="22"></condicion>-->
+		          
+		          <estructura>
+
+		         	<div class="conocimiento elemento" data-nivel="{nivel}" data-id_elemento="{id}">
+		         		<div class="info">
+		         			<div class="nombre inline vertical-m">{nombre}</div>
+		         			<div class="nivel inline vertical-m">
+		         				<span>Nivel</span> <span class="numero">{nivel}</span>
+		         			</div>
+		         		</div>
+		         		<div class="barra">
+		         			<div class="barra_color"></div>
+		         		</div>
+		         		<div class="btn_editar"></div>
+		         		<div class="btn_eliminar"></div>
+		         	</div>
+		         	<div class="form_gestion" data-id_elemento="{id}"></div>
+
+		          </estructura>
+
+		        </div>	
+
+	         </div>
+
+	         <div class="form_oculto">
+	         	
+		        <div class="comp-gestion-elemento" data-titulo="" data-titulo_update="Editar conocimiento" data-elemento="conocimiento" data-accion="insert" data-gestion="todo" data-espaciototal="9">
+					
+					<bloque data-espacio="9">
+					<campo data-iddom="id_skill" data-nombre="ID Skill:" data-valor="" data-campo="id_conocimiento" data-tipo="hidden">   
+		          <!-- hidden -->      
+		          </campo>
+		          <campo data-nombre="Conocimiento:" data-iddom="input_mostrar_conocimiento" data-update="false" data-espacio="6" data-campo="nombre" data-tipo="text">
+		            
+		          </campo>
+
+		          <campo   data-campo="nivel" data-nombre="Nivel:" data-tipo="select"  data-espacio="3" data-select="1">
+		            <div data-opcion="1"  data-value="1"></div>   
+		            <div data-opcion="2"  data-value="2"></div>  
+		            <div data-opcion="3"  data-value="3"></div>  
+		            <div data-opcion="4"  data-value="4"></div>  
+		            <div data-opcion="5"  data-value="5"></div>  
+		            <div data-opcion="6"  data-value="6"></div>  
+		            <div data-opcion="7"  data-value="7"></div>  
+		            <div data-opcion="8"  data-value="8"></div>  
+		            <div data-opcion="9"  data-value="9"></div>  
+		            <div data-opcion="10"  data-value="10"></div>     
+		          </campo>
+
+					</bloque>
+		          
+		        </div>
+	         </div>
+
+         	</div>
+         
+
+      </section>
+
+
+	<script>
+		
+var GL_DELAY_KEYUP_CURSOTEMA;
+		$(document).ready(function(){
+			$('body').click(function(){				
+	    		$('#lista_conocimientos_autocom').hide();
+			});
+			
+			
+
+		    $('body').on('keyup','#input_mostrar_conocimiento',function(event){
+
+		      if (event.keyCode!=38 && event.keyCode!=40 && event.keyCode!=13){
+
+		      	fun_mostrar_academ_keyup($(this));
+
+		      }else{
+
+		      	if (event.keyCode==13){ 
+		      		if($('#lista_conocimientos_autocom .tema_curso').length==0){
+		      			$('#crear_nuevo_curso_tema.hover').click();
+		      		}else{
+
+			    		$('#lista_conocimientos_autocom').hide();
+
+			      		$('.columna_conocimientos .formulario #id_skill').val($('#lista_conocimientos_autocom .tema_curso.hover').data('id_elemento'));
+
+		      		}
+		      	}else{
+
+		      		if($('#lista_conocimientos_autocom .tema_curso').length==0){
+		      			$('#crear_nuevo_curso_tema').addClass('hover');
+		      		}else{
+
+
+				      	if(event.keyCode==38){ //UP ARROW
+				      		if($('#lista_conocimientos_autocom .tema_curso.hover').length>0){
+				      			//significa que ya existe un hover seleccionado entonces debemos decidir apuntar al siguiente
+				      			if($('#lista_conocimientos_autocom .tema_curso').index($('#lista_conocimientos_autocom .tema_curso.hover'))==0){
+				      				//esto significa que hemos hecho up en el item que está mas arriba
+				      				$('#lista_conocimientos_autocom .tema_curso.hover').removeClass('hover');
+
+				      				$('#lista_conocimientos_autocom .tema_curso').last().addClass('hover');
+				      				
+				      			}else{
+				      				var obj=$('#lista_conocimientos_autocom .tema_curso.hover');
+				      				$('#lista_conocimientos_autocom .tema_curso.hover').removeClass('hover');
+				      				$(obj).prev().addClass('hover');
+				      			}
+				      		}else{
+				      			//significa que no hay hover apuntado aun, entonces debemos apuntar al primero de abajo
+				      			$('#lista_conocimientos_autocom .tema_curso').last().addClass('hover');
+				      		}
+				      	}else{
+				      		//DOWN ARROW
+
+				      		if($('#lista_conocimientos_autocom .tema_curso.hover').length>0){
+				      			//significa que ya existe un hover seleccionado entonces debemos decidir apuntar al siguiente
+				      			if($('#lista_conocimientos_autocom .tema_curso').index($('#lista_conocimientos_autocom .tema_curso.hover'))==$('#lista_conocimientos_autocom .tema_curso').length-1){
+				      				//esto significa que hemos hecho up en el item que está mas arriba
+				      				$('#lista_conocimientos_autocom .tema_curso.hover').removeClass('hover');
+
+				      				$('#lista_conocimientos_autocom .tema_curso').first().addClass('hover');
+				      				
+				      			}else{
+				      				var obj=$('#lista_conocimientos_autocom .tema_curso.hover');
+				      				$('#lista_conocimientos_autocom .tema_curso.hover').removeClass('hover');
+				      				$(obj).next().addClass('hover');
+				      			}
+				      		}else{
+				      			//significa que no hay hover apuntado aun, entonces debemos apuntar al primero de arriba
+
+				      			$('#lista_conocimientos_autocom .tema_curso').first().addClass('hover');
+				      		}
+
+
+			      		}
+
+			      	$(this).val($('#lista_conocimientos_autocom .tema_curso.hover').data('nombre'));
+			      	}
+
+
+		      	}
+		      }
+
+		    });
+
+
+
+		    $('body').on('click','#lista_conocimientos_autocom .tema_curso',function(){
+		   
+		    	
+				$('#lista_conocimientos_autocom').hide();
+
+
+		      	$('.columna_conocimientos .formulario #id_skill').val($(this).data('id_elemento'));
+		      	$('.columna_conocimientos .formulario #input_mostrar_conocimiento').val($(this).data('nombre'));
+
+
+
+		    });
+
+		   
+
+		    $('body').on('click','#crear_nuevo_curso_tema',function(){
+		    	
+		    		$('#nombre_nuevo_tema_curso').val($('#input_mostrar_conocimiento').val());
+		    		$('#nombre_busqueda_nuevo_tema_curso').val($('#input_mostrar_conocimiento').val());
+		    	$('#lista_conocimientos_autocom .comp-gestion-elemento .comp-ge-form .comp-ge-btn-accion[data-accion="insert"]').click();
+				fun_cancel_buble_event(event);
+
+		    });
+
+		    $('.columna_conocimientos').on('click','.elemento .btn_editar',function(){
+		    	$('.columna_conocimientos .lista_conocimientos .elemento').show();
+		    	var id=$(this).parents('.elemento').data('id_elemento');
+		    	
+		    	var objeto= $('.columna_conocimientos .content .comp-gestion-elemento[data-elemento="conocimiento"]');
+		    	$(objeto).appendTo('.form_gestion[data-id_elemento="'+id+'"]');
+		    	$('.columna_conocimientos .form_gestion[data-id_elemento="'+id+'"]').show();
+				$(this).parents('.elemento').hide();
+				$('.btn_mostrar_agregar').show();
+		    });
+
+		    $('.columna_conocimientos').on('click','.elemento .btn_eliminar',function(){
+		    	$('.columna_conocimientos .lista_conocimientos .elemento').show();
+		    	var id=$(this).parents('.elemento').data('id_elemento');
+		    	
+		    	var objeto= $('.columna_conocimientos .content .comp-gestion-elemento[data-elemento="conocimiento"]');
+		    	$(objeto).appendTo('.form_gestion[data-id_elemento="'+id+'"]');
+		    	$('.columna_conocimientos .form_gestion[data-id_elemento="'+id+'"]').show();
+
+		    	$('.columna_conocimientos .form_gestion[data-id_elemento="'+id+'"] .comp-ge-btn-accion[data-accion="preguntar_delete"]').click();
+				$(this).parents('.elemento').hide();
+				$('.btn_mostrar_agregar').show();
+		    });
+
+
+		    $('.btn_mostrar_agregar').click(function(){
+
+		    	$('.columna_conocimientos .comp-gestion-elemento').data('accion','insert');
+
+		    	$('.columna_conocimientos .comp-gestion-elemento .comp-ge-btn-accion[data-accion="limpiar"]').click();
+
+
+		    	var objeto= $('.columna_conocimientos .content .comp-gestion-elemento[data-elemento="conocimiento"]');
+		    	$(objeto).appendTo('.formulario');
+		    	$('.columna_conocimientos .btn_mostrar_agregar').hide();
+		    	$('.columna_conocimientos .formulario').show();
+		    });
+
+		});
+
+
+	function fun_mostrar_academ_keyup(obj_dom){
+
+      	var valor=$(obj_dom).val();
+
+      	clearInterval(GL_DELAY_KEYUP_CURSOTEMA);
+		GL_DELAY_KEYUP_CURSOTEMA=setInterval(function(){
+			clearInterval(GL_DELAY_KEYUP_CURSOTEMA);
+
+	      	$('#lista_conocimientos_autocom').removeClass('lateral');
+	      	$('#lista_conocimientos_autocom').addClass('horizontal');
+
+	      	$('#lista_conocimientos_autocom').css('top', ($(obj_dom).offset().top+30) +'px' );
+
+	      $('#lista_conocimientos_autocom').css('left',$(obj_dom).offset().left);
+
+
+	      ancho = parseInt($(obj_dom).css('width').replace('px',''));
+
+	      	$('#lista_conocimientos_autocom').css('width',ancho+'px');
+
+  			$('#crear_nuevo_curso_tema').removeClass('hover');
+
+			$('#lista_conocimientos_autocom').show();
+			
+			$('#lista_conocimientos_autocom #lugar_buscador').val($('.comp-menu-opcion.seleccionado').data('opcion'));
+			GL_COMPONENTE_CONSULTOR_ELEMENTOS.LISTA['buscar_conocimientos'].reset();
+
+			$('#lista_conocimientos_autocom #condicion_temas_cursos').val(valor);
+
+			GL_COMPONENTE_CONSULTOR_ELEMENTOS.LISTA['buscar_conocimientos'].consultar();
+			
+		},200);
+}
+
+
+
+
+	</script>
+
+
+  	<style>
+
+	.columna_conocimientos .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="limpiar"]{		
+    	display: none;
+	}
+	.columna_conocimientos .comp-gestion-elemento[data-accion="insert"] .comp-ge-btn-accion[data-accion="cancelar"]{
+    	display: inline-block;
+	}
+	
+	.mostrado{		
+    	display: block;
+	}
+
+	.columna_conocimientos .btn_mostrar_agregar{
+	    background-color: #f1f1f1;
+	    cursor: pointer;
+	    padding: 15px;
+	    text-align: center;
+	    margin-bottom: 10px;
+
+	}
+
+	.columna_conocimientos .btn_mostrar_agregar:hover{
+		background-color: #ccc;
+	}
+	.columna_conocimientos .btn_mostrar_agregar .icono{
+
+	    display: inline-block;
+	    position: relative;
+	    height: 30px;
+	    width: 30px;
+	    border-radius: 20px;
+	    vertical-align: middle;
+	    background-image:url('IMG/PERFILES/+.png');
+	    background-size: cover;
+	    background-position: center;
+	}
+	
+	.columna_conocimientos .btn_mostrar_agregar .txt{
+		margin-left: 20px;
+		font-size: 18px;
+		color:gray;
+	}
+
+      	.columna_conocimientos {
+    width: 100%;
+    height: initial !important;
+    padding-bottom: 20px;
+      	}
+      	.columna_conocimientos .content{
+    max-width: 400px;
+    width: calc(100% - 150px);
+    margin: auto;
+
+      	}
+      	.columna_conocimientos .titulo{
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #777777;
+    margin-top: 22px;
+    text-align: center;
+      	}
+      	.columna_conocimientos .lista_conocimientos{
+      		margin: auto;
+      		margin-bottom: 10px;
+      	}
+
+      	.columna_conocimientos .lista_conocimientos .elemento{
+      		padding: 10px 10px 15px 10px;
+      		background-color: #f1f1f1;
+    		font-size: 13px;
+			position: relative;
+			cursor: inherit;
+    		margin-bottom: 10px;
+      	}      	
+      	.columna_conocimientos .lista_conocimientos .info{
+    		margin-bottom: 10px;
+      	}
+      	.columna_conocimientos .lista_conocimientos .nombre{
+      		color: gray;
+    		width: calc(100% - 65px);
+      	}
+      	.columna_conocimientos .lista_conocimientos .nivel{
+      		    width: 60px;
+    text-align: right;
+      	}
+
+      	.columna_conocimientos .lista_conocimientos .barra{
+      		border-radius: 20px;
+      		height: 10px;
+      		background-color: rgb(206, 204, 204);
+
+      	}
+      	.columna_conocimientos .lista_conocimientos .barra_color{
+      		border-radius: 20px;
+      		height: 100%;
+      		background-color: rgb(100, 100, 100);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="1"] .barra_color{
+      		width: 10%;
+      		background-color: #777;
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="2"] .barra_color{
+      		width: 20%;
+      		background-color: #777;
+      	}
+
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="3"] .barra_color{
+      		width: 30%;
+      		background-color: #777;
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="1"] .nivel,
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="2"] .nivel,
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="3"] .nivel{
+      		color: #777;
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="4"] .barra_color{
+      		width: 40%;
+      		background-color: rgb(249, 142, 35);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="5"] .barra_color{
+      		width: 50%;
+      		background-color: rgb(249, 142, 35);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="6"] .barra_color{
+      		width: 60%;
+      		background-color: rgb(249, 142, 35);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="7"] .barra_color{
+      		width: 70%;
+      		background-color: rgb(249, 142, 35);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="4"] .nivel,
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="5"] .nivel,
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="6"] .nivel,
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="7"] .nivel{
+      		color: rgb(249, 142, 35);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="8"] .barra_color{
+      		width: 80%;
+      		background-color: rgb(49, 211, 133);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="9"] .barra_color{
+      		width: 90%;
+      		background-color: rgb(49, 211, 133);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="10"] .barra_color{
+      		width: 100%;
+      		background-color: rgb(49, 211, 133);
+      	}
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="8"] .nivel,
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="9"] .nivel,
+      	.columna_conocimientos .lista_conocimientos .elemento[data-nivel="10"] .nivel{
+      		color: rgb(49, 211, 133);
+      	}
+
+			.columna_conocimientos .lista_conocimientos .elemento .btn_editar,
+			.columna_conocimientos .lista_conocimientos .elemento .btn_eliminar{	
+				background-size: 100%;
+				background-position: center;	
+				cursor: pointer;
+				opacity:0.6;
+				position: absolute;
+				top: 50%;				
+				-webkit-transform: translate3d(0px,-50%,0px);
+				-moz-transform: translate3d(0px,-50%,0px);
+				-ms-transform: translate3d(0px,-50%,0px);
+				-o-transform: translate3d(0px,-50%,0px);
+				transform: translate3d(0px,-50%,0px);
+			}
+			.columna_conocimientos .lista_conocimientos .elemento .btn_editar{			
+				width: 20px;
+				height: 20px;	
+				background-image: url(IMG/PERFILES/edit_gray.png);
+				right: -35px;
+			}
+			.columna_conocimientos .lista_conocimientos .elemento .btn_eliminar{	
+			    width: 15px;
+			    height: 15px;
+	    		margin-left: 8px;
+			    background-image: url(IMG/PERFILES/close_gray.png);	
+				right: -65px;
+
+			}
+
+			.columna_conocimientos .lista_conocimientos .elemento .btn_editar:hover,
+			.columna_conocimientos .lista_conocimientos .elemento .btn_eliminar:hover{
+				opacity: 1;
+			}
+
+			.columna_conocimientos .formulario{
+				display: none;
+      			
+      		}
+
+			.columna_conocimientos .formulario.oculto{
+				display: none;
+			}
+      		.columna_conocimientos .formulario .comp-gestion-elemento{
+				padding: 10px;
+    			box-shadow: 0px 0px 2px #969696;
+      		}
+      		.columna_conocimientos  .lista-select{
+
+			    padding-top: 3px !important;
+      		}
+      		.columna_conocimientos .comp-ge-campo[data-campo="nivel"]{
+			    width: calc(33% - 5px) !important;
+			    margin-left: 5px;
+      		}
+      		.columna_conocimientos .comp-content-titulo{
+      			display: none;
+      		}
+
+
+
+  #lista_conocimientos_autocom #crear_nuevo_curso_tema{
+  
+    margin: 5px;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px #999;
+    background: #FFFFCF;
+
+  }
+  #lista_conocimientos_autocom #crear_nuevo_curso_tema:hover{
+    background: #FFF5AD;
+
+  }
+  #lista_conocimientos_autocom #crear_nuevo_curso_tema.hover{
+    background: #FFF4A8;
+  }
+
+  #lista_conocimientos_autocom #crear_nuevo_curso_tema.oculto{
+    display: none;
+  }
+
+  #lista_conocimientos_autocom .msj_alerta{
+
+    color: #FF2E2E;
+    text-align: center;
+    padding: 5px 10px;
+    border-top: 1px solid red;
+    display: none;
+  }
+  #lista_conocimientos_autocom .msj_correcto{
+
+    color: #00D400;
+    text-align: center;
+    padding: 5px 10px;
+    border-top: 1px solid #00D400;
+    display: none;
+  }
+
+	#lista_conocimientos_autocom .lista_cursos_temas{
+	    font-size: 12px;
+	}
+
+    .columna_conocimientos .formulario .comp-ge-campo_input.comp-contacto-alerta.exito{
+
+    border: 1px rgb(0, 212, 0) solid;
+
+    }
+    .columna_conocimientos .formulario .comp-ge-campo.comp-contacto-alerta.exito:hover {
+	    background: rgba(142, 255, 178, 0.1);
+	}
+    .columna_conocimientos .formulario .comp-ge-campo_input.comp-contacto-alerta.exito .aviso-aux{
+      color:#00D400;
+
+      border-top: 1px solid #00D400;
+    }
+
+    .columna_conocimientos .formulario .comp-ge-campo.comp-contacto-alerta.exito.focus-input{
+	box-shadow: none !important;
+    }
+
+			.columna_conocimientos .form_oculto{
+      			display: none;
+      		}
+	.columna_conocimientos .comp-gestion-elemento .comp-ge-btn-accion .content-btn{		
+	    font-size: 11px;
+	    padding-left: 12px;
+	    padding-right: 12px;
+	}
+      </style>    

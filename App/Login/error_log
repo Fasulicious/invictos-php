@@ -1,0 +1,2 @@
+[28-Nov-2016 12:08:06 America/Chicago] PHP Warning:  require_once(../DAO/DAOLogin.php): failed to open stream: No such file or directory in /home1/manuelf27/public_html/App/Login/logear.php on line 11
+[28-Nov-2016 12:08:06 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '../DAO/DAOLogin.php' (include_path='.:/opt/php56/lib/php') in /home1/manuelf27/public_html/App/Login/logear.php on line 11

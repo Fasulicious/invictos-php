@@ -1,0 +1,230 @@
+
+.comp-galeria{  
+  position: relative;
+  height: 100%;
+}
+
+.comp-galeria .comp-galeria-contenedor{  
+  height: 100%;
+}
+
+.comp-galeria .comp-galeria-contenido{
+
+  width: 100%;
+  height:100%;
+}
+
+  .comp-galeria .cg-titulo{    
+    z-index: 10;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0px 0px 9px #222, 0px 0px 9px #222;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+  }
+  .comp-galeria .cg-descripcion{
+    width: 80%;
+    margin: auto;
+    padding: 40px 0px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+    .comp-galeria .cg-contenedor{      
+        width: 100%;
+        height: 40%;
+        position: relative;
+    }
+
+      .comp-galeria .cg-div-galeria{
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        overflow: hidden;
+      } 
+
+        .comp-galeria .cg-contenedor.inferior .cg-div-galeria{          
+          width: 100%;          
+        } 
+
+        .comp-galeria .cg-contenedor.laterales .cg-div-galeria{          
+          width: 80%; 
+          float: left;         
+        } 
+
+          .comp-galeria .cg-contenedor.laterales .cg-nav-lateral{          
+            width: 10%;       
+            height: 100%;   
+            cursor: pointer;
+            float: left;   
+            
+          } 
+          .comp-galeria .cg-contenedor.laterales .cg-nav-lateral.inactivo{          
+            opacity: 0.7;
+            pointer-events:none;
+
+          } 
+          .comp-galeria .cg-contenedor.laterales .cg-nav-lateral:hover{          
+            background: #f1f1f1;
+            
+          } 
+          
+
+
+
+
+        .comp-galeria .cg-div-galeria .cg-contenedor-rejillas{
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          -webkit-transition: all 1s cubic-bezier(.11,.76,.44,1);
+          -moz-transition: all 1s cubic-bezier(.11,.76,.44,1);
+          -ms-transition: all 1s cubic-bezier(.11,.76,.44,1);
+          -o-transition: all 1s cubic-bezier(.11,.76,.44,1);
+          transition: all 1s cubic-bezier(.11,.76,.44,1);
+        }
+
+          .comp-galeria .cg-div-galeria .cg-rejilla-elementos{
+            height: 100%;
+            float:left;
+          }
+
+            .comp-galeria .cg-div-galeria .cg-elemento{
+                float: left;
+              overflow: hidden;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box;
+            } 
+
+              .comp-galeria .cg-div-galeria.diseno1 .cg-elemento{
+                
+                padding: 3px;
+                
+              } 
+
+                .comp-galeria .cg-div-galeria.diseno2 .cg-elemento{
+                    
+                    border-top:1px solid #777; 
+                    border-left:1px solid #777; 
+                  
+                } 
+
+                .comp-galeria .cg-div-galeria.diseno2 .cg-elemento.fila1{                  
+                    border-top:0px;                   
+                } 
+                .comp-galeria .cg-div-galeria.diseno2 .cg-elemento.columna1{                  
+                    border-left:0px;                   
+                } 
+
+
+            .comp-galeria .cg-div-galeria .galeria-elem:hover{
+              
+            } 
+
+
+              .comp-galeria .cg-div-galeria .cg-elemento .cg-elemento-contenido{
+                height: 100%;
+              }
+
+                .comp-galeria .cg-div-galeria .cg-elemento .cg-elemento-imagen{
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+
+
+                .cg-elemento-info{
+                  
+                  height: 100%;
+                  text-align: center;
+                  color:white;
+                  text-shadow:0px 0px 2px #666;
+
+                }
+
+                  .cg-elemento-info .cg-elemento-titulo{
+                    height: 50%;
+                  }
+                
+                  .cg-elemento-info .cg-elemento-subtitulo{
+                    height: 50%;
+                  }
+
+          .comp-galeria .cg-contenedor-nav{
+            width:100%;
+            padding: 20px;
+            text-align: center;   
+
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box;     
+          }
+
+            .comp-galeria .cg-nav-btn{
+              width: 16px;
+              height:16px;
+              background: white;
+              border-radius: 10px;
+              border: 1px solid #888;
+              display: inline-table;
+              cursor: pointer;
+              margin: 4px;
+            }
+
+            .comp-galeria .cg-nav-btn.activo{
+
+              background: #999;
+            }
+
+    .comp-galeria .cg-contenedor.laterales .cg-nav-lateral .cg-nav-flecha{
+      width: 50px;
+      height: 50px;    
+      background-color: rgba(0,0,0,0.4);
+      background-image:url(../IMG/flecha.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 80% 80%;
+      margin: auto;
+      border-radius: 40px;
+      cursor:pointer;
+
+    }
+      .comp-galeria .cg-contenedor.laterales .cg-nav-lateral.cg-nav-izq .cg-nav-flecha{
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+
+    .comp-galeria .cg-contenedor.laterales .cg-nav-lateral:hover  .cg-nav-flecha{
+
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+        background-size: 60% 60%;
+
+    }
+    .comp-galeria .cg-contenedor.laterales .cg-nav-lateral.cg-nav-izq:hover  .cg-nav-flecha{
+
+        -webkit-transform: rotate(180deg) scale(1.2);
+        -moz-transform: rotate(180deg) scale(1.2);
+        -ms-transform: rotate(180deg) scale(1.2);
+        -o-transform:rotate(180deg)  scale(1.2);
+        transform: rotate(180deg) scale(1.2);
+
+    }

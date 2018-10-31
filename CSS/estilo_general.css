@@ -1,0 +1,545 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+
+}
+
+html,body{
+  height: 100%;
+}
+
+
+ol, ul, li {
+list-style: none;
+}
+
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+a {
+text-decoration: none;
+}
+
+@font-face {
+
+  font-family: 'OpenSansLight';
+
+    src:
+    url(../FONTS/OpenSans-Light.otf) format('opentype'),
+    url(../FONTS/OpenSans-Light.ttf) format('truetype'),
+    url(../FONTS/OpenSans-Light.woff) format('woff'),
+    url(../FONTS/OpenSans-Light.woff2) format('woff2');
+
+}
+@font-face {
+
+  font-family: 'OpenSansRegular';
+
+    src:
+    url(../FONTS/OpenSans-Regular.otf) format('opentype'),
+    url(../FONTS/OpenSans-Regular.ttf) format('truetype'),
+    url(../FONTS/OpenSans-Regular.woff) format('woff'),
+    url(../FONTS/OpenSans-Regular.woff2) format('woff2');
+
+}
+@font-face {
+
+  font-family: 'OpenSansBold';
+
+    src:
+    url(../FONTS/OpenSans-Bold.otf) format('opentype'),
+    url(../FONTS/OpenSans-Bold.ttf) format('truetype'),
+    url(../FONTS/OpenSans-Bold.woff) format('woff'),
+    url(../FONTS/OpenSans-Bold.woff2) format('woff2');
+
+}
+
+
+
+input[type="button"]{
+
+    padding: 10px;
+    background: rgba(17, 19, 94, 0.51);
+    border: 1px solid rgba(121, 124, 255, 0.54);
+    color: white;
+    font-size: 18px;
+    outline: none;
+}
+
+body,textarea, input , div{    
+  font-family: OpenSansRegular !important;
+}
+
+.trans_1{
+
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+  }
+
+
+
+html::-webkit-scrollbar-track
+{
+  border: 4px solid white;
+  background-color: rgb(255,87,87);
+}
+
+html::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb
+{
+  width: 20px;
+  background-color:  rgb(255,87,87); 
+}
+
+
+body.sin_scroll{
+  overflow:none;
+}
+
+
+.oculto_fondo{      
+    opacity:0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);    
+    pointer-events:none;
+}
+
+.oculto_derecha{      
+    opacity: 0;
+    pointer-events:none;
+    -webkit-transform: translate3d(100px,0px,0px);
+    -moz-transform: translate3d(100px,0px,0px);
+    -ms-transform: translate3d(100px,0px,0px);
+    -o-transform: translate3d(100px,0px,0px);
+    transform: translate3d(100px,0px,0px);
+}
+ 
+
+.contenedor-tabla{      
+  display: table;         
+  height: 100%;  
+  width: 100%;
+}
+
+.contenedor-celda{      
+  display: table-cell;       
+  height: 100%;  
+  vertical-align: middle;            
+}
+
+
+
+  .no_events{
+    pointer-events:none;
+  
+  }
+
+
+
+
+  
+
+#cargando.comp-cargando{
+  position: fixed;
+  background-color: rgb(255,87,87);
+}
+#cargando.comp-cargando #comp-cargando-barra{
+  border: 6px solid white;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  height: 9px;
+  border-radius: 29px;
+  background-color: white;
+}
+
+
+#cargando.comp-cargando #comp-cargando-barra .barra_llenado{
+  background-color: rgb(255,87,87);
+  border-radius: 18px;
+}
+
+.comp-cargando #imagen{
+
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+
+    -webkit-transition: all .5s cubic-bezier(0, 0, 0.25, 1);
+    -moz-transition: all .5s cubic-bezier(0, 0, 0.25, 1);
+    -ms-transition: all .5s cubic-bezier(0, 0, 0.25, 1);
+    -o-transition: all .5s cubic-bezier(0, 0, 0.25, 1);
+    transition: all .5s cubic-bezier(0, 0, 0.25, 1);
+    
+  margin-bottom: 0px;
+}
+
+.comp-cargando #imagen.mostrado{
+
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+  transform: scale(1) !important;
+}
+.comp-cargando #imagen img{
+
+    width: 170px;
+}
+
+.comp-cargando #comp-cargando-barra{
+
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+
+    -webkit-transition: all .5s  cubic-bezier(0, 0, 0.25, 1);
+    -moz-transition: all .5s  cubic-bezier(0, 0, 0.25, 1);
+    -ms-transition: all .5s  cubic-bezier(0, 0, 0.25, 1);
+    -o-transition: all .5s  cubic-bezier(0, 0, 0.25, 1);
+    transition: all .5s  cubic-bezier(0, 0, 0.25, 1);
+}
+
+.comp-cargando #comp-cargando-barra.mostrado{
+
+  -webkit-transform: scaleX(1) !important;
+  -moz-transform: scaleX(1) !important;
+  -ms-transform: scaleX(1) !important;
+  -o-transform: scaleX(1) !important;
+  transform: scaleX(1) !important;
+}
+
+
+
+
+
+
+
+section.estilo-pagina{
+
+  color: #b5b5b5;
+  text-align: justify;
+  padding-top: 110px;
+  max-width: 1050px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+section>header{
+        
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+section>article{
+        
+  margin-top: 30px;
+}
+section>article h2{
+        
+  font-weight: bold;
+  color: #8e8e8e;
+  margin-bottom: 10px;
+}
+section>article p{
+        
+  font-size: 13px;
+}
+
+
+
+
+  .protector_fondo_popup {
+    background: rgba(0, 0, 0, 0.71);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+  .protector_fondo_popup .comp-popup{
+
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate3d(-50%,-50%,0px);
+      -moz-transform: translate3d(-50%,-50%,0px);
+      -ms-transform: translate3d(-50%,-50%,0px);
+      -o-transform: translate3d(-50%,-50%,0px);
+      transform: translate3d(-50%,-50%,0px);
+      background: white;
+  }
+
+  .cerrar{
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    background-size: cover;
+    background-image: url(../IMG/x.png);
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+  /*****************GESTOR ELEMENTO ********************/
+  /*****************GESTOR ELEMENTO ********************/
+  /*****************GESTOR ELEMENTO ********************/
+  /*****************GESTOR ELEMENTO ********************/
+
+      body .comp-gestion-elemento .comp-ge-campo_input{
+    border: 1px solid #ccc;
+      }
+      body .comp-gestion-elemento .comp-ge-campo,body .comp-gestion-elemento .comp-ge-campo:hover{
+        background: transparent;  
+
+      }
+
+      body .comp-gestion-elemento .comp-ge-campo_input.focus-input{
+        box-shadow: none;
+      }
+      body .comp-gestion-elemento .comp-ge-campo_input input{
+
+       font-size: 14px !important;
+      }
+
+  body .comp-gestion-elemento .comp-ge-btn-accion{
+    border:0px;
+  }
+      body .comp-gestion-elemento .comp-ge-btn-accion .content-btn:hover{
+
+          background: rgb(245, 57, 57);
+      }
+      body .comp-gestion-elemento .comp-ge-btn-accion .content-btn{
+
+        color: white;
+        background: rgb(255,87,87);
+        font-size: 13px;
+        padding-left: 27px;
+        padding-right: 27px;
+        border-radius: 20px;
+      }
+
+      body .comp-gestion-elemento .comp-ge-btn-accion .content-btn .comp-ge-boton{
+
+        font-family: OpenSansLight !important;
+      }
+
+    body .comp-gestion-elemento .comp-ge-campo input[type="text"],
+    body .comp-gestion-elemento .comp-ge-campo input[type="password"],
+    body .comp-gestion-elemento .comp-ge-campo textarea,
+    body .comp-gestion-elemento .comp-ge-campo select{
+
+        color: #888;
+    }
+
+
+
+
+
+
+.boton_invictos{  
+  background: rgb(255,87,87);
+    border: 1px solid rgb(199,62,62);
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+  padding: 3px 30px;
+  cursor:pointer;
+  font-family: OpenSansLight !important;
+}
+.boton_invictos:hover{
+  background: rgb(245, 57, 57);
+}
+
+
+.boton_invictos.gris{  
+  background:#aaa;
+    border: 1px solid rgb(255,87,87);
+}
+.boton_invictos.gris:hover{
+  background: #888;
+}
+
+.bold{
+  font-family: OpenSansBold !important;
+}
+                
+
+
+
+.txt-centro{ 
+  text-align: center; 
+}
+.txt-der,
+.txt-derecha{ 
+  text-align: right; 
+}
+.txt-izq,
+.txt-izquierda{ 
+  text-align: left; 
+}
+
+.f-left{
+  float: left;
+}
+.f-right{ 
+  float: right; 
+}
+
+.c-celeste{
+  color:#7db6ff;
+}
+
+.a-pointer{
+  cursor: pointer;
+}
+.a-pointer:hover{
+  text-decoration: underline;
+}
+
+.inline{  
+  display: inline-block;
+}
+.vertical-t{
+  vertical-align: top;
+}
+.vertical-m{  
+  vertical-align: middle;
+}
+.vertical-b{
+  vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .box_profesor{
+    width: calc(100% - 100px);
+    display: inline-block;
+    vertical-align: middle;
+  } 
+  .box_profesor .foto{
+    width: 65px;
+    height: 65px;
+    background: url(../IMG/USUARIOS/WEB/profesor_default.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: gainsboro;
+    background-size: 100%;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .box_profesor .informacion{
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 80px);
+    height: 70px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 5px;
+    text-align: left;
+  }
+  .box_profesor .info_sup{
+    color: gray;
+    margin-bottom: 5px;
+    margin-top: 2px;
+  } 
+  .box_profesor .nombre .texto{
+      display: inline-block;
+      border-bottom: 1px solid gray;
+  }
+  .box_profesor .conocimientos{
+
+    font-size: 12px;
+    color: gray;
+  }
+  .box_profesor .conocimientos .conocimiento{
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .box_profesor .conocimientos .conocimiento.match{
+    color: #7db6ff;
+  }
+  .box_profesor .valoracion{
+    margin-top: -3px;
+  }
+  .box_profesor .valoracion .btn_votar{                 
+      cursor: default;
+  }
+  .box_profesor .valoracion .icono{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(../IMG/valoracion_activo.png);
+    vertical-align: middle;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /*.box_profesor .valoracion .btn_votar.activo .icono {
+    background-image: url(../IMG/valoracion_activo.png);
+  }*/
+
+
+  .box_profesor .valoracion .numero{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    color: gray;
+  }

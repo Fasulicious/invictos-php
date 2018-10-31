@@ -1,0 +1,391 @@
+			<section id="" class="columna_editar_perfil" data-area="editar_perfil">             
+			
+			    <div class="comp-gestion-elemento" data-titulo="" data-titulo_update="" data-elemento="info_perfil" data-objeto="info_perfil" data-accion="update" data-gestion="update" data-espaciototal="8"  data-funcion_insert="fun_insert_datos_perfil();" data-funcion_update="fun_update_datos_perfil();">
+
+				<bloque data-espacio="4">
+					<campo data-nombre="Cambiar foto" data-campo="foto" data-src="IMG/USUARIOS/WEB" data-src_default="IMG/USUARIOS/WEB/profesor_default.png" data-espacio="4"  data-tipo="imagen" data-imagen_btn="si" data-funcion="fun_cambia_foto_edit_perfil"></campo>
+		            <campo data-nombre="Nombre de usuario para Link de tu perfil (no usar espacio):" data-espacio="4" data-campo="username" data-tipo="text"></campo>
+		            <campo data-nombre="Nombres:" data-espacio="4" data-iddom="campo_nombres_usuario" data-campo="nombres" data-tipo="text"></campo>
+		            <campo data-nombre="" data-espacio="4" data-iddom="campo_nombres_busqueda" data-campo="nombres_busqueda" data-tipo="hidden"></campo>
+		            
+		            <campo data-nombre="Apellidos:" data-iddom="campo_apellidos_usuario" data-espacio="4" data-campo="apellidos" data-tipo="text"></campo>
+		            <campo data-nombre="" data-iddom="campo_apellidos_busqueda" data-espacio="4" data-campo="apellidos_busqueda" data-tipo="hidden"></campo>
+		            <campo data-nombre="Fecha de nacimiento:" data-espacio="3" data-campo="fecha_nacimiento" data-tipo="date"></campo>
+			      	<campo   data-campo="mostrar_edad" data-nombre="Visible:" data-tipo="select"  data-espacio="1" data-select="1">
+				        <div data-opcion="Todos"  data-value="1"></div>   
+				        <div data-opcion="Solo yo"  data-value="0"></div>     
+			      	</campo>
+		            <campo data-nombre="Correo:" data-espacio="4" data-campo="correo" data-tipo="text"></campo>
+		            <campo data-nombre="Tel&eacute;fono:" data-espacio="3" data-campo="telefono" data-tipo="text"></campo>
+
+			          <campo   data-campo="mostrar_telefono" data-nombre="Visible:" data-tipo="select"  data-espacio="1" data-select="1">
+			            <div data-opcion="Todos"  data-value="1"></div>   
+			            <div data-opcion="Solo yo"  data-value="0"></div>     
+			          </campo>
+
+		            <?php
+						if($_SESSION['tipo']=='P'){
+					?>		
+
+		            	<campo data-nombre="" data-espacio="4" data-campo="nivel_educativo" data-tipo="constante" data-value="0">					            
+		            	</campo>		            
+					
+					<campo data-iddom="id_academ" data-nombre="ID Academ:" data-valor="" data-campo="id_academ" data-tipo="hidden">   
+		          <!-- hidden -->      
+		          </campo>
+		          <campo data-nombre="Formaci&oacute;n Acad&eacute;mica (Centro de estudios, universidad o instituto):" data-iddom="input_mostrar_academ" data-update="true" data-espacio="4" data-campo="educacion" data-tipo="text">
+		            
+		          </campo>
+		          
+		            	<campo data-nombre="Ciudad o distrito:" data-iddom="ciudad_edit_info_perfil" data-espacio="4" data-campo="ciudad" data-tipo="hidden"></campo>
+		            <campo data-nombre="" data-espacio="4" data-campo="latitud_ini" data-tipo="hidden"></campo>
+		            <campo data-nombre="" data-espacio="4" data-campo="longitud_ini" data-tipo="hidden"></campo>
+		            <campo data-nombre="Direcci&oacute;n:" data-espacio="4" data-campo="direccion" data-tipo="hidden"></campo>
+		            <?php
+						}
+		            ?>	
+				</bloque>
+            
+				<bloque data-espacio="4">
+
+		            <?php
+						if($_SESSION['tipo']=='A'){
+					?>		
+				
+		            	<campo data-nombre="Grado de estudios:" data-espacio="4" data-campo="nivel_educativo" data-tipo="select">					            		
+							<div data-opcion="Primaria" data-value="1"></div>
+				            <div data-opcion="Secundaria" data-value="2"></div>
+	              			<div data-opcion="Preparatoria" data-value="3"></div>
+	              			<div data-opcion="Instituto" data-value="4"></div>
+	              			<div data-opcion="Universitario" data-value="5"></div>
+		            	</campo>
+		            	<campo data-iddom="id_academ" data-nombre="ID Academ:" data-valor="" data-campo="id_academ" data-tipo="hidden">   
+			          <!-- hidden -->      
+			          </campo>
+		            	<campo data-nombre="Centro educativo:" data-iddom="input_mostrar_academ" data-update="true" data-espacio="4" data-campo="educacion" data-tipo="text"></campo>
+		            	<campo data-nombre="Ciudad o distrito:" data-iddom="ciudad_edit_info_perfil" data-espacio="4" data-campo="ciudad" data-tipo="hidden"></campo>
+		            <campo data-nombre="" data-espacio="4" data-campo="latitud_ini" data-tipo="hidden"></campo>
+		            <campo data-nombre="" data-espacio="4" data-campo="longitud_ini" data-tipo="hidden"></campo>
+		            <campo data-nombre="Direcci&oacute;n:" data-espacio="4" data-campo="direccion" data-tipo="hidden"></campo>
+		            <?php
+						}
+		            ?>
+		            
+		            <campo data-nombre="Link Facebook:" data-espacio="4" data-campo="link_facebook" data-tipo="text"></campo>
+		            <campo data-nombre="Link Twitter:" data-espacio="4" data-campo="link_twitter" data-tipo="text"></campo>
+		            <campo data-nombre="Link LinkedIn:" data-espacio="4" data-campo="link_linkedin" data-tipo="text"></campo>
+		            <?php
+						if($_SESSION['tipo']=='P'){
+					?>					
+			            <campo data-nombre="Presentaci&oacute;n:" data-espacio="4" data-campo="presentacion" data-tipo="textarea"></campo>
+			            <campo data-nombre="Pensamiento:" data-espacio="4" data-campo="pensamiento" data-tipo="textarea"></campo>
+					<?php
+						}
+		            ?>
+				</bloque>
+
+					<ClassExtra DOMdestino="btn-update" class="inactivo"></ClassExtra>
+					<ClassExtra DOMdestino="btn-cancelar" class="inactivo"></ClassExtra>
+			    </div>
+
+			</section>
+
+
+<script>
+
+
+var GL_DELAY_KEYUP_CURSOTEMA;
+	$(document).ready(function(){
+		$('.columna_editar_perfil').on('keyup','.comp-gestion-elemento .comp-ge-campo input, .comp-gestion-elemento .comp-ge-campo textarea', function(){
+
+			$('.columna_editar_perfil .comp-gestion-elemento .comp-ge-btns .comp-ge-btn-accion').removeClass('inactivo');
+
+		});
+
+
+		$('.columna_editar_perfil').on('change','.comp-gestion-elemento .comp-ge-campo select', function(){
+
+			$('.columna_editar_perfil .comp-gestion-elemento .comp-ge-btns .comp-ge-btn-accion').removeClass('inactivo');
+
+		});
+		
+		//Auto 
+		
+		$('body').click(function(){				
+	    		$('#lista_academ_autocom').hide();
+	    		$('#lista_conocimientos_autocom').css('height', '250px');	
+			});
+
+
+		    $('body').on('keyup','#input_mostrar_academ',function(event){
+
+		      if (event.keyCode!=38 && event.keyCode!=40 && event.keyCode!=13){
+
+		      	fun_mostrar_academ_keyup($(this));
+
+		      }else{
+
+		      	if (event.keyCode==13){ 
+		      		if($('#lista_academ_autocom .tema_curso').length==0){
+		      			$('#crear_nuevo_curso_tema.hover').click();
+		      		}else{
+
+			    		$('#lista_academ_autocom').hide();
+
+			      		$('.columna_editar_perfil .formulario #id_edu').val($('#lista_academ_autocom .tema_curso.hover').data('id_elemento'));
+
+		      		}
+		      	}else{
+
+		      		if($('#lista_academ_autocom .tema_curso').length==0){
+		      			$('#crear_nuevo_curso_tema').addClass('hover');
+		      		}else{
+
+
+				      	if(event.keyCode==38){ //UP ARROW
+				      		if($('#lista_academ_autocom .tema_curso.hover').length>0){
+				      			//significa que ya existe un hover seleccionado entonces debemos decidir apuntar al siguiente
+				      			if($('#lista_academ_autocom .tema_curso').index($('#lista_academ_autocom .tema_curso.hover'))==0){
+				      				//esto significa que hemos hecho up en el item que está mas arriba
+				      				$('#lista_academ_autocom .tema_curso.hover').removeClass('hover');
+
+				      				$('#lista_academ_autocom .tema_curso').last().addClass('hover');
+				      				
+				      			}else{
+				      				var obj=$('#lista_academ_autocom .tema_curso.hover');
+				      				$('#lista_academ_autocom .tema_curso.hover').removeClass('hover');
+				      				$(obj).prev().addClass('hover');
+				      			}
+				      		}else{
+				      			//significa que no hay hover apuntado aun, entonces debemos apuntar al primero de abajo
+				      			$('#lista_academ_autocom .tema_curso').last().addClass('hover');
+				      		}
+				      	}else{
+				      		//DOWN ARROW
+
+				      		if($('#lista_academ_autocom .tema_curso.hover').length>0){
+				      			//significa que ya existe un hover seleccionado entonces debemos decidir apuntar al siguiente
+				      			if($('#lista_academ_autocom .tema_curso').index($('#lista_academ_autocom .tema_curso.hover'))==$('#lista_academ_autocom .tema_curso').length-1){
+				      				//esto significa que hemos hecho up en el item que está mas arriba
+				      				$('#lista_academ_autocom .tema_curso.hover').removeClass('hover');
+
+				      				$('#lista_academ_autocom .tema_curso').first().addClass('hover');
+				      				
+				      			}else{
+				      				var obj=$('#lista_academ_autocom .tema_curso.hover');
+				      				$('#lista_academ_autocom .tema_curso.hover').removeClass('hover');
+				      				$(obj).next().addClass('hover');
+				      			}
+				      		}else{
+				      			//significa que no hay hover apuntado aun, entonces debemos apuntar al primero de arriba
+
+				      			$('#lista_academ_autocom .tema_curso').first().addClass('hover');
+				      		}
+
+
+			      		}
+
+			      	$(this).val($('#lista_academ_autocom .tema_curso.hover').data('nombre'));
+			      	}
+
+
+		      	}
+		      }
+
+		    });
+
+
+
+		    $('body').on('click','#lista_academ_autocom .tema_curso',function(){
+		   
+		    	
+				$('#lista_academ_autocom').hide();
+
+
+		      	$('.columna_editar_perfil .formulario #id_edu').val($(this).data('id_elemento'));
+		      	$('.columna_editar_perfil .formulario #input_mostrar_academ').val($(this).data('nombre'));
+
+
+
+		    });
+
+		   
+
+		    $('body').on('click','#crear_nuevo_curso_tema',function(){
+		    	
+		    		$('#nombre_nuevo_tema_curso').val($('#input_mostrar_academ').val());
+		    		$('#nombre_busqueda_nuevo_tema_curso').val($('#input_mostrar_academ').val());
+		    	$('#lista_academ_autocom .comp-gestion-elemento .comp-ge-form .comp-ge-btn-accion[data-accion="insert"]').click();
+				fun_cancel_buble_event(event);
+
+		    });
+
+		    $('.columna_editar_perfil').on('click','.elemento .btn_editar',function(){
+		    	$('.columna_editar_perfil .lista_conocimientos .elemento').show();
+		    	var id=$(this).parents('.elemento').data('id_elemento');
+		    	
+		    	var objeto= $('.columna_editar_perfil .content .comp-gestion-elemento[data-elemento="form_academ"]');
+		    	$(objeto).appendTo('.form_gestion[data-id_elemento="'+id+'"]');
+		    	$('.columna_editar_perfil .form_gestion[data-id_elemento="'+id+'"]').show();
+				$(this).parents('.elemento').hide();
+				$('.btn_mostrar_agregar').show();
+		    });
+
+		    $('.columna_editar_perfil').on('click','.elemento .btn_eliminar',function(){
+		    	$('.columna_editar_perfil .lista_conocimientos .elemento').show();
+		    	var id=$(this).parents('.elemento').data('id_elemento');
+		    	
+		    	var objeto= $('.columna_editar_perfil .content .comp-gestion-elemento[data-elemento="form_academ"]');
+		    	$(objeto).appendTo('.form_gestion[data-id_elemento="'+id+'"]');
+		    	$('.columna_editar_perfil .form_gestion[data-id_elemento="'+id+'"]').show();
+
+		    	$('.columna_editar_perfil .form_gestion[data-id_elemento="'+id+'"] .comp-ge-btn-accion[data-accion="preguntar_delete"]').click();
+				$(this).parents('.elemento').hide();
+				$('.btn_mostrar_agregar').show();
+		    });
+
+
+		    $('.btn_mostrar_agregar').click(function(){
+
+		    	$('.columna_editar_perfil .comp-gestion-elemento').data('accion','insert');
+
+		    	$('.columna_editar_perfil .comp-gestion-elemento .comp-ge-btn-accion[data-accion="limpiar"]').click();
+
+
+		    	var objeto= $('.columna_editar_perfil .content .comp-gestion-elemento[data-elemento="form_academ"]');
+		    	$(objeto).appendTo('.formulario');
+		    	$('.columna_editar_perfil .btn_mostrar_agregar').hide();
+		    	$('.columna_editar_perfil .formulario').show();
+		    });
+	});
+
+function fun_apply_daterangepicker(){
+	$('.columna_editar_perfil .comp-gestion-elemento .comp-ge-btns .comp-ge-btn-accion').removeClass('inactivo');
+
+}
+
+
+function fun_cambia_foto_edit_perfil(){
+	
+	$('.columna_editar_perfil .comp-gestion-elemento .comp-ge-btns .comp-ge-btn-accion').removeClass('inactivo');
+
+}
+
+function fun_insert_datos_perfil(){
+	$('.columna_editar_perfil #campo_nombres_busqueda').val($('.columna_editar_perfil #campo_nombres_usuario').val());
+	$('.columna_editar_perfil #campo_apellidos_busqueda').val($('.columna_editar_perfil #campo_apellidos_usuario').val());
+}
+function fun_update_datos_perfil(){
+	$('.columna_editar_perfil #campo_nombres_busqueda').val($('.columna_editar_perfil #campo_nombres_usuario').val());
+	$('.columna_editar_perfil #campo_apellidos_busqueda').val($('.columna_editar_perfil #campo_apellidos_usuario').val());
+}
+
+
+//Auto
+
+	function fun_mostrar_academ_keyup(obj_dom){
+
+      	var valor=$(obj_dom).val();
+
+      	clearInterval(GL_DELAY_KEYUP_CURSOTEMA);
+		GL_DELAY_KEYUP_CURSOTEMA=setInterval(function(){
+			clearInterval(GL_DELAY_KEYUP_CURSOTEMA);
+
+	      	$('#lista_academ_autocom').removeClass('lateral');
+	      	$('#lista_academ_autocom').addClass('horizontal');
+
+	      	$('#lista_academ_autocom').css('top', ($(obj_dom).offset().top+30) +'px' );
+
+	      $('#lista_academ_autocom').css('left',$(obj_dom).offset().left);
+
+
+	      ancho = parseInt($(obj_dom).css('width').replace('px',''));
+
+	      	$('#lista_academ_autocom').css('width',ancho+'px');
+
+  			$('#crear_nuevo_curso_tema').removeClass('hover');
+
+			$('#lista_academ_autocom').show();
+			
+			$('#lista_academ_autocom #lugar_buscador').val($('.comp-menu-opcion.seleccionado').data('opcion'));
+			GL_COMPONENTE_CONSULTOR_ELEMENTOS.LISTA['buscar_academ'].reset();
+
+			$('#lista_academ_autocom #condicion_temas_academ').val(valor);
+
+			GL_COMPONENTE_CONSULTOR_ELEMENTOS.LISTA['buscar_academ'].consultar();
+			
+		},200);
+}
+
+</script>
+
+			<style>
+			
+			.mostrado{		
+    	display: block;
+	}
+
+
+			body .comp-gestion-elemento .comp-ge-campo[data-esimagen="si"]{
+				border:none; 
+			}
+body .comp-gestion-elemento .comp-ge-campo_input{
+
+    font-size: 11px;
+}
+
+body .comp-gestion-elemento .comp-ge-campo_input input,
+body .comp-gestion-elemento .comp-ge-campo_input textarea,
+body .comp-gestion-elemento .comp-ge-campo_input select{
+	
+    font-size: 13px !important;
+}
+
+.columna_editar_perfil .comp-gestion-elemento .comp-ge-campo textarea{
+
+    height: 80px;
+}
+
+.columna_editar_perfil{
+
+    margin-left: 10px;
+    height: initial !important;
+    padding-bottom: 30px;
+}
+.columna_editar_perfil .comp-ge-vista_previa .comp-ge-imagen{
+
+  background: url(IMG/USUARIOS/WEB/profesor_default.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: gainsboro;
+  background-size: 100%;
+  border: 1px solid #c7c7c7;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.columna_editar_perfil #comp-ge-imagen-foto{
+	text-align: center;
+
+}
+.columna_editar_perfil #comp-ge-imagen-foto .comp-ge-imagen{
+    border-radius: 10px;
+}
+
+.columna_editar_perfil .comp-content-titulo{
+	display: none;
+}
+
+.columna_editar_perfil .comp-gestion-elemento .comp-ge-btns .comp-ge-btn-accion.inactivo{
+	pointer-events: none;
+	opacity: 0.5;
+}
+.columna_editar_perfil .comp-gestion-elemento .comp-ge-campo .lista-select{
+	padding: 4px;
+}
+
+			</style>

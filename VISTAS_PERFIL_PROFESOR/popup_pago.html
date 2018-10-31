@@ -1,0 +1,116 @@
+
+
+
+<div class="protector_fondo_popup" data-id_popup="pago_comision">
+  <div id="popup_pago_comision" class="comp-popup">
+  <div class="cerrar cerrar_popup"></div>
+    <div class="sup">
+      <div class="texto">
+        Para pagarnos, puedes hacer un dep&oacute;sito al siguiente n&uacute;mero de cuenta:
+      </div>
+      <div class="cuenta">191-012352456-0-46</div>
+    </div>
+    <div class="inf">
+      
+        <div class="comp-contactenos" data-tipocarga="manual" data-motivo="pago" data-titulo="" data-alturawindow="false" data-palabraboton="Enviar">
+       
+
+            <bloque data-titulo="Una vez hayas realizado el pago, escanea o t&oacute;male una foto al voucher, y env&iacute;alo mediante el siguiente formulario:"  data-btn_enviar="true">       
+<!--
+              <ClassExtra DOMdestino="comp-contactenos-bloque" class="trans_bezier_05 trans_delay_04 anim-oculto-opacity anim-desplaza-izquierda-10">
+              </ClassExtra>-->
+              <dato campo="id" nombre="" tipo="hidden" >
+              </dato>
+              <dato campo="nombre" nombre="Nombre completo:" tipo="input" >
+              </dato>
+              <dato campo="correo" nombre="Correo electr&oacute;nico:" tipo="input" >
+              </dato>
+              <dato campo="comprobante" nombre="Adjunta tu comprobante de pago:" tipo="archivo" >
+              </dato>
+            </bloque>
+
+        </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+
+  .protector_fondo_popup {
+    background: rgba(0, 0, 0, 0.71);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+
+
+  .protector_fondo_popup .comp-popup{
+
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate3d(-50%,-50%,0px);
+      -moz-transform: translate3d(-50%,-50%,0px);
+      -ms-transform: translate3d(-50%,-50%,0px);
+      -o-transform: translate3d(-50%,-50%,0px);
+      transform: translate3d(-50%,-50%,0px);
+      background: white;
+  }
+  #popup_pago_comision{
+    max-width: 500px;
+    width: 100%;
+    min-height: 300px;
+    height: initial;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 13px;
+    color: gray;
+    position: relative;
+  }
+    #popup_pago_comision .sup{
+  
+    }
+    #popup_pago_comision .sup .texto{
+
+    }
+    #popup_pago_comision .sup .texto{
+
+    }
+    #popup_pago_comision .inf{
+
+    }
+    #popup_pago_comision .inf .texto{
+
+    }
+  #popup_pago_comision .comp-contactenos .comp-contactenos-titulo{    
+    display: none;
+  }
+  #popup_pago_comision .comp-contactenos .comp-contactenos-alineador{
+    padding: 0px;
+    max-width: initial;
+    margin-top: 30px;
+  }
+
+  #popup_pago_comision  .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo_input{
+    border-color: #dadada;
+    margin-top: 10px;
+  }
+
+  #popup_pago_comision  .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo_input.focus-input{
+    box-shadow: none;
+  }
+
+  #popup_pago_comision .comp-contactenos .info_extra{
+    display: none;
+  }
+
+</style>

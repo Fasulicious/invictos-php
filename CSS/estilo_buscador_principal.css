@@ -1,0 +1,550 @@
+body.busqueda{
+  position: relative;
+}
+
+body.busqueda #pac-container-busqueda{
+  top: initial !important;
+  bottom: 55px !important;
+}
+            #inicio #resultados-busqueda-ranking{
+              height: 100%;
+              padding-top: 100px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box;
+              display: inline-block;
+              vertical-align: top;
+              width: 350px;
+              padding-left: 10px;
+            }
+            #inicio #resultados-busqueda-ranking .titulo_busqueda-ranking{
+              color: gray;
+              font-size: 20px;
+              text-align: left;
+              padding-bottom: 20px;
+            }
+            
+            #inicio #resultados-busqueda-ranking .lista_resultados_ranking{
+              height: calc(100% - 105px);
+              overflow-x: hidden;
+              padding-right: 10px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box;
+            }
+
+
+            #inicio #resultados-busqueda-ranking .lista_resultados_ranking::-webkit-scrollbar-track
+            {
+              border: 0px solid white;
+              background-color: transparent;
+            }
+
+            #inicio #resultados-busqueda-ranking .lista_resultados_ranking::-webkit-scrollbar
+            {
+              width: 10px;
+              background-color: rgb(205,205,205);
+              border-radius: 10px;
+
+            }
+
+            #inicio #resultados-busqueda-ranking .lista_resultados_ranking::-webkit-scrollbar-thumb
+            {
+              width: 20px;
+              background-color:  rgb(99,99,99); 
+              border-radius: 10px;
+            }
+
+            
+            #inicio #resultados-busqueda-ranking .lista_resultados_ranking .resultado{
+              margin-bottom: 10px;
+            }
+
+            #inicio #resultados-busqueda-ranking .lista_resultados_ranking .foto{
+              width: 70px;
+              height: 70px;
+              background: url(../IMG/USUARIOS/WEB/profesor_default.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-color: gainsboro;
+              background-size: 100%;
+              border: 1px solid #c7c7c7;
+              border-radius: 10px;
+              display: inline-block;
+              vertical-align: top;
+            }
+            #inicio #resultados-busqueda-ranking .lista_resultados_ranking .informacion{
+              display: inline-block;
+              vertical-align: middle;
+              width: calc(100% - 80px);
+              min-height: 70px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box;
+              padding-left: 5px;
+              text-align: left;
+              }
+
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .info_sup{
+
+                  color: gray;
+                  margin-bottom: 5px;
+                } 
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .nombre .texto{
+
+                  display: inline-block;
+                  border-bottom: 1px solid gray;
+                  cursor: pointer;
+              }
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .conocimientos{
+
+                font-size: 12px;
+                color: gray;
+              }
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .conocimientos .conocimiento{
+
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+              }
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .conocimientos .conocimiento.match{
+                color: #7db6ff;
+              }
+
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .valoracion .btn_votar {
+                 
+              }
+
+
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .valoracion .icono{
+
+                width: 15px;
+                margin-right: 4px;
+                height: 20px;
+                display: inline-block;
+                background: url(../IMG/valoracion.png);
+                vertical-align: middle;
+                background-size: cover;
+                background-position: center;
+              }
+
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .valoracion .btn_votar.activo .icono {
+                background-image: url(../IMG/valoracion_activo.png);
+              }
+              #inicio #resultados-busqueda-ranking .lista_resultados_ranking .valoracion .numero{
+
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13px;
+                color: gray;
+              }
+
+
+            #inicio{
+            }
+            #inicio.busqueda .comp-slider-full{
+              display: none;
+            }
+
+              #barra_de_busqueda{
+                position: absolute;
+                height: 100px;
+                -webkit-transform: translate3d(0px,-50px,0px);
+                -ms-transform: translate3d(0px,-50px,0px);
+                -o-transform: translate3d(0px,-50px,0px);
+                transform: translate3d(0px,-50px,0px);
+                top:70%;
+                width: 100%;
+              }
+
+            #inicio.busqueda #barra_de_busqueda{
+              top: initial;
+              bottom: 0px;
+              -webkit-transform: none;
+              -moz-transform: none;
+              -ms-transform: none;
+              -o-transform: none;
+              transform: none;
+              height: 58px;
+            }
+            #inicio.busqueda #barra_de_busqueda #botones_extra{
+              display: none;
+            }
+
+              #barra_buscador{
+
+                background-color: white;
+                padding: 15px;
+                width: 560px;
+                border: 1px solid rgb(234, 234, 234);
+                border-radius: 10px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+                margin: auto;
+              }
+
+                #inicio.busqueda #barra_buscador{
+
+                  width: 100%;
+                  text-align: center;
+                  border-radius: 0px;    
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  border: 0px;
+                  box-shadow: 0px 0px 3px gray;
+                  position: relative;
+                }
+
+                  #inicio.busqueda #barra_buscador .volver_busqueda{
+                    width: 50%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    z-index: 10;
+                    display: none;
+                  }
+                  #inicio.busqueda #barra_buscador .volver_busqueda.izq{
+                    left: 0;
+                  }
+                  #inicio.busqueda #barra_buscador .volver_busqueda.der{
+                    right: 0;
+                  }
+              #barra_buscador .inputs{
+                display: inline-block;
+                
+              }
+
+              #barra_buscador .div_content_input{
+                display: inline-block;
+                vertical-align: top;
+                width: 179px;
+              }
+              #barra_buscador .div_content_input.alerta input{              
+                border: 1px solid #ff5757;
+              }
+              #barra_buscador .div_content_input .msj_aux{
+                color: red;
+                font-size: 12px;                            
+                text-align: center;
+                display: none;
+
+              }
+              #barra_buscador .div_content_input.alerta .msj_aux{
+                display: block;
+
+              }
+              #barra_buscador input[type="text"]{
+                border: 1px solid #d2d2d2;
+                outline: none;
+                padding: 14px 10px 13px 10px;
+                border-radius: 7px;
+                font-size: 13px;
+                width: 100%;
+              }
+
+              #barra_buscador .boton_busqueda{
+                display: inline-block;                
+                padding: 10px 47px 11px 47px;
+                
+                font-size: 18px;
+                border-radius: 7px;
+                margin-left: 3px;
+    vertical-align: top;
+              }
+
+              #barra_de_busqueda #botones_extra{
+                text-align: center;
+
+              }
+              #barra_de_busqueda #botones_extra .texto{
+
+                font-family: OpenSansLight !important;
+                font-size: 15px;
+                margin-top: 20px;
+              }
+              #barra_de_busqueda .botones{
+                margin-top: 13px;
+
+              }
+              #barra_de_busqueda #botones_extra .boton{
+                padding: 4px;
+                border: 1px solid rgb(199,62,62);
+                border-radius: 29px;
+                background: white;
+                color: #777;
+                text-align: center;
+                font-size: 14px;
+                width: 110px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+                display: inline-block;                            
+                margin-left: 10px;
+                margin-right: 10px;
+                cursor: pointer;
+              }
+              #barra_de_busqueda #botones_extra .boton:hover{                            
+                background: #ff7171;
+                color: white;
+              }
+
+
+              #inicio .contenedores_resultados{
+
+                height: 100%;
+                width: 100%;
+                max-width: 1000px;
+                margin: auto;
+                text-align: center;
+                display: none;
+                padding-left: 10px;
+              }
+              #inicio.busqueda .contenedores_resultados{
+                display: block;
+              }
+              #inicio #resultados-busqueda{
+                height: 100%;
+                padding-top: 100px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+                display: inline-block;
+                vertical-align: top;
+                width: calc(100% - 355px);
+                text-align: left;
+              }
+              #inicio #resultados-busqueda .descripcion{
+
+                color: rgb(120,120,120);
+                font-size: 18px;
+                margin-bottom: 15px;
+              }
+              #inicio #resultados-busqueda .lista_resultados{
+
+                overflow-x: hidden;
+                height: calc(100% - 105px);
+                padding-right: 10px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+              }
+
+
+            #inicio #resultados-busqueda .lista_resultados::-webkit-scrollbar-track
+            {
+              border: 0px solid white;
+              background-color: transparent;
+            }
+
+            #inicio #resultados-busqueda .lista_resultados::-webkit-scrollbar
+            {
+              width: 10px;
+              background-color: rgb(205,205,205);
+              border-radius: 10px;
+
+            }
+
+            #inicio #resultados-busqueda .lista_resultados::-webkit-scrollbar-thumb
+            {
+              width: 20px;
+              background-color:  rgb(99,99,99); 
+              border-radius: 10px;
+            }
+
+
+
+
+              #inicio #resultados-busqueda .lista_resultados .resultado{
+
+                padding: 20px;
+                border: 1px solid rgb(222,222,222);
+                border-radius: 6px;
+                margin-top: 10px;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado.seleccionado{
+                border: 1px solid rgb(255, 87, 87);
+                box-shadow: 0px 0px 2px rgb(255, 87, 87) inset;
+
+              }
+              
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido{
+
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .foto{
+                width: 100px;
+                height: 100px;
+                background: url(../IMG/USUARIOS/WEB/profesor_default.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: gainsboro;
+                background-size: cover;
+                border: 1px solid #c7c7c7;
+                border-radius: 15%;
+                display: inline-block;
+                vertical-align: top;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion{
+
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% - 100px);
+                height: 100px;
+                box-sizing: border-box;
+                padding-left: 15px;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup{
+
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .nombre{
+                display: inline-block;
+                width: calc(100% - 130px);
+              }
+
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .nombre .texto{
+              
+                border-bottom: 1px solid gray;
+                display: inline-block;
+                font-size: 18px;
+                font-weight: bold;
+                color: gray;
+                cursor:pointer;
+
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    width: 130px;
+    color: gray;
+    text-align: right;
+              }
+              
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion .btn_votar{
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 44px;
+    text-align: left;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion .btn_votar .icono{
+                width: 20px;
+                height: 20px;
+                background-image: url(../IMG/valoracion.png);
+                background-position: center;
+                background-size: cover;
+                display: inline-block;
+                vertical-align: middle;
+              }
+
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion .btn_votar.activo .icono{
+                background-image: url(../IMG/valoracion_activo.png);               
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion .btn_votar .numero{
+                
+                display: inline-block;
+                vertical-align: middle;
+                border-bottom: 1px solid gray;
+              }
+              
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_sup .valoracion .texto{
+                            
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf{
+                            
+                font-size: 14px;
+                padding-top: 10px;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf .info_inf_izq{
+
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% - 80px);
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf .info_inf_izq .conocimientos{
+
+                margin-bottom: 7px;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf .info_inf_izq .conocimientos .conocimiento{
+
+                color: grey;
+                margin-right: 10px;
+                display: inline-block;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf .info_inf_izq .conocimientos .conocimiento.match{
+
+                color: #7db6ff;
+              }
+
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf .info_inf_izq .direccion{
+                color: grey;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf .info_inf_der{
+
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13px;
+                color: #7db6ff;
+                width: 80px;
+                text-align: right;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf .info_inf_der .enlace_mapa{
+                cursor: pointer;    
+                display: inline-block;
+              }
+
+              #inicio #resultados-busqueda .lista_resultados .resultado .contenido .informacion .info_inf .info_inf_der .enlace_mapa:hover{
+                text-decoration: underline;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .mensaje{
+                display: none;
+               padding-top: 15px;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado.seleccionado .mensaje{
+                display: block;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .mensaje textarea{
+                width: 100%;
+                box-sizing: border-box;
+                border: 1px solid #d9d9d9;
+                border-radius: 10px;
+                outline: none;
+                padding: 10px;
+                height: 60px;
+                resize: none;
+                font-size: 12px;
+              }
+              #inicio #resultados-busqueda .lista_resultados .resultado .mensaje .div_enviar_mensaje{
+    text-align: right;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 100px;
+    margin-left: auto;
+              }
+
+
+
+        #inicio #resultados-busqueda .lista_resultados .resultado .contacto_realizado{
+          color:green;
+          font-size: 18px;
+          padding: 10px 10px 0px 10px;
+          display: none;
+          text-align: center;
+        }

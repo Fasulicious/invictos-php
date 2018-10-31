@@ -1,0 +1,352 @@
+.comp-contactenos{
+  height: 100%
+}
+
+
+.comp-contactenos-content{  
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   box-sizing: border-box;
+}
+  .comp-contactenos .comp-contactenos-celda{    
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+    .comp-contactenos .comp-contactenos-alineador{          
+      margin: auto;
+      width: 100%;
+      padding: 30px 20px 5px 20px;
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.27);
+      
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   box-sizing: border-box;
+    }
+
+    .comp-contactenos .comp-contactenos-alineador.responsive{          
+      margin-top: 25%;
+      margin-bottom: 30px;
+    }
+
+      .comp-contactenos .comp-contactenos-titulo{                
+              
+          padding: 25px 10px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .comp-contactenos .comp-contactenos-cuerpo{                
+        
+      }
+        .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo{                
+          padding: 3px;
+
+        }
+        .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo_input{  
+          background-color: white;
+          border-radius: 6px;
+          margin-bottom: 5px;
+            border: 1px solid rgba(0, 216, 255, 0.52);
+            position: relative;
+
+            -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+        }
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo_input.focus-input{
+            box-shadow: 0px 0px 6px rgba(0, 216, 200, .7);
+          }
+
+
+        .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo.comp-contacto-alerta{
+          border: 1px rgba(255, 142, 142, 0.8) solid;
+        }
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo_input.comp-contacto-alerta.focus-input{
+            box-shadow: 0px 0px 6px rgba(255, 80, 80, .8);
+          }
+
+
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo .comp-contactenos-img-input{    
+            
+            width: 46px;
+            height: 46px;
+            display: inline-table;
+            text-align: center;
+            vertical-align: middle;
+
+          }
+
+            .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo .comp-contactenos-img-input img{
+              width: 70%;   
+            }
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo .comp-contactenos-img-input.textarea{  
+            vertical-align: top;  
+          }
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo input{                
+                     
+            padding: 5px;
+            border: 0px solid rgba(0, 216, 255, 0.52);
+            outline: none;
+            font-size: 15px;
+            width: 100%;
+            -webkit-box-sizing:border-box ;
+            -ms-box-sizing:border-box ;
+            -o-box-sizing:border-box ;
+            -moz-box-sizing:border-box ;
+            box-sizing:border-box ;
+          }
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo input.con_img{  
+            width: Calc(100% - 50px);
+          }
+          
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo textarea{                
+              padding: 5px;
+              border: 0px solid rgba(0, 216, 255, 0.52);
+              outline: none;
+              width: 100%;
+              height: 150px;
+              font-size: 15px;
+              resize: none;
+              -webkit-box-sizing:border-box ;
+              -ms-box-sizing:border-box ;
+              -o-box-sizing:border-box ;
+              -moz-box-sizing:border-box ;
+              box-sizing:border-box ;
+          }
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo textarea.con_img{            
+            width: Calc(100% - 50px);
+          }
+
+
+
+
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo .campo-vacio{                
+            display: block;
+            color: red;
+            overflow: hidden;
+            border-top: 1px solid rgb(255, 205, 205);
+            height: 20px;
+            font-size: 14px;
+            text-align: center;          
+
+            -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+
+          }
+          .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo .campo-vacio.oculto{                
+            height: 0px;
+            border-top: 0px solid rgb(255, 205, 205);
+          }
+          
+
+
+
+    .comp-contactenos .comp-contactenos-cuerpo .comp-contactenos-campo-enviar{
+      text-align: center;
+    }
+
+      .comp-contactenos .comp-contactenos-enviar{
+        margin: auto;
+        min-width: 70px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        display: inline-block;
+      }
+        .comp-contactenos .comp-contactenos-enviar .comp-content-enviar{
+          background: rgba(255, 255, 255, 0.11);
+          text-align: center;
+          padding: 6px 10px 6px 10px;
+          border: 1px solid rgba(39, 39, 39, 0.08);
+          cursor: pointer;
+          color: rgba(115, 115, 115, 0.87);
+        }
+          .comp-contactenos .comp-contactenos-enviar .comp-content-enviar:hover{
+            background: rgba(255, 255, 255, 0.3);            
+          }
+
+      .comp-contactenos .comp-contactenos-enviar.comp-contacto-enviando{
+        pointer-events:none;
+        cursor: default;
+        opacity: .8;
+      }
+
+
+
+    .comp-contactenos .info_extra{
+        text-align: center;
+        font-size: 16px;
+        margin-top: 60px;
+    }
+
+
+
+  .comp-contactenos .comp-contactenos-btn-gmaps{
+
+    -webkit-transition: all 1s cubic-bezier(0, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0, 0, 0.25, 1);
+    -ms-transition: all 1s cubic-bezier(0, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0, 0, 0.25, 1);
+    transition: all 1s cubic-bezier(0, 0, 0.25, 1);
+  }
+    .comp-contactenos .comp-contactenos-btn-gmaps.comp-gm-btn{  
+      background: url('../IMG/lugar.png') center no-repeat rgba(255,255,255,0.2);
+      background-size: auto 50%;
+      cursor:pointer;  
+
+    }
+      .comp-contactenos .comp-contactenos-btn-gmaps.comp-gm-btn:hover{  
+        background-color:rgba(255,255,255,0.5);  
+      background-size: auto 70%;
+      }
+
+    .comp-contactenos .comp-contactenos-btn-gmaps.comp-gm-canvas{  
+      height: 300px !important;
+    }
+
+
+
+
+    .comp-contactenos .comp-contactenos-pie-pagina{  
+      background: black;
+    }
+      .comp-contactenos .comp-contactenos-pie-pagina .comp-contactenos-pie-content{
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        height: 100%;
+      }
+      .comp-contactenos .comp-contactenos-pie-pagina .comp-contactenos-pie-celda{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+      }
+      .comp-contactenos .comp-contactenos-pie-pagina .comp-contactenos-pie-texto{
+        text-align:center;
+        color: white;
+        padding:0px 20px;
+      }
+
+
+
+
+
+
+
+
+
+
+.comp-contactenos-vista_previa{
+  
+    width: 95px;
+    margin-top: 5px;
+    height: 95px;
+    background-size: cover;
+    background-position: center;
+    
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+
+    border: 2px #71FF00 solid;
+
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     -o-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+.comp-contactenos-vista_previa[data-origen="bd"]{
+
+    border: 2px blue solid;
+
+  }
+
+  .comp-contactenos-vista_previa-eliminar{
+    cursor: pointer;
+
+  }
+
+.comp-contactenos-vista_previa-eliminar:before{
+  position: absolute;
+  content: ' ';
+  top: 0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 10;
+  opacity: 0;
+
+}
+
+.comp-contactenos-vista_previa-eliminar:hover:before{
+  opacity: 1;
+}
+
+
+.comp-contactenos-vista_previa-eliminar:after{
+      position: absolute;
+    content: 'Eliminar';
+    top: 37px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0px 0px 9px black;
+    height: 30px;
+    color: white;
+    z-index: 20;
+    opacity: 0;
+    left: 0px;
+
+}
+.comp-contactenos-vista_previa-eliminar:hover:after{
+  opacity: 1;
+}
+
+
+
+
+
+.comp-contactenos-vista_previa[data-tipo="pdf"]{
+
+    background-image: url(../IMG/pdf.png);
+    background-color:rgb(210,71,38);
+    background-repeat:no-repeat;
+    background-position:center;
+
+    height: 110px;
+    background-size: initial;
+
+
+  }
+.comp-contactenos-vista_previa[data-tipo="doc"]{
+
+    background-image: url(../IMG/doc.png);
+    background-color:rgb(69,120,196);
+    background-repeat:no-repeat;
+    background-position:center;
+
+    height: 110px;
+    background-size: initial;
+
+
+  }
+
+  .comp-contactenos-campo-texto_extra{
+   font-style: italic;
+   color:#666;
+  }
